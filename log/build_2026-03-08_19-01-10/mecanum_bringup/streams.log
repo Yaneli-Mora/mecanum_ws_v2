@@ -1,0 +1,42 @@
+[0.071s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[0.122s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.745s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.996s] -- Configuring done (0.9s)
+[1.038s] -- Generating done (0.0s)
+[1.045s] -- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup
+[1.057s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[1.059s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup -- -j4 -l4
+[1.230s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup -- -j4 -l4
+[1.232s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup
+[1.261s] -- Install configuration: "Release"
+[1.261s] -- Execute custom install script
+[1.264s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/full_mission.launch.py
+[1.267s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/localization.launch.py
+[1.267s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/mission.launch.py
+[1.268s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/navigation.launch.py
+[1.269s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/robot.launch.py
+[1.271s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/arena_positions.yaml
+[1.271s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/controllers.yaml
+[1.272s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/ekf.yaml
+[1.273s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/nav2_params.yaml
+[1.273s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/sensor_calibration.yaml
+[1.274s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/white_lines.yaml
+[1.275s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/map/arena_map.pgm
+[1.275s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/map/arena_map.yaml
+[1.277s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/calibration/forward_camera.yaml
+[1.277s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/package_run_dependencies/mecanum_bringup
+[1.278s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/parent_prefix_path/mecanum_bringup
+[1.279s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/ament_prefix_path.sh
+[1.279s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/ament_prefix_path.dsv
+[1.281s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/path.sh
+[1.281s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/path.dsv
+[1.284s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.bash
+[1.285s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.sh
+[1.285s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.zsh
+[1.291s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.dsv
+[1.292s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.dsv
+[1.319s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/packages/mecanum_bringup
+[1.320s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/cmake/mecanum_bringupConfig.cmake
+[1.320s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/cmake/mecanum_bringupConfig-version.cmake
+[1.321s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.xml
+[1.376s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup

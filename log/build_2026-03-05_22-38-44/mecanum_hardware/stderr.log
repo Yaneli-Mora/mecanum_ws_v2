@@ -1,0 +1,22 @@
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/motor_driver.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kserial_protocol_pi.hpp: No such file or directory
+    2 | #include [01;31m[K"serial_protocol_pi.hpp"[m[K   // Pi-side copy of serial_protocol.h
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/mecanum_hardware.dir/build.make:104: CMakeFiles/mecanum_hardware.dir/src/motor_driver.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn mecanum_hardware::MecanumSystem::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:9:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+    9 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+      |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/tigertronics/testing_ws/install/hardware_interface/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+                 from [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/include/mecanum_hardware/mec_system.hpp:9[m[K,
+                 from [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:1[m[K:
+[01m[K/home/tigertronics/testing_ws/install/hardware_interface/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26:[m[K [01;36m[Knote: [m[Kdeclared here
+  140 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info);
+      |                          [01;36m[K^~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type mecanum_hardware::MecanumSystem::[01;32m[Kread[m[K(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:118:59:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KTeensyToPiPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+  118 |     encoder_reader_->update(period.seconds(), [01;35m[Klatest_pkt_.enc_ticks[m[K);
+      |                                               [01;35m[K~~~~~~~~~~~~^~~~~~~~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mecanum_hardware.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

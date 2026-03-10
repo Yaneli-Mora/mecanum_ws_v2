@@ -1,0 +1,48 @@
+[0.074s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/duck_operations -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/duck_operations
+[0.133s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.254s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.331s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.368s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.433s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.492s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.700s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.720s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.974s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.136s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[2.215s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.269s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[2.334s] -- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+[2.357s] -- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[2.371s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[2.380s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.776s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[2.812s] -- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)
+[3.251s] Error parsing '/home/tigertronics/mecanum_ws_v2/src/duck_operations/package.xml':
+[57.340s] Traceback (most recent call last):
+[57.340s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[57.340s]     main()
+[57.340s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[57.340s]     raise e
+[57.341s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[57.341s]     package = parse_package_string(
+[57.341s]               ^^^^^^^^^^^^^^^^^^^^^
+[57.341s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 630, in parse_package_string
+[57.341s]     pkg.name = _get_node_value(_get_node(root, 'name', filename))
+[57.341s]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[57.342s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 800, in _get_node
+[57.342s]     raise InvalidPackage('The manifest must contain exactly one "%s" tag' % tagname, filename)
+[57.342s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/tigertronics/mecanum_ws_v2/src/duck_operations/package.xml':
+[57.342s] The manifest must contain exactly one "name" tag
+[57.515s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[57.515s]   execute_process(/usr/bin/python3
+[57.515s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[57.515s]   /home/tigertronics/mecanum_ws_v2/src/duck_operations/package.xml
+[57.515s]   /home/tigertronics/mecanum_ws_v2/build/duck_operations/ament_cmake_core/package.cmake)
+[57.515s]   returned error code 1
+[57.516s] Call Stack (most recent call first):
+[57.516s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[57.516s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[57.516s]   CMakeLists.txt:28 (ament_package)
+[57.516s] 
+[57.516s] [0m
+[57.516s] -- Configuring incomplete, errors occurred!

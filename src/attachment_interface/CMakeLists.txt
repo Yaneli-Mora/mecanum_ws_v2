@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.8)
+project(attachment_interface)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(attachment_node src/attachment_node.cpp)
+target_include_directories(attachment_node PUBLIC include)
+ament_target_dependencies(attachment_node rclcpp std_msgs)
+install(TARGETS attachment_node DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY include/ DESTINATION include)
+ament_package()

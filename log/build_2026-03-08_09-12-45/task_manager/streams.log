@@ -1,0 +1,24 @@
+[0.075s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/task_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/task_manager -- -j4 -l4
+[0.329s] [100%] Built target task_manager_node
+[0.364s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/task_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/task_manager -- -j4 -l4
+[0.368s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/task_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/task_manager
+[0.395s] -- Install configuration: "Release"
+[0.396s] -- Execute custom install script
+[0.398s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/lib/task_manager/task_manager_node
+[0.399s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/include/task_manager/task_manager_node.hpp
+[0.400s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/package_run_dependencies/task_manager
+[0.401s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/parent_prefix_path/task_manager
+[0.402s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.sh
+[0.403s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.dsv
+[0.403s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.sh
+[0.403s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.dsv
+[0.404s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.bash
+[0.404s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.sh
+[0.405s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.zsh
+[0.405s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.dsv
+[0.405s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.dsv
+[0.440s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/packages/task_manager
+[0.440s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig.cmake
+[0.441s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig-version.cmake
+[0.442s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.xml
+[0.448s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/task_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/task_manager

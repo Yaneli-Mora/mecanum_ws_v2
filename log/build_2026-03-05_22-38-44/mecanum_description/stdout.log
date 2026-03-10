@@ -1,0 +1,25 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (1.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/urdf/mecanum_robot.urdf.xacro
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/urdf/ros2_control.xacro
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/urdf/sensors.xacro
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/ament_index/resource_index/package_run_dependencies/mecanum_description
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/ament_index/resource_index/parent_prefix_path/mecanum_description
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/environment/path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/environment/path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/local_setup.bash
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/local_setup.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/local_setup.zsh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/ament_index/resource_index/packages/mecanum_description
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/cmake/mecanum_descriptionConfig.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/cmake/mecanum_descriptionConfig-version.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.xml

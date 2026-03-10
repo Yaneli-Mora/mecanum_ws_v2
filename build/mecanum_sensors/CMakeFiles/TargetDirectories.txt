@@ -1,0 +1,12 @@
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/mecanum_sensors_uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/teensy_bridge_node.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/fixture_detector_node.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/imu_node.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/test.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/edit_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/rebuild_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/list_install_components.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/install.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/install/local.dir
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/CMakeFiles/install/strip.dir

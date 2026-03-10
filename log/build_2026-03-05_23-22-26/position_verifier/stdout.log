@@ -1,0 +1,22 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/position_verifier_node.dir/src/position_verifier_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable position_verifier_node[0m
+[100%] Built target position_verifier_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/position_verifier/position_verifier_node
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/include/position_verifier/position_verifier_node.hpp
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/package_run_dependencies/position_verifier
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/parent_prefix_path/position_verifier
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.bash
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.zsh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/packages/position_verifier
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig-version.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.xml

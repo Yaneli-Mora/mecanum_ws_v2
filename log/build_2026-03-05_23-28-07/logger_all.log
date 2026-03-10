@@ -1,0 +1,732 @@
+[0.180s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DCMAKE_BUILD_TYPE=Release']
+[0.180s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DCMAKE_BUILD_TYPE=Release'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa733eb10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa74f7260>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa74f7260>>, mixin_verb=('build',))
+[0.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.273s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.273s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tigertronics/mecanum_ws_v2'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ros'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['cmake', 'python']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'cmake'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'python'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['python_setup_py']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'python_setup_py'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ignore_ament_install'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'colcon_pkg'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['colcon_meta']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'colcon_meta'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['ros']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ros'
+[0.339s] DEBUG:colcon.colcon_core.package_identification:Package 'src/attachment_interface' with type 'ros.ament_cmake' and name 'attachment_interface'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ros'
+[0.341s] DEBUG:colcon.colcon_core.package_identification:Package 'src/duck_operations' with type 'ros.ament_cmake' and name 'duck_operations'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ros'
+[0.342s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_bringup' with type 'ros.ament_cmake' and name 'mecanum_bringup'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ros'
+[0.344s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_description' with type 'ros.ament_cmake' and name 'mecanum_description'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ignore_ament_install'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ros'
+[0.345s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_hardware' with type 'ros.ament_cmake' and name 'mecanum_hardware'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ignore_ament_install'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['colcon_pkg']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'colcon_pkg'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['colcon_meta']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'colcon_meta'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['ros']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ros'
+[0.347s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_localization' with type 'ros.ament_cmake' and name 'mecanum_localization'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['colcon_pkg']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'colcon_pkg'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['colcon_meta']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'colcon_meta'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ros'
+[0.348s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_sensors' with type 'ros.ament_cmake' and name 'mecanum_sensors'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ros'
+[0.350s] DEBUG:colcon.colcon_core.package_identification:Package 'src/position_verifier' with type 'ros.ament_cmake' and name 'position_verifier'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ros'
+[0.351s] DEBUG:colcon.colcon_core.package_identification:Package 'src/task_manager' with type 'ros.ament_cmake' and name 'task_manager'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['colcon_pkg']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'colcon_pkg'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['colcon_meta']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'colcon_meta'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['ros']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ros'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['cmake', 'python']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'cmake'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'python'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['python_setup_py']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'python_setup_py'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['colcon_pkg']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'colcon_pkg'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ros'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['cmake', 'python']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'cmake'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['python_setup_py']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ignore_ament_install'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ros'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['cmake', 'python']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'cmake'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['python_setup_py']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'python_setup_py'
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.394s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 72 installed packages in /home/tigertronics/testing_ws/install
+[0.395s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/tigertronics/tigert_ws/install
+[0.399s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 437 installed packages in /opt/ros/jazzy
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_target' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.578s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.579s] DEBUG:colcon.colcon_core.verb:Building package 'attachment_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/attachment_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/attachment_interface', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/attachment_interface', 'symlink_install': True, 'test_result_base': None}
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_target' from command line to 'None'
+[0.579s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_clean_cache' from command line to 'False'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_clean_first' from command line to 'False'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_force_configure' from command line to 'False'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'ament_cmake_args' from command line to 'None'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'catkin_cmake_args' from command line to 'None'
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.580s] DEBUG:colcon.colcon_core.verb:Building package 'duck_operations' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/duck_operations', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/duck_operations', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/duck_operations', 'symlink_install': True, 'test_result_base': None}
+[0.580s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_target' from command line to 'None'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.581s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.581s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_target' from command line to 'None'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.582s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_description', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_description', 'symlink_install': True, 'test_result_base': None}
+[0.582s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_target' from command line to 'None'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.583s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware', 'symlink_install': True, 'test_result_base': None}
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_target' from command line to 'None'
+[0.583s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.584s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_localization', 'symlink_install': True, 'test_result_base': None}
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_target' from command line to 'None'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[0.584s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.585s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors', 'symlink_install': True, 'test_result_base': None}
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_target' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_clean_cache' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_clean_first' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_force_configure' from command line to 'False'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'ament_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'catkin_cmake_args' from command line to 'None'
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.585s] DEBUG:colcon.colcon_core.verb:Building package 'position_verifier' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/position_verifier', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/position_verifier', 'symlink_install': True, 'test_result_base': None}
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_args' from command line to '['-DCMAKE_BUILD_TYPE=Release']'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_target' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.586s] DEBUG:colcon.colcon_core.verb:Building package 'task_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/task_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DCMAKE_BUILD_TYPE=Release'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/task_manager', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/task_manager', 'symlink_install': True, 'test_result_base': None}
+[0.587s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.588s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.589s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/attachment_interface' with build type 'ament_cmake'
+[0.589s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/attachment_interface'
+[0.595s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.636s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/duck_operations' with build type 'ament_cmake'
+[0.636s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/duck_operations'
+[0.637s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.637s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.658s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup' with build type 'ament_cmake'
+[0.658s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup'
+[0.659s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.659s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.677s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_description' with build type 'ament_cmake'
+[0.677s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_description'
+[0.678s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.678s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.709s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/attachment_interface -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/attachment_interface
+[0.724s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/duck_operations -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/duck_operations
+[0.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[0.779s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_description
+[2.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[2.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup -- -j4 -l4
+[2.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_description -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_description
+[2.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_description -- -j4 -l4
+[2.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup -- -j4 -l4
+[2.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup
+[2.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_description -- -j4 -l4
+[2.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_description
+[2.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_description)
+[2.933s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_description
+[2.944s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description' for CMake module files
+[2.946s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description' for CMake config files
+[2.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_description', 'cmake_prefix_path')
+[2.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.ps1'
+[2.950s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.dsv'
+[2.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.sh'
+[2.956s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/bin'
+[2.956s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/lib/pkgconfig/mecanum_description.pc'
+[2.957s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/lib/python3.12/site-packages'
+[2.958s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/bin'
+[2.959s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.ps1'
+[2.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.dsv'
+[2.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.sh'
+[2.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.bash'
+[2.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.zsh'
+[2.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/colcon-core/packages/mecanum_description)
+[2.974s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_description)
+[2.975s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description' for CMake module files
+[2.976s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description' for CMake config files
+[2.977s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_description', 'cmake_prefix_path')
+[2.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.ps1'
+[2.980s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.dsv'
+[2.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/hook/cmake_prefix_path.sh'
+[2.985s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/bin'
+[2.986s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/lib/pkgconfig/mecanum_description.pc'
+[2.987s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/lib/python3.12/site-packages'
+[2.988s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/bin'
+[2.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.ps1'
+[2.990s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.dsv'
+[2.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.sh'
+[2.994s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.bash'
+[2.996s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/mecanum_description/package.zsh'
+[3.001s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_description/share/colcon-core/packages/mecanum_description)
+[3.004s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware' with build type 'ament_cmake'
+[3.005s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware'
+[3.005s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.005s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.045s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_bringup)
+[3.051s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup' for CMake module files
+[3.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup
+[3.059s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup' for CMake config files
+[3.062s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_bringup', 'cmake_prefix_path')
+[3.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.ps1'
+[3.066s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.dsv'
+[3.070s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.sh'
+[3.074s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/bin'
+[3.075s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/lib/pkgconfig/mecanum_bringup.pc'
+[3.076s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/lib/python3.12/site-packages'
+[3.078s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/bin'
+[3.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.ps1'
+[3.084s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.dsv'
+[3.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.sh'
+[3.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.bash'
+[3.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.zsh'
+[3.095s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/colcon-core/packages/mecanum_bringup)
+[3.097s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_bringup)
+[3.098s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup' for CMake module files
+[3.099s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup' for CMake config files
+[3.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_bringup', 'cmake_prefix_path')
+[3.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.ps1'
+[3.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.dsv'
+[3.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/hook/cmake_prefix_path.sh'
+[3.107s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/bin'
+[3.107s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/lib/pkgconfig/mecanum_bringup.pc'
+[3.109s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/lib/python3.12/site-packages'
+[3.110s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/bin'
+[3.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.ps1'
+[3.113s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.dsv'
+[3.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.sh'
+[3.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.bash'
+[3.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.zsh'
+[3.121s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/colcon-core/packages/mecanum_bringup)
+[3.129s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_localization' with build type 'ament_cmake'
+[3.129s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_localization'
+[3.130s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.130s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.177s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[3.207s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_localization -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_localization
+[3.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/attachment_interface -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/attachment_interface
+[3.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/attachment_interface -- -j4 -l4
+[4.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/duck_operations -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/duck_operations
+[4.735s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/duck_operations -- -j4 -l4
+[8.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_localization -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_localization
+[8.661s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_localization -- -j4 -l4
+[10.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[10.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4
+[67.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4
+[67.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware
+[68.171s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_hardware)
+[68.172s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware' for CMake module files
+[68.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware
+[68.181s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware' for CMake config files
+[68.185s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_hardware', 'cmake_prefix_path')
+[68.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.ps1'
+[68.201s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.dsv'
+[68.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.sh'
+[68.218s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib'
+[68.219s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_hardware', 'ld_library_path_lib')
+[68.223s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.ps1'
+[68.228s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.dsv'
+[68.230s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.sh'
+[68.235s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/bin'
+[68.235s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib/pkgconfig/mecanum_hardware.pc'
+[68.236s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib/python3.12/site-packages'
+[68.241s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/bin'
+[68.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.ps1'
+[68.251s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.dsv'
+[68.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.sh'
+[68.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.bash'
+[68.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.zsh'
+[68.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/colcon-core/packages/mecanum_hardware)
+[68.281s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_hardware)
+[68.282s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware' for CMake module files
+[68.284s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware' for CMake config files
+[68.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_hardware', 'cmake_prefix_path')
+[68.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.ps1'
+[68.288s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.dsv'
+[68.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/cmake_prefix_path.sh'
+[68.294s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib'
+[68.296s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_hardware', 'ld_library_path_lib')
+[68.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.ps1'
+[68.298s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.dsv'
+[68.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/hook/ld_library_path_lib.sh'
+[68.305s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/bin'
+[68.306s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib/pkgconfig/mecanum_hardware.pc'
+[68.311s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib/python3.12/site-packages'
+[68.312s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/bin'
+[68.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.ps1'
+[68.316s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.dsv'
+[68.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.sh'
+[68.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.bash'
+[68.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.zsh'
+[68.326s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/colcon-core/packages/mecanum_hardware)
+[68.344s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors' with build type 'ament_cmake'
+[68.345s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors'
+[68.345s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[68.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[68.688s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_sensors -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors
+[78.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_sensors -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors
+[78.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors -- -j4 -l4
+[86.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/attachment_interface -- -j4 -l4
+[86.424s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/attachment_interface
+[86.650s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attachment_interface)
+[86.651s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface' for CMake module files
+[86.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/attachment_interface
+[86.664s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface' for CMake config files
+[86.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('attachment_interface', 'cmake_prefix_path')
+[86.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.ps1'
+[86.682s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.dsv'
+[86.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.sh'
+[86.697s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib'
+[86.697s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/bin'
+[86.698s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib/pkgconfig/attachment_interface.pc'
+[86.698s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib/python3.12/site-packages'
+[86.703s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/bin'
+[86.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.ps1'
+[86.709s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.dsv'
+[86.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.sh'
+[86.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.bash'
+[86.722s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.zsh'
+[86.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/colcon-core/packages/attachment_interface)
+[86.732s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attachment_interface)
+[86.733s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface' for CMake module files
+[86.739s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface' for CMake config files
+[86.741s] Level 1:colcon.colcon_core.shell:create_environment_hook('attachment_interface', 'cmake_prefix_path')
+[86.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.ps1'
+[86.747s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.dsv'
+[86.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/hook/cmake_prefix_path.sh'
+[86.763s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib'
+[86.763s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/bin'
+[86.763s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib/pkgconfig/attachment_interface.pc'
+[86.765s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib/python3.12/site-packages'
+[86.769s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/bin'
+[86.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.ps1'
+[86.782s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.dsv'
+[86.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.sh'
+[86.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.bash'
+[86.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.zsh'
+[86.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/colcon-core/packages/attachment_interface)
+[86.824s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/position_verifier' with build type 'ament_cmake'
+[86.824s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/position_verifier'
+[86.825s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[86.843s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[86.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/position_verifier -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/position_verifier
+[94.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/position_verifier -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/position_verifier
+[94.116s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/position_verifier -- -j4 -l4
+[126.053s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/duck_operations -- -j4 -l4
+[126.058s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/duck_operations
+[126.295s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(duck_operations)
+[126.296s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations' for CMake module files
+[126.297s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/duck_operations
+[126.301s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations' for CMake config files
+[126.305s] Level 1:colcon.colcon_core.shell:create_environment_hook('duck_operations', 'cmake_prefix_path')
+[126.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.ps1'
+[126.310s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.dsv'
+[126.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.sh'
+[126.315s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib'
+[126.315s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/bin'
+[126.316s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/pkgconfig/duck_operations.pc'
+[126.317s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/python3.12/site-packages'
+[126.318s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/bin'
+[126.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.ps1'
+[126.321s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.dsv'
+[126.323s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.sh'
+[126.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.bash'
+[126.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.zsh'
+[126.329s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/colcon-core/packages/duck_operations)
+[126.331s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(duck_operations)
+[126.332s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations' for CMake module files
+[126.334s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations' for CMake config files
+[126.335s] Level 1:colcon.colcon_core.shell:create_environment_hook('duck_operations', 'cmake_prefix_path')
+[126.336s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.ps1'
+[126.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.dsv'
+[126.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/hook/cmake_prefix_path.sh'
+[126.343s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib'
+[126.344s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/bin'
+[126.344s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/pkgconfig/duck_operations.pc'
+[126.345s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/python3.12/site-packages'
+[126.346s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/duck_operations/bin'
+[126.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.ps1'
+[126.350s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.dsv'
+[126.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.sh'
+[126.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.bash'
+[126.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.zsh'
+[126.361s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/duck_operations/share/colcon-core/packages/duck_operations)
+[126.366s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/tigertronics/mecanum_ws_v2/src/task_manager' with build type 'ament_cmake'
+[126.367s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/task_manager'
+[126.368s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[126.370s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[126.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/task_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/task_manager -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/task_manager
+[127.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_localization -- -j4 -l4
+[127.965s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_localization
+[128.212s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_localization)
+[128.217s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization' for CMake module files
+[128.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_localization
+[128.223s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization' for CMake config files
+[128.226s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_localization', 'cmake_prefix_path')
+[128.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.ps1'
+[128.231s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.dsv'
+[128.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.sh'
+[128.240s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib'
+[128.241s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/bin'
+[128.241s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/pkgconfig/mecanum_localization.pc'
+[128.243s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/python3.12/site-packages'
+[128.245s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/bin'
+[128.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.ps1'
+[128.250s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.dsv'
+[128.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.sh'
+[128.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.bash'
+[128.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.zsh'
+[128.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/colcon-core/packages/mecanum_localization)
+[128.270s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_localization)
+[128.271s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization' for CMake module files
+[128.274s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization' for CMake config files
+[128.278s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_localization', 'cmake_prefix_path')
+[128.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.ps1'
+[128.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.dsv'
+[128.288s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/hook/cmake_prefix_path.sh'
+[128.294s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib'
+[128.299s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/bin'
+[128.299s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/pkgconfig/mecanum_localization.pc'
+[128.300s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/python3.12/site-packages'
+[128.304s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/bin'
+[128.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.ps1'
+[128.317s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.dsv'
+[128.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.sh'
+[128.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.bash'
+[128.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.zsh'
+[128.345s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/colcon-core/packages/mecanum_localization)
+[131.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/task_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/task_manager -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/task_manager
+[131.045s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/task_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/task_manager -- -j4 -l4
+[178.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/position_verifier -- -j4 -l4
+[178.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/position_verifier
+[178.904s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(position_verifier)
+[178.905s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier' for CMake module files
+[178.906s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/position_verifier
+[178.912s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier' for CMake config files
+[178.914s] Level 1:colcon.colcon_core.shell:create_environment_hook('position_verifier', 'cmake_prefix_path')
+[178.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.ps1'
+[178.918s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.dsv'
+[178.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.sh'
+[178.923s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib'
+[178.924s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/bin'
+[178.925s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/pkgconfig/position_verifier.pc'
+[178.925s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/python3.12/site-packages'
+[178.927s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/bin'
+[178.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.ps1'
+[178.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv'
+[178.934s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.sh'
+[178.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.bash'
+[178.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.zsh'
+[178.940s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/colcon-core/packages/position_verifier)
+[178.948s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(position_verifier)
+[178.949s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier' for CMake module files
+[178.951s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier' for CMake config files
+[178.952s] Level 1:colcon.colcon_core.shell:create_environment_hook('position_verifier', 'cmake_prefix_path')
+[178.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.ps1'
+[178.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.dsv'
+[178.956s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/hook/cmake_prefix_path.sh'
+[178.960s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib'
+[178.960s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/bin'
+[178.960s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/pkgconfig/position_verifier.pc'
+[178.961s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/python3.12/site-packages'
+[178.962s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/position_verifier/bin'
+[178.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.ps1'
+[178.964s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv'
+[178.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.sh'
+[178.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.bash'
+[178.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.zsh'
+[178.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/colcon-core/packages/position_verifier)
+[182.550s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors -- -j4 -l4
+[182.555s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors
+[182.698s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_sensors)
+[182.699s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors' for CMake module files
+[182.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors
+[182.702s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors' for CMake config files
+[182.703s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_sensors', 'cmake_prefix_path')
+[182.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.ps1'
+[182.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.dsv'
+[182.706s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.sh'
+[182.709s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib'
+[182.710s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/bin'
+[182.710s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/pkgconfig/mecanum_sensors.pc'
+[182.710s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/python3.12/site-packages'
+[182.711s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/bin'
+[182.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.ps1'
+[182.714s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.dsv'
+[182.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.sh'
+[182.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.bash'
+[182.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.zsh'
+[182.721s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/colcon-core/packages/mecanum_sensors)
+[182.724s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mecanum_sensors)
+[182.724s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors' for CMake module files
+[182.726s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors' for CMake config files
+[182.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('mecanum_sensors', 'cmake_prefix_path')
+[182.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.ps1'
+[182.729s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.dsv'
+[182.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/hook/cmake_prefix_path.sh'
+[182.733s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib'
+[182.734s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/bin'
+[182.734s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/pkgconfig/mecanum_sensors.pc'
+[182.734s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/python3.12/site-packages'
+[182.735s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/bin'
+[182.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.ps1'
+[182.737s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.dsv'
+[182.739s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.sh'
+[182.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.bash'
+[182.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.zsh'
+[182.747s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/colcon-core/packages/mecanum_sensors)
+[192.688s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/task_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/task_manager -- -j4 -l4
+[192.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/task_manager': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/task_manager
+[192.790s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(task_manager)
+[192.791s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager' for CMake module files
+[192.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/task_manager' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/task_manager
+[192.796s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager' for CMake config files
+[192.798s] Level 1:colcon.colcon_core.shell:create_environment_hook('task_manager', 'cmake_prefix_path')
+[192.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.ps1'
+[192.799s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.dsv'
+[192.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.sh'
+[192.803s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib'
+[192.803s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/bin'
+[192.803s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib/pkgconfig/task_manager.pc'
+[192.804s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib/python3.12/site-packages'
+[192.805s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/bin'
+[192.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.ps1'
+[192.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.dsv'
+[192.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.sh'
+[192.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.bash'
+[192.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.zsh'
+[192.813s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/task_manager/share/colcon-core/packages/task_manager)
+[192.816s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(task_manager)
+[192.816s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager' for CMake module files
+[192.817s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager' for CMake config files
+[192.818s] Level 1:colcon.colcon_core.shell:create_environment_hook('task_manager', 'cmake_prefix_path')
+[192.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.ps1'
+[192.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.dsv'
+[192.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/hook/cmake_prefix_path.sh'
+[192.822s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib'
+[192.822s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/bin'
+[192.822s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib/pkgconfig/task_manager.pc'
+[192.823s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/lib/python3.12/site-packages'
+[192.823s] Level 1:colcon.colcon_core.environment:checking '/home/tigertronics/mecanum_ws_v2/install/task_manager/bin'
+[192.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.ps1'
+[192.826s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.dsv'
+[192.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.sh'
+[192.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.bash'
+[192.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.zsh'
+[192.831s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/tigertronics/mecanum_ws_v2/install/task_manager/share/colcon-core/packages/task_manager)
+[192.833s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[192.834s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[192.835s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[192.835s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[192.867s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[192.867s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[192.867s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[192.960s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[192.961s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.ps1'
+[192.964s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tigertronics/mecanum_ws_v2/install/_local_setup_util_ps1.py'
+[192.969s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.ps1'
+[192.983s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.sh'
+[192.986s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tigertronics/mecanum_ws_v2/install/_local_setup_util_sh.py'
+[192.987s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.sh'
+[192.997s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.bash'
+[193.000s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.bash'
+[193.011s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.zsh'
+[193.014s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.zsh'

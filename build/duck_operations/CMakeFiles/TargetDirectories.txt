@@ -1,0 +1,11 @@
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/duck_operations_uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/duck_detector_node.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/plow_controller_node.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/test.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/edit_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/rebuild_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/list_install_components.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/install.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/install/local.dir
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/CMakeFiles/install/strip.dir

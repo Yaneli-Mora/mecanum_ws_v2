@@ -1,0 +1,51 @@
+[0.075s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[0.127s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.672s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.696s] -- Found hardware_interface: 4.43.0 (/home/tigertronics/testing_ws/install/hardware_interface/share/hardware_interface/cmake)
+[0.764s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.778s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.811s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.841s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.214s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.280s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.287s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.321s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.339s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.380s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.401s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.432s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.063s] -- Configuring done (1.9s)
+[2.243s] -- Generating done (0.2s)
+[2.270s] -- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware
+[2.301s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[2.302s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4
+[2.645s] [100%] Built target mecanum_hardware
+[2.688s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4
+[2.691s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware
+[2.720s] -- Install configuration: "Release"
+[2.720s] -- Execute custom install script
+[2.728s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware//mecanum_hardware_plugin.xml
+[2.730s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/lib/libmecanum_hardware.so
+[2.733s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/include/mecanum_hardware/encoder_reader.hpp
+[2.734s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/include/mecanum_hardware/mec_system.hpp
+[2.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/include/mecanum_hardware/motor_driver.hpp
+[2.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/include/mecanum_hardware/serial_manager.hpp
+[2.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/include/mecanum_hardware/serial_protocol_pi.hpp
+[2.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/mecanum_hardware_plugin.xml
+[2.736s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/ament_index/resource_index/package_run_dependencies/mecanum_hardware
+[2.738s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/ament_index/resource_index/parent_prefix_path/mecanum_hardware
+[2.740s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/environment/ament_prefix_path.sh
+[2.740s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/environment/ament_prefix_path.dsv
+[2.742s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/environment/path.sh
+[2.742s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/environment/path.dsv
+[2.743s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/local_setup.bash
+[2.745s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/local_setup.sh
+[2.746s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/local_setup.zsh
+[2.747s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/local_setup.dsv
+[2.747s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.dsv
+[2.788s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/ament_index/resource_index/packages/mecanum_hardware
+[2.790s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/mecanum_hardware
+[2.792s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/cmake/mecanum_hardwareConfig.cmake
+[2.793s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/cmake/mecanum_hardwareConfig-version.cmake
+[2.794s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_hardware/share/mecanum_hardware/package.xml
+[2.802s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware

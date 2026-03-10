@@ -1,0 +1,24 @@
+[0.094s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/attachment_interface -- -j4 -l4
+[0.463s] [100%] Built target attachment_node
+[0.530s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/attachment_interface -- -j4 -l4
+[0.537s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/attachment_interface
+[0.603s] -- Install configuration: ""
+[0.606s] -- Execute custom install script
+[0.607s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/lib/attachment_interface/attachment_node
+[0.678s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/include/attachment_interface/attachment_node.hpp
+[0.767s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/ament_index/resource_index/package_run_dependencies/attachment_interface
+[0.818s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/ament_index/resource_index/parent_prefix_path/attachment_interface
+[0.862s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/environment/ament_prefix_path.sh
+[0.907s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/environment/ament_prefix_path.dsv
+[0.970s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/environment/path.sh
+[1.035s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/environment/path.dsv
+[1.186s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/local_setup.bash
+[1.308s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/local_setup.sh
+[1.412s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/local_setup.zsh
+[1.524s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/local_setup.dsv
+[1.639s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.dsv
+[1.731s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/ament_index/resource_index/packages/attachment_interface
+[1.811s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/cmake/attachment_interfaceConfig.cmake
+[1.881s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/cmake/attachment_interfaceConfig-version.cmake
+[1.975s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/attachment_interface/share/attachment_interface/package.xml
+[2.099s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/attachment_interface

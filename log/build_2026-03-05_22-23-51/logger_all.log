@@ -1,0 +1,371 @@
+[0.536s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.536s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff8dbe6db0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8dd9f3e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8dd9f3e0>>, mixin_verb=('build',))
+[0.681s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.682s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.682s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tigertronics/mecanum_ws_v2'
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['ignore', 'ignore_ament_install']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ignore_ament_install'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['colcon_pkg']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'colcon_pkg'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['colcon_meta']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'colcon_meta'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['ros']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'ros'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['cmake', 'python']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'cmake'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'python'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extensions ['python_setup_py']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_attachment) by extension 'python_setup_py'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ignore'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ignore_ament_install'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['colcon_pkg']
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'colcon_pkg'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['colcon_meta']
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'colcon_meta'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['ros']
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'ros'
+[0.760s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/attachment_interface': Error(s) in package 'src/attachment_interface/package.xml':
+The manifest must contain exactly one "name" tag
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extensions ['cmake', 'python']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'cmake'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/attachment_interface) by extension 'python'
+[0.762s] DEBUG:colcon.colcon_core.package_identification:Package 'src/attachment_interface' with type 'cmake' and name 'attachment_interface'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['ignore', 'ignore_ament_install']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ignore'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ignore_ament_install'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['colcon_pkg']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'colcon_pkg'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['colcon_meta']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'colcon_meta'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['ros']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'ros'
+[0.763s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/duck_operations': Error(s) in package 'src/duck_operations/package.xml':
+The manifest must contain exactly one "name" tag
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extensions ['cmake', 'python']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'cmake'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/duck_operations) by extension 'python'
+[0.764s] DEBUG:colcon.colcon_core.package_identification:Package 'src/duck_operations' with type 'cmake' and name 'duck_operations'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ignore'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ignore_ament_install'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['colcon_pkg']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'colcon_pkg'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['colcon_meta']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'colcon_meta'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['ros']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'ros'
+[0.765s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/mecanum_bringup': Error(s) in package 'src/mecanum_bringup/package.xml':
+The manifest must contain exactly one "name" tag
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extensions ['cmake', 'python']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'cmake'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_bringup) by extension 'python'
+[0.766s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_bringup' with type 'cmake' and name 'mecanum_bringup'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['ignore', 'ignore_ament_install']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ignore'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ignore_ament_install'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['colcon_pkg']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'colcon_pkg'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['colcon_meta']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'colcon_meta'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['ros']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'ros'
+[0.767s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/mecanum_description': Error(s) in package 'src/mecanum_description/package.xml':
+The manifest must contain exactly one "name" tag
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extensions ['cmake', 'python']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'cmake'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_description) by extension 'python'
+[0.767s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_description' with type 'cmake' and name 'mecanum_description'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ignore'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ignore_ament_install'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['colcon_pkg']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'colcon_pkg'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['colcon_meta']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'colcon_meta'
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extensions ['ros']
+[0.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_hardware) by extension 'ros'
+[0.771s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_hardware' with type 'ros.ament_cmake' and name 'mecanum_hardware'
+[0.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ignore'
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ignore_ament_install'
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['colcon_pkg']
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'colcon_pkg'
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['colcon_meta']
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'colcon_meta'
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['ros']
+[0.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'ros'
+[0.773s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/mecanum_localization': Error(s) in package 'src/mecanum_localization/package.xml':
+The manifest must contain exactly one "name" tag
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extensions ['cmake', 'python']
+[0.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'cmake'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_localization) by extension 'python'
+[0.774s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_localization' with type 'cmake' and name 'mecanum_localization'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['ignore', 'ignore_ament_install']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ignore'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ignore_ament_install'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['colcon_pkg']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'colcon_pkg'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['colcon_meta']
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'colcon_meta'
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['ros']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'ros'
+[0.775s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/mecanum_sensors': Error(s) in package 'src/mecanum_sensors/package.xml':
+The manifest must contain exactly one "name" tag
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extensions ['cmake', 'python']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'cmake'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/mecanum_sensors) by extension 'python'
+[0.776s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mecanum_sensors' with type 'cmake' and name 'mecanum_sensors'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['ignore', 'ignore_ament_install']
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ignore'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ignore_ament_install'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['colcon_pkg']
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'colcon_pkg'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['colcon_meta']
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'colcon_meta'
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['ros']
+[0.776s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'ros'
+[0.777s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/position_verifier': Error(s) in package 'src/position_verifier/package.xml':
+The manifest must contain exactly one "name" tag
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extensions ['cmake', 'python']
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'cmake'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/position_verifier) by extension 'python'
+[0.778s] DEBUG:colcon.colcon_core.package_identification:Package 'src/position_verifier' with type 'cmake' and name 'position_verifier'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ignore'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ignore_ament_install'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['colcon_pkg']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'colcon_pkg'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['colcon_meta']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'colcon_meta'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['ros']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'ros'
+[0.779s] DEBUG:colcon.colcon_core.package_identification:Failed to parse potential ROS package manifest in'src/task_manager': Error(s) in package 'src/task_manager/package.xml':
+The manifest must contain exactly one "name" tag
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extensions ['cmake', 'python']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'cmake'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/task_manager) by extension 'python'
+[0.780s] DEBUG:colcon.colcon_core.package_identification:Package 'src/task_manager' with type 'cmake' and name 'task_manager'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['ignore', 'ignore_ament_install']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ignore'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ignore_ament_install'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['colcon_pkg']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'colcon_pkg'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['colcon_meta']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'colcon_meta'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['ros']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'ros'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['cmake', 'python']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'cmake'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'python'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extensions ['python_setup_py']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/teensy_firmware) by extension 'python_setup_py'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['ignore', 'ignore_ament_install']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ignore'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ignore_ament_install'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['colcon_pkg']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'colcon_pkg'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['colcon_meta']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'colcon_meta'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['ros']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'ros'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['cmake', 'python']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'cmake'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'python'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extensions ['python_setup_py']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify(udev_rules) by extension 'python_setup_py'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['ignore', 'ignore_ament_install']
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ignore'
+[0.781s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ignore_ament_install'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['colcon_pkg']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'colcon_pkg'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['colcon_meta']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'colcon_meta'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['ros']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'ros'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['cmake', 'python']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'cmake'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'python'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extensions ['python_setup_py']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify({install,build,log}) by extension 'python_setup_py'
+[0.782s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.782s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.782s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.782s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.782s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.832s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.833s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.851s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 72 installed packages in /home/tigertronics/testing_ws/install
+[0.853s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/tigertronics/tigert_ws/install
+[0.856s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 435 installed packages in /opt/ros/jazzy
+[0.860s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.212s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_args' from command line to 'None'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_target' from command line to 'None'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_clean_first' from command line to 'False'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'cmake_force_configure' from command line to 'False'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'ament_cmake_args' from command line to 'None'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'attachment_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.213s] DEBUG:colcon.colcon_core.verb:Building package 'attachment_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/attachment_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/attachment_interface', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/attachment_interface', 'symlink_install': False, 'test_result_base': None}
+[1.213s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_target' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_clean_cache' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_clean_first' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'cmake_force_configure' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'ament_cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'catkin_cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'duck_operations' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.214s] DEBUG:colcon.colcon_core.verb:Building package 'duck_operations' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/duck_operations', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/duck_operations', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/duck_operations', 'symlink_install': False, 'test_result_base': None}
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_target' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[1.214s] Level 5:colcon.colcon_core.verb:set package 'mecanum_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.214s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup', 'symlink_install': False, 'test_result_base': None}
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_target' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.215s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_description', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_description', 'symlink_install': False, 'test_result_base': None}
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_target' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[1.215s] Level 5:colcon.colcon_core.verb:set package 'mecanum_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.215s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware', 'symlink_install': False, 'test_result_base': None}
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_target' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_clean_first' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'cmake_force_configure' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'ament_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.216s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_localization', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_localization', 'symlink_install': False, 'test_result_base': None}
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_target' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_clean_cache' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_clean_first' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'cmake_force_configure' from command line to 'False'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'ament_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'catkin_cmake_args' from command line to 'None'
+[1.216s] Level 5:colcon.colcon_core.verb:set package 'mecanum_sensors' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.217s] DEBUG:colcon.colcon_core.verb:Building package 'mecanum_sensors' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors', 'symlink_install': False, 'test_result_base': None}
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_target' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_clean_cache' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_clean_first' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'cmake_force_configure' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'ament_cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'catkin_cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'position_verifier' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.217s] DEBUG:colcon.colcon_core.verb:Building package 'position_verifier' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/position_verifier', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/position_verifier', 'symlink_install': False, 'test_result_base': None}
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_args' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_target' from command line to 'None'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_clean_first' from command line to 'False'
+[1.217s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'cmake_force_configure' from command line to 'False'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'ament_cmake_args' from command line to 'None'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[1.218s] Level 5:colcon.colcon_core.verb:set package 'task_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.218s] DEBUG:colcon.colcon_core.verb:Building package 'task_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/tigertronics/mecanum_ws_v2/build/task_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/tigertronics/mecanum_ws_v2/install/task_manager', 'merge_install': False, 'path': '/home/tigertronics/mecanum_ws_v2/src/task_manager', 'symlink_install': False, 'test_result_base': None}
+[1.218s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.219s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.220s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/attachment_interface'
+[1.237s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.238s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.238s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.259s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/duck_operations'
+[1.259s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.260s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.282s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup'
+[1.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.284s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.304s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/tigertronics/mecanum_ws_v2/src/mecanum_description'
+[1.305s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.305s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/attachment_interface -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/attachment_interface
+[1.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/duck_operations': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/duck_operations -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/duck_operations
+[1.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[1.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_description -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_description
+[57.735s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[69.610s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[69.611s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[69.611s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[69.611s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[69.629s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[69.629s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[69.629s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[69.681s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[69.682s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.ps1'
+[69.686s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tigertronics/mecanum_ws_v2/install/_local_setup_util_ps1.py'
+[69.690s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.ps1'
+[69.702s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.sh'
+[69.703s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/tigertronics/mecanum_ws_v2/install/_local_setup_util_sh.py'
+[69.705s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.sh'
+[69.714s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.bash'
+[69.717s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.bash'
+[69.725s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/tigertronics/mecanum_ws_v2/install/local_setup.zsh'
+[69.728s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/tigertronics/mecanum_ws_v2/install/setup.zsh'

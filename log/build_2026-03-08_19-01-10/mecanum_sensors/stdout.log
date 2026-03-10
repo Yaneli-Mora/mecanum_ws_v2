@@ -1,0 +1,4 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/tof_node.dir/src/tof_node.cpp.o[0m
+[ 37%] Built target fixture_detector_node
+[ 62%] Built target teensy_bridge_node
+[ 87%] Built target imu_node

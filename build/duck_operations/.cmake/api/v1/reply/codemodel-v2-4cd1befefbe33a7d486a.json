@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-e04bce961cf91758eb33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "duck_operations",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "duck_detector_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-duck_detector_node-Release-442b42c4b9320d916165.json",
+					"name" : "duck_detector_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "duck_operations_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-duck_operations_uninstall-Release-5ec38f853c8d589ff631.json",
+					"name" : "duck_operations_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "plow_controller_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plow_controller_node-Release-8d05181c388a70966009.json",
+					"name" : "plow_controller_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-bc484edd1726045eb158.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tigertronics/mecanum_ws_v2/build/duck_operations",
+		"source" : "/home/tigertronics/mecanum_ws_v2/src/duck_operations"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

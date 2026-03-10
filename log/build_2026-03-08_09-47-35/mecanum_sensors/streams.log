@@ -1,0 +1,18 @@
+[0.043s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors -- -j4 -l4
+[0.630s] [ 16%] [32mBuilding CXX object CMakeFiles/imu_node.dir/src/imu_node.cpp.o[0m
+[0.821s] [ 33%] [32mBuilding CXX object CMakeFiles/teensy_bridge_node.dir/src/teensy_bridge_node.cpp.o[0m
+[0.842s] [ 50%] [32mBuilding CXX object CMakeFiles/fixture_detector_node.dir/src/fixture_detector_node.cpp.o[0m
+[53.432s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:[m[K In member function ‘[01m[Kvoid ImuNode::[01;32m[KreadRegs[m[K(uint8_t, uint8_t*, int)[m[K’:
+[53.445s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:84:10:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[53.445s]    84 |     [01;35m[Kwrite(fd_, &reg, 1)[m[K;
+[53.446s]       |     [01;35m[K~~~~~^~~~~~~~~~~~~~[m[K
+[53.446s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:85:9:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[53.446s]    85 |     [01;35m[Kread(fd_, buf, len)[m[K;
+[53.446s]       |     [01;35m[K~~~~^~~~~~~~~~~~~~~[m[K
+[53.493s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:[m[K In member function ‘[01m[Kuint8_t ImuNode::[01;32m[KreadReg[m[K(uint8_t)[m[K’:
+[53.493s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:77:10:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[53.493s]    77 |     [01;35m[Kwrite(fd_, &reg, 1)[m[K;
+[53.493s]       |     [01;35m[K~~~~~^~~~~~~~~~~~~~[m[K
+[53.493s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/imu_node.cpp:79:9:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[53.493s]    79 |     [01;35m[Kread(fd_, &val, 1)[m[K;
+[53.495s]       |     [01;35m[K~~~~^~~~~~~~~~~~~~[m[K

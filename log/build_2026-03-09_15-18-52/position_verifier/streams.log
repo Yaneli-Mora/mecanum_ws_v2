@@ -1,0 +1,24 @@
+[0.048s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/position_verifier -- -j4 -l4
+[0.392s] [100%] Built target position_verifier_node
+[0.472s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/position_verifier -- -j4 -l4
+[0.489s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/position_verifier
+[0.516s] -- Install configuration: "Release"
+[0.519s] -- Execute custom install script
+[0.523s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/position_verifier/position_verifier_node
+[0.525s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/include/position_verifier/position_verifier_node.hpp
+[0.527s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/package_run_dependencies/position_verifier
+[0.528s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/parent_prefix_path/position_verifier
+[0.530s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.sh
+[0.531s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.dsv
+[0.531s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.sh
+[0.532s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.dsv
+[0.533s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.bash
+[0.533s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.sh
+[0.534s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.zsh
+[0.534s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.dsv
+[0.534s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv
+[0.564s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/packages/position_verifier
+[0.564s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig.cmake
+[0.565s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig-version.cmake
+[0.565s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.xml
+[0.569s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/position_verifier' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/position_verifier

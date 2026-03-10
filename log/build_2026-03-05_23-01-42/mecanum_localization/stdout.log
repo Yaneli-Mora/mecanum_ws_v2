@@ -1,0 +1,24 @@
+[ 33%] Built target odometry_publisher
+[ 66%] Built target white_line_corrector
+[100%] Built target initial_pose_publisher
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/odometry_publisher
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/initial_pose_publisher
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/white_line_corrector
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/include/mecanum_localization/odometry_publisher.hpp
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/package_run_dependencies/mecanum_localization
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/parent_prefix_path/mecanum_localization
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/ament_prefix_path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.bash
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.zsh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/packages/mecanum_localization
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/cmake/mecanum_localizationConfig.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/cmake/mecanum_localizationConfig-version.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.xml

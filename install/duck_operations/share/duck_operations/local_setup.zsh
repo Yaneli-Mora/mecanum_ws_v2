@@ -1,0 +1,1 @@
+/home/tigertronics/mecanum_ws_v2/build/duck_operations/ament_cmake_environment_hooks/local_setup.zsh

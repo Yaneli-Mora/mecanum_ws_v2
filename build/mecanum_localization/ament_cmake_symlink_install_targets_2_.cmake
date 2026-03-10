@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tigertronics/mecanum_ws_v2/build/mecanum_localization/white_line_corrector" "TARGETS" "white_line_corrector" "DESTINATION" "lib/mecanum_localization")

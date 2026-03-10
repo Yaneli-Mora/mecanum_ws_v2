@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>mecanum_hardware</name>
+  <version>0.1.0</version>
+  <description>ros2_control hardware plugin for mecanum robot</description>
+  <maintainer email="todo@todo.com">TODO</maintainer>
+  <license>Apache-2.0</license>
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

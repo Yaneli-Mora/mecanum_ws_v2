@@ -1,0 +1,28 @@
+[0.065s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_localization -- -j4 -l4
+[0.549s] [ 33%] Built target odometry_publisher
+[0.648s] [ 66%] Built target white_line_corrector
+[0.688s] [100%] Built target initial_pose_publisher
+[0.872s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_localization -- -j4 -l4
+[0.889s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_localization
+[0.983s] -- Install configuration: ""
+[0.983s] -- Execute custom install script
+[0.985s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/odometry_publisher
+[1.078s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/initial_pose_publisher
+[1.191s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/lib/mecanum_localization/white_line_corrector
+[1.299s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/include/mecanum_localization/odometry_publisher.hpp
+[1.384s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/package_run_dependencies/mecanum_localization
+[1.473s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/parent_prefix_path/mecanum_localization
+[1.577s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/ament_prefix_path.sh
+[1.640s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/ament_prefix_path.dsv
+[1.707s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/path.sh
+[1.806s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/environment/path.dsv
+[1.867s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.bash
+[1.920s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.sh
+[1.986s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.zsh
+[2.199s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/local_setup.dsv
+[2.281s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.dsv
+[2.395s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/ament_index/resource_index/packages/mecanum_localization
+[2.518s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/cmake/mecanum_localizationConfig.cmake
+[2.578s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/cmake/mecanum_localizationConfig-version.cmake
+[2.784s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_localization/share/mecanum_localization/package.xml
+[2.982s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_localization

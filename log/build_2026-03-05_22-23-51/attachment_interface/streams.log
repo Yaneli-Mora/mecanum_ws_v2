@@ -1,0 +1,55 @@
+[0.112s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/attachment_interface -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/attachment_interface
+[0.733s] -- The C compiler identification is GNU 13.3.0
+[1.358s] -- The CXX compiler identification is GNU 13.3.0
+[1.429s] -- Detecting C compiler ABI info
+[2.017s] -- Detecting C compiler ABI info - done
+[2.033s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.039s] -- Detecting C compile features
+[2.041s] -- Detecting C compile features - done
+[2.079s] -- Detecting CXX compiler ABI info
+[2.832s] -- Detecting CXX compiler ABI info - done
+[2.862s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.863s] -- Detecting CXX compile features
+[2.863s] -- Detecting CXX compile features - done
+[2.878s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.668s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.545s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[4.903s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.009s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.140s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.283s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.858s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[5.882s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[6.378s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[6.458s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[6.573s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.973s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[8.236s] Error parsing '/home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml':
+[65.660s] Traceback (most recent call last):
+[65.664s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[65.665s]     main()
+[65.672s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[65.673s]     raise e
+[65.673s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[65.673s]     package = parse_package_string(
+[65.674s]               ^^^^^^^^^^^^^^^^^^^^^
+[65.674s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 630, in parse_package_string
+[65.674s]     pkg.name = _get_node_value(_get_node(root, 'name', filename))
+[65.674s]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[65.680s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 800, in _get_node
+[65.680s]     raise InvalidPackage('The manifest must contain exactly one "%s" tag' % tagname, filename)
+[65.681s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml':
+[65.683s] The manifest must contain exactly one "name" tag
+[66.173s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[66.173s]   execute_process(/usr/bin/python3
+[66.174s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[66.174s]   /home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml
+[66.174s]   /home/tigertronics/mecanum_ws_v2/build/attachment_interface/ament_cmake_core/package.cmake)
+[66.175s]   returned error code 1
+[66.176s] Call Stack (most recent call first):
+[66.177s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[66.177s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[66.178s]   CMakeLists.txt:12 (ament_package)
+[66.179s] 
+[66.179s] [0m
+[66.180s] -- Configuring incomplete, errors occurred!

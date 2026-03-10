@@ -1,0 +1,22 @@
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In constructor ‘[01m[KToFNode::[01;32m[KToFNode[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:90:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_sensors_[m[K’ was not declared in this scope
+   90 |     [01;31m[Knum_sensors_[m[K = get_parameter("num_sensors").as_int();
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In destructor ‘[01m[Kvirtual ToFNode::[01;32m[K~ToFNode[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:136:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_sensors_[m[K’ was not declared in this scope
+  136 |     for (int i = 0; i < [01;31m[Knum_sensors_[m[K; i++)
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In member function ‘[01m[Kbool ToFNode::[01;32m[KinitSensors[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:145:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_sensors_[m[K’ was not declared in this scope
+  145 |     for (int i = 0; i < [01;31m[Knum_sensors_[m[K; i++) gpiod_line_set_value(lines_[i], 0);
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:149:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_sensors_[m[K’ was not declared in this scope
+  149 |     for (int i = 0; i < [01;31m[Knum_sensors_[m[K; i++) {
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In member function ‘[01m[Kvoid ToFNode::[01;32m[Kpublish[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:212:25:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_sensors_[m[K’ was not declared in this scope
+  212 |     for (int i = 0; i < [01;31m[Knum_sensors_[m[K; i++) {
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tof_node.dir/build.make:76: CMakeFiles/tof_node.dir/src/tof_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tof_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

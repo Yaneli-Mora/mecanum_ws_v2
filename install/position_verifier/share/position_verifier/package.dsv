@@ -1,0 +1,8 @@
+source;share/position_verifier/hook/cmake_prefix_path.ps1
+source;share/position_verifier/hook/cmake_prefix_path.dsv
+source;share/position_verifier/hook/cmake_prefix_path.sh
+source;share/position_verifier/local_setup.bash
+source;share/position_verifier/local_setup.dsv
+source;share/position_verifier/local_setup.ps1
+source;share/position_verifier/local_setup.sh
+source;share/position_verifier/local_setup.zsh

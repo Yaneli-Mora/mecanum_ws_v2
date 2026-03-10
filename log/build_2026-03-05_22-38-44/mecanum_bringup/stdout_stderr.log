@@ -1,0 +1,36 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (1.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/full_mission.launch.py
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/localization.launch.py
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/mission.launch.py
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/navigation.launch.py
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/launch/robot.launch.py
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/arena_positions.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/controllers.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/ekf.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/nav2_params.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/sensor_calibration.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/config/white_lines.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/map/arena_map.pgm
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/map/arena_map.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/calibration/forward_camera.yaml
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/package_run_dependencies/mecanum_bringup
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/parent_prefix_path/mecanum_bringup
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/ament_prefix_path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/ament_prefix_path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/path.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/environment/path.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.bash
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.sh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.zsh
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/ament_index/resource_index/packages/mecanum_bringup
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/cmake/mecanum_bringupConfig.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/cmake/mecanum_bringupConfig-version.cmake
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_bringup/share/mecanum_bringup/package.xml

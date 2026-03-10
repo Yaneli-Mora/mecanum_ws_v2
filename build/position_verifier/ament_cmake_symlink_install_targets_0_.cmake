@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tigertronics/mecanum_ws_v2/build/position_verifier/position_verifier_node" "TARGETS" "position_verifier_node" "DESTINATION" "lib/position_verifier")

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <ros2_control name="MecanumSystem" type="system">
+    <hardware>
+      <plugin>mecanum_hardware/MecanumSystem</plugin>
+      <param name="serial_port">/dev/teensy</param>
+      <param name="baud_rate">115200</param>
+
+      <!-- Encoder: 4096 ticks/rev (quadrature encoder with 1024 PPR) -->
+      <param name="ticks_per_rev">4096</param>
+
+      <!-- Wheel radius in metres: ~2in = 0.051m -->
+      <param name="wheel_radius">0.051</param>
+
+      <!-- Wheelbase (centre-to-centre lateral): 7in - wheel_width = ~0.153m -->
+      <param name="wheel_separation_y">0.178</param>
+
+      <!-- Wheelbase (centre-to-centre longitudinal): ~0.178m -->
+      <param name="wheel_separation_x">0.178</param>
+
+      <!-- Max wheel velocity rad/s — tune to your motor spec -->
+      <param name="max_velocity_rad_s">20.0</param>
+    </hardware>
+
+    <joint name="front_left_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface   name="position"/>
+      <state_interface   name="velocity"/>
+    </joint>
+    <joint name="front_right_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface   name="position"/>
+      <state_interface   name="velocity"/>
+    </joint>
+    <joint name="rear_left_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface   name="position"/>
+      <state_interface   name="velocity"/>
+    </joint>
+    <joint name="rear_right_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface   name="position"/>
+      <state_interface   name="velocity"/>
+    </joint>
+
+  </ros2_control>
+
+</robot>

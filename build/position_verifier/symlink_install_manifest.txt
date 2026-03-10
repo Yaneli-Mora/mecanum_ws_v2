@@ -1,0 +1,17 @@
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/position_verifier/position_verifier_node
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/include/position_verifier/position_verifier_node.hpp
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/package_run_dependencies/position_verifier
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/parent_prefix_path/position_verifier
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.sh
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.dsv
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.sh
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.dsv
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.bash
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.sh
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.zsh
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.dsv
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/packages/position_verifier
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig.cmake
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig-version.cmake
+/home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.xml

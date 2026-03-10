@@ -1,0 +1,40 @@
+[0.085s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/attachment_interface': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/attachment_interface -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/attachment_interface
+[0.144s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.213s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.294s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.322s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.367s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.422s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.612s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.626s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.872s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.062s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[2.314s] Error parsing '/home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml':
+[54.980s] Traceback (most recent call last):
+[54.980s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[54.981s]     main()
+[54.981s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[54.981s]     raise e
+[54.982s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[54.982s]     package = parse_package_string(
+[54.982s]               ^^^^^^^^^^^^^^^^^^^^^
+[54.983s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 630, in parse_package_string
+[54.984s]     pkg.name = _get_node_value(_get_node(root, 'name', filename))
+[54.984s]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[54.985s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 800, in _get_node
+[54.986s]     raise InvalidPackage('The manifest must contain exactly one "%s" tag' % tagname, filename)
+[54.988s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml':
+[54.990s] The manifest must contain exactly one "name" tag
+[55.433s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[55.433s]   execute_process(/usr/bin/python3
+[55.435s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[55.436s]   /home/tigertronics/mecanum_ws_v2/src/attachment_interface/package.xml
+[55.436s]   /home/tigertronics/mecanum_ws_v2/build/attachment_interface/ament_cmake_core/package.cmake)
+[55.436s]   returned error code 1
+[55.436s] Call Stack (most recent call first):
+[55.437s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[55.437s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[55.437s]   CMakeLists.txt:12 (ament_package)
+[55.437s] 
+[55.439s] [0m
+[55.440s] -- Configuring incomplete, errors occurred!

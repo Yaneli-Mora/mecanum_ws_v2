@@ -1,0 +1,1 @@
+/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/include/mecanum_hardware/serial_manager.hpp

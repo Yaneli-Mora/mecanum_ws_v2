@@ -1,0 +1,2 @@
+Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup

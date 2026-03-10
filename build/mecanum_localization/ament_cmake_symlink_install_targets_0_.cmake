@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tigertronics/mecanum_ws_v2/build/mecanum_localization/odometry_publisher" "TARGETS" "odometry_publisher" "DESTINATION" "lib/mecanum_localization")

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<robot name="mecanum_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find mecanum_description)/urdf/ros2_control.xacro"/>
+  <xacro:include filename="$(find mecanum_description)/urdf/sensors.xacro"/>
+
+  <!-- ── Robot dimensions ──────────────────────────────────────────────────
+       Body: 10in x 7in x ~3in tall
+       10in = 0.254m (x, front-to-back)
+        7in = 0.178m (y, left-to-right)
+        3in = 0.076m (z, height of body)
+       Wheel radius: ~2in = 0.051m
+       Wheel width:  ~1in = 0.025m
+       Wheelbase (x): wheels at ±0.089m from centre (half of 7in track)
+       Track (y):     wheels at ±0.089m from centre
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <xacro:property name="body_x"      value="0.254"/>
+  <xacro:property name="body_y"      value="0.178"/>
+  <xacro:property name="body_z"      value="0.076"/>
+  <xacro:property name="wheel_r"     value="0.051"/>
+  <xacro:property name="wheel_w"     value="0.025"/>
+  <xacro:property name="wheel_xoff"  value="0.089"/>  <!-- front/rear from centre -->
+  <xacro:property name="wheel_yoff"  value="0.089"/>  <!-- left/right from centre -->
+  <xacro:property name="body_clearance" value="0.010"/> <!-- ground clearance -->
+
+  <!-- base_footprint — ground projection used by Nav2 -->
+  <link name="base_footprint"/>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child  link="base_link"/>
+    <origin xyz="0 0 ${wheel_r + body_clearance}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- base_link — main body -->
+  <link name="base_link">
+    <visual>
+      <geometry><box size="${body_x} ${body_y} ${body_z}"/></geometry>
+      <material name="grey"><color rgba="0.5 0.5 0.5 1"/></material>
+    </visual>
+    <collision>
+      <geometry><box size="${body_x} ${body_y} ${body_z}"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="3.0"/>
+      <!-- I = m/12 * (y²+z²), (x²+z²), (x²+y²) -->
+      <inertia
+        ixx="${3.0/12.0 * (body_y*body_y + body_z*body_z)}"
+        iyy="${3.0/12.0 * (body_x*body_x + body_z*body_z)}"
+        izz="${3.0/12.0 * (body_x*body_x + body_y*body_y)}"
+        ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+  </link>
+
+  <!-- ── Mecanum wheel macro ───────────────────────────────────────────── -->
+  <xacro:macro name="mecanum_wheel" params="name x y">
+    <link name="${name}_link">
+      <visual>
+        <origin rpy="1.5708 0 0"/>
+        <geometry><cylinder length="${wheel_w}" radius="${wheel_r}"/></geometry>
+        <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
+      </visual>
+      <collision>
+        <origin rpy="1.5708 0 0"/>
+        <geometry><cylinder length="${wheel_w}" radius="${wheel_r}"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="0.3"/>
+        <!-- solid cylinder: Ixx=Iyy=m/12*(3r²+h²), Izz=mr²/2 -->
+        <inertia
+          ixx="${0.3/12.0 * (3*wheel_r*wheel_r + wheel_w*wheel_w)}"
+          iyy="${0.3/12.0 * (3*wheel_r*wheel_r + wheel_w*wheel_w)}"
+          izz="${0.3/2.0  * wheel_r*wheel_r}"
+          ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child  link="${name}_link"/>
+      <origin xyz="${x} ${y} ${-body_z/2}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <dynamics damping="0.01" friction="0.1"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- FL=front-left, FR=front-right, RL=rear-left, RR=rear-right -->
+  <xacro:mecanum_wheel name="front_left_wheel"  x=" ${wheel_xoff}" y=" ${wheel_yoff}"/>
+  <xacro:mecanum_wheel name="front_right_wheel" x=" ${wheel_xoff}" y="-${wheel_yoff}"/>
+  <xacro:mecanum_wheel name="rear_left_wheel"   x="-${wheel_xoff}" y=" ${wheel_yoff}"/>
+  <xacro:mecanum_wheel name="rear_right_wheel"  x="-${wheel_xoff}" y="-${wheel_yoff}"/>
+
+</robot>

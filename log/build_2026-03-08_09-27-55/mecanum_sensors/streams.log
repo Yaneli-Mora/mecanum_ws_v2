@@ -1,0 +1,27 @@
+[0.039s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors -- -j4 -l4
+[0.609s] [100%] Built target fixture_detector_node
+[0.609s] [100%] Built target teensy_bridge_node
+[0.641s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors -- -j4 -l4
+[0.677s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors
+[0.716s] -- Install configuration: "Release"
+[0.721s] -- Execute custom install script
+[0.723s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/teensy_bridge_node
+[0.724s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/fixture_detector_node
+[0.728s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/fixture_detector_node.hpp
+[0.729s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/teensy_bridge_node.hpp
+[0.729s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/package_run_dependencies/mecanum_sensors
+[0.731s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/parent_prefix_path/mecanum_sensors
+[0.732s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.sh
+[0.733s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.dsv
+[0.734s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.sh
+[0.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.dsv
+[0.735s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.bash
+[0.736s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.sh
+[0.737s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.zsh
+[0.738s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.dsv
+[0.738s] -- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.dsv
+[0.771s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/packages/mecanum_sensors
+[0.772s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig.cmake
+[0.772s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig-version.cmake
+[0.773s] -- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.xml
+[0.776s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors

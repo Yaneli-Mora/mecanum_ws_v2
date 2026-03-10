@@ -1,0 +1,63 @@
+[0.032s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[0.376s] -- The C compiler identification is GNU 13.3.0
+[0.716s] -- The CXX compiler identification is GNU 13.3.0
+[0.803s] -- Detecting C compiler ABI info
+[1.418s] -- Detecting C compiler ABI info - done
+[1.464s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.467s] -- Detecting C compile features
+[1.469s] -- Detecting C compile features - done
+[1.585s] -- Detecting CXX compiler ABI info
+[2.340s] -- Detecting CXX compiler ABI info - done
+[2.419s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.424s] -- Detecting CXX compile features
+[2.428s] -- Detecting CXX compile features - done
+[2.512s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.947s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.362s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.145s] -- Found hardware_interface: 4.43.0 (/home/tigertronics/testing_ws/install/hardware_interface/share/hardware_interface/cmake)
+[5.785s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.901s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[6.065s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.204s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.980s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[8.391s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[8.458s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[8.688s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[9.201s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[9.219s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[9.353s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[9.375s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[9.456s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[9.571s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[13.102s] -- Configuring done (13.0s)
+[13.435s] -- Generating done (0.3s)
+[13.441s] -- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware
+[13.509s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_hardware -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_hardware
+[13.511s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4
+[13.981s] [ 20%] [32mBuilding CXX object CMakeFiles/mecanum_hardware.dir/src/motor_driver.cpp.o[0m
+[13.987s] [ 40%] [32mBuilding CXX object CMakeFiles/mecanum_hardware.dir/src/encoder_reader.cpp.o[0m
+[14.011s] [ 60%] [32mBuilding CXX object CMakeFiles/mecanum_hardware.dir/src/serial_manager.cpp.o[0m
+[14.062s] [ 80%] [32mBuilding CXX object CMakeFiles/mecanum_hardware.dir/src/mec_system.cpp.o[0m
+[16.638s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/motor_driver.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kserial_protocol_pi.hpp: No such file or directory
+[16.639s]     2 | #include [01;31m[K"serial_protocol_pi.hpp"[m[K   // Pi-side copy of serial_protocol.h
+[16.640s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[16.640s] compilation terminated.
+[16.691s] gmake[2]: *** [CMakeFiles/mecanum_hardware.dir/build.make:104: CMakeFiles/mecanum_hardware.dir/src/motor_driver.cpp.o] Error 1
+[16.693s] gmake[2]: *** Waiting for unfinished jobs....
+[43.611s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn mecanum_hardware::MecanumSystem::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[43.615s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:9:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[43.615s]     9 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[43.615s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[43.616s] In file included from [01m[K/home/tigertronics/testing_ws/install/hardware_interface/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[43.616s]                  from [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/include/mecanum_hardware/mec_system.hpp:9[m[K,
+[43.616s]                  from [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:1[m[K:
+[43.617s] [01m[K/home/tigertronics/testing_ws/install/hardware_interface/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[43.627s]   140 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info);
+[43.627s]       |                          [01;36m[K^~~~~~~[m[K
+[43.775s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type mecanum_hardware::MecanumSystem::[01;32m[Kread[m[K(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[43.775s] [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_hardware/src/mec_system.cpp:118:59:[m[K [01;35m[Kwarning: [m[Ktaking address of packed member of ‘[01m[KTeensyToPiPacket[m[K’ may result in an unaligned pointer value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-of-packed-member-Waddress-of-packed-member]8;;[m[K]
+[43.775s]   118 |     encoder_reader_->update(period.seconds(), [01;35m[Klatest_pkt_.enc_ticks[m[K);
+[43.776s]       |                                               [01;35m[K~~~~~~~~~~~~^~~~~~~~~[m[K
+[61.745s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mecanum_hardware.dir/all] Error 2
+[61.750s] gmake: *** [Makefile:146: all] Error 2
+[61.841s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_hardware' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_hardware -- -j4 -l4

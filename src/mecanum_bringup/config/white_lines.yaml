@@ -1,0 +1,20 @@
+# white_lines.yaml
+# Known white line positions for EKF drift correction
+# axis x = line runs vertically (crossing it corrects x position)
+# axis y = line runs horizontally (crossing it corrects y position)
+# MEASURE ON YOUR PHYSICAL FIELD
+
+white_lines:
+  vertical_center:
+    axis: x
+    position_m: 1.219
+    length_start: 0.05
+    length_end: 1.169
+    tolerance_m: 0.08
+
+  horizontal_right:
+    axis: y
+    position_m: 0.609
+    length_start: 1.219
+    length_end: 2.388
+    tolerance_m: 0.08

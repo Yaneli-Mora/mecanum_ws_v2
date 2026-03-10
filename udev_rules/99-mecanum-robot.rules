@@ -1,0 +1,22 @@
+# /etc/udev/rules.d/99-mecanum-robot.rules
+# Gives fixed device names to Teensy and Arduino regardless of USB port order
+#
+# INSTALL:
+#   sudo cp 99-mecanum-robot.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger
+#
+# VERIFY:
+#   ls -la /dev/teensy /dev/arduino_attachment
+
+# Teensy 4.1 → /dev/teensy
+SUBSYSTEM=="tty", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0483", \
+    SYMLINK+="teensy", MODE="0666"
+
+# Arduino Uno → /dev/arduino_attachment
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0043", \
+    SYMLINK+="arduino_attachment", MODE="0666"
+
+# Arduino Nano CH340 → /dev/arduino_attachment
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", \
+    SYMLINK+="arduino_attachment", MODE="0666"

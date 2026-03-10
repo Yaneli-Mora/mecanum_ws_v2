@@ -1,0 +1,31 @@
+[ 50%] Built target imu_node
+[ 50%] Built target teensy_bridge_node
+[ 75%] Built target fixture_detector_node
+[ 87%] [32mBuilding CXX object CMakeFiles/tof_node.dir/src/tof_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable tof_node[0m
+[100%] Built target tof_node
+-- Install configuration: ""
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/teensy_bridge_node
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/fixture_detector_node
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/imu_node
+-- Installing: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/tof_node
+-- Set non-toolchain portion of runtime path of "/home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/tof_node" to ""
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/fixture_detector_node.hpp
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/teensy_bridge_node.hpp
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/package_run_dependencies/mecanum_sensors
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/parent_prefix_path/mecanum_sensors
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.sh
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.sh
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.dsv
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.bash
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.sh
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.zsh
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.dsv
+-- Installing: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.dsv
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/packages/mecanum_sensors
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig.cmake
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig-version.cmake
+-- Up-to-date: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.xml

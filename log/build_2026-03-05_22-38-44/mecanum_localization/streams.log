@@ -1,0 +1,48 @@
+[0.099s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_localization
+[0.658s] -- The C compiler identification is GNU 13.3.0
+[1.115s] -- The CXX compiler identification is GNU 13.3.0
+[1.352s] -- Detecting C compiler ABI info
+[1.906s] -- Detecting C compiler ABI info - done
+[1.946s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.952s] -- Detecting C compile features
+[1.953s] -- Detecting C compile features - done
+[1.998s] -- Detecting CXX compiler ABI info
+[2.934s] -- Detecting CXX compiler ABI info - done
+[3.038s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.038s] -- Detecting CXX compile features
+[3.043s] -- Detecting CXX compile features - done
+[3.110s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.238s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.691s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.362s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[5.733s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[5.841s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[5.994s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.147s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.801s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[6.862s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[7.667s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[7.882s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[8.116s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.782s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[9.204s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[9.337s] -- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+[9.386s] -- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[10.253s] -- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[10.545s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[10.558s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[10.558s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[11.375s] -- Configuring done (11.1s)
+[11.554s] -- Generating done (0.1s)
+[11.623s] -- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_localization
+[11.737s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_localization -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_localization
+[11.743s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_localization': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/tigertronics/mecanum_ws_v2/build/mecanum_localization -- -j4 -l4
+[12.441s] [ 16%] [32mBuilding CXX object CMakeFiles/odometry_publisher.dir/src/odometry_publisher.cpp.o[0m
+[12.469s] [ 33%] [32mBuilding CXX object CMakeFiles/initial_pose_publisher.dir/src/initial_pose_publisher.cpp.o[0m
+[12.491s] [ 50%] [32mBuilding CXX object CMakeFiles/white_line_corrector.dir/src/white_line_corrector.cpp.o[0m
+[56.510s] [ 66%] [32m[1mLinking CXX executable initial_pose_publisher[0m
+[61.506s] [ 66%] Built target initial_pose_publisher
+[82.529s] [ 83%] [32m[1mLinking CXX executable odometry_publisher[0m
+[85.673s] [ 83%] Built target odometry_publisher
+[91.513s] [100%] [32m[1mLinking CXX executable white_line_corrector[0m
+[93.502s] [100%] Built target white_line_corrector

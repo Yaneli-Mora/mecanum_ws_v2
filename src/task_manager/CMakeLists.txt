@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.8)
+project(task_manager)
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+
+add_executable(task_manager_node src/task_manager_node.cpp)
+target_include_directories(task_manager_node PUBLIC include)
+ament_target_dependencies(task_manager_node
+  rclcpp rclcpp_action nav2_msgs std_msgs geometry_msgs nav_msgs
+  tf2 tf2_geometry_msgs)
+install(TARGETS task_manager_node DESTINATION lib/${PROJECT_NAME})
+install(DIRECTORY include/ DESTINATION include)
+ament_package()

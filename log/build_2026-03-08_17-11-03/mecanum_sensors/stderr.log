@@ -1,0 +1,22 @@
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint16_t[01;32m[K readReg16[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:72:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   72 |   [01;35m[Kwrite(fd, buf, 2)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:74:7:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   74 |   [01;35m[Kread(fd, val, 2)[m[K;
+      |   [01;35m[K~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint8_t[01;32m[K readReg[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:65:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   65 |   [01;35m[Kwrite(fd, buf, 2)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:67:7:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   67 |   [01;35m[Kread(fd, &val, 1)[m[K;
+      |   [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg[m[K(int, uint16_t, uint8_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:56:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   56 |   [01;35m[Kwrite(fd, buf, 3)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg16[m[K(int, uint16_t, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:61:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   61 |   [01;35m[Kwrite(fd, buf, 4)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K

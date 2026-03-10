@@ -1,0 +1,20 @@
+[100%] Built target task_manager_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/lib/task_manager/task_manager_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/include/task_manager/task_manager_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/package_run_dependencies/task_manager
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/parent_prefix_path/task_manager
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.bash
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.zsh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/packages/task_manager
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig-version.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.xml

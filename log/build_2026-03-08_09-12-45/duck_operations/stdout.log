@@ -1,0 +1,23 @@
+[ 50%] Built target duck_detector_node
+[100%] Built target plow_controller_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/duck_operations/duck_detector_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/lib/duck_operations/plow_controller_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/include/duck_operations/duck_detector_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/include/duck_operations/plow_controller_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/ament_index/resource_index/package_run_dependencies/duck_operations
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/ament_index/resource_index/parent_prefix_path/duck_operations
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/environment/path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/environment/path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/local_setup.bash
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/local_setup.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/local_setup.zsh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/ament_index/resource_index/packages/duck_operations
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/cmake/duck_operationsConfig.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/cmake/duck_operationsConfig-version.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/duck_operations/share/duck_operations/package.xml

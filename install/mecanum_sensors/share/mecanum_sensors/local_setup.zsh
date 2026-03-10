@@ -1,0 +1,1 @@
+/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/ament_cmake_environment_hooks/local_setup.zsh

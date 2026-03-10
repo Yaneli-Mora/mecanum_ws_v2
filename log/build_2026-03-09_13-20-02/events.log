@@ -1,0 +1,392 @@
+[0.000000] (-) TimerEvent: {}
+[0.000445] (-) JobUnselected: {'identifier': 'attachment_interface'}
+[0.000868] (-) JobUnselected: {'identifier': 'duck_operations'}
+[0.000903] (-) JobUnselected: {'identifier': 'mecanum_bringup'}
+[0.000927] (-) JobUnselected: {'identifier': 'mecanum_description'}
+[0.000947] (-) JobUnselected: {'identifier': 'mecanum_hardware'}
+[0.000967] (-) JobUnselected: {'identifier': 'mecanum_localization'}
+[0.000985] (-) JobUnselected: {'identifier': 'mecanum_sensors'}
+[0.001002] (-) JobUnselected: {'identifier': 'task_manager'}
+[0.001024] (position_verifier) JobQueued: {'identifier': 'position_verifier', 'dependencies': OrderedDict()}
+[0.001050] (position_verifier) JobStarted: {'identifier': 'position_verifier'}
+[0.037027] (position_verifier) JobProgress: {'identifier': 'position_verifier', 'progress': 'cmake'}
+[0.041882] (position_verifier) Command: {'cmd': ['/usr/bin/cmake', '/home/tigertronics/mecanum_ws_v2/src/position_verifier', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/position_verifier'], 'cwd': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'en', 'USER': 'tigertronics', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tigertronics/testing_ws/install/ros2_control_demo_example_3/lib:/home/tigertronics/testing_ws/install/velocity_controllers/lib:/home/tigertronics/testing_ws/install/tricycle_steering_controller/lib:/home/tigertronics/testing_ws/install/tricycle_controller/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8/lib:/home/tigertronics/testing_ws/install/transmission_interface/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11/lib:/home/tigertronics/testing_ws/install/bicycle_steering_controller/lib:/home/tigertronics/testing_ws/install/ackermann_steering_controller/lib:/home/tigertronics/testing_ws/install/steering_controllers_library/lib:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10/lib:/home/tigertronics/testing_ws/install/hardware_interface_testing/lib:/home/tigertronics/testing_ws/install/ros2_control_test_assets/lib:/home/tigertronics/testing_ws/install/gz_ros2_control/lib:/home/tigertronics/testing_ws/install/range_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/position_controllers/lib:/home/tigertronics/testing_ws/install/pose_broadcaster/lib:/home/tigertronics/testing_ws/install/pid_controller/lib:/home/tigertronics/testing_ws/install/parallel_gripper_controller/lib:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller/lib:/home/tigertronics/testing_ws/install/mecanum_drive_controller/lib:/home/tigertronics/testing_ws/install/joint_trajectory_controller/lib:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface/lib:/home/tigertronics/testing_ws/install/joint_state_broadcaster/lib:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/gripper_controllers/lib:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/gpio_controllers/lib:/home/tigertronics/testing_ws/install/effort_controllers/lib:/home/tigertronics/testing_ws/install/forward_command_controller/lib:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/diff_drive_controller/lib:/home/tigertronics/testing_ws/install/controller_manager/lib:/home/tigertronics/testing_ws/install/chained_filter_controller/lib:/home/tigertronics/testing_ws/install/admittance_controller/lib:/home/tigertronics/testing_ws/install/controller_interface/lib:/home/tigertronics/testing_ws/install/cm_topic_hardware_component/lib:/home/tigertronics/testing_ws/install/hardware_interface/lib:/home/tigertronics/testing_ws/install/joint_limits/lib:/home/tigertronics/testing_ws/install/control_toolbox/lib:/home/tigertronics/testing_ws/install/realtime_tools/lib:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio/lib:/home/tigertronics/testing_ws/install/kinematics_interface_kdl/lib:/home/tigertronics/testing_ws/install/kinematics_interface/lib:/home/tigertronics/testing_ws/install/controller_manager_msgs/lib:/home/tigertronics/testing_ws/install/control_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/mujoco_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/tigertronics', 'OLDPWD': '/home/tigertronics', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '2079', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '-/testing_ws', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/tigertronics/testing_ws/install:/home/tigertronics/tigert_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tigertronics', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/mujoco_vendor/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/tigertronics-desktop:@/tmp/.ICE-unix/2047,unix/tigertronics-desktop:/tmp/.ICE-unix/2047', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e68336c4_cde9_4bfa_aa27_4c91a0092e9a', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/home/tigertronics/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.105', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/tigertronics', 'AMENT_PREFIX_PATH': '/home/tigertronics/testing_ws/install/ros2_controllers:/home/tigertronics/testing_ws/install/ros2_control_demos:/home/tigertronics/testing_ws/install/ros2_control_demo_example_3:/home/tigertronics/testing_ws/install/gz_ros2_control_demos:/home/tigertronics/testing_ws/install/velocity_controllers:/home/tigertronics/testing_ws/install/tricycle_steering_controller:/home/tigertronics/testing_ws/install/tricycle_controller:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8:/home/tigertronics/testing_ws/install/ros2_control:/home/tigertronics/testing_ws/install/transmission_interface:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11:/home/tigertronics/testing_ws/install/bicycle_steering_controller:/home/tigertronics/testing_ws/install/ackermann_steering_controller:/home/tigertronics/testing_ws/install/steering_controllers_library:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17:/home/tigertronics/testing_ws/install/ros2_control_demo_example_15:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6:/home/tigertronics/testing_ws/install/ros2_control_demo_example_13:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/home/tigertronics/testing_ws/install/hardware_interface_testing:/home/tigertronics/testing_ws/install/ros2_control_test_assets:/home/tigertronics/testing_ws/install/ros2_control_demo_description:/home/tigertronics/testing_ws/install/gz_ros2_control:/home/tigertronics/testing_ws/install/ros2_control_cmake:/home/tigertronics/testing_ws/install/range_sensor_broadcaster:/home/tigertronics/testing_ws/install/position_controllers:/home/tigertronics/testing_ws/install/pose_broadcaster:/home/tigertronics/testing_ws/install/pid_controller:/home/tigertronics/testing_ws/install/parallel_gripper_controller:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller:/home/tigertronics/testing_ws/install/mecanum_drive_controller:/home/tigertronics/testing_ws/install/joint_trajectory_controller:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface:/home/tigertronics/testing_ws/install/joint_state_broadcaster:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster:/home/tigertronics/testing_ws/install/gripper_controllers:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster:/home/tigertronics/testing_ws/install/gpio_controllers:/home/tigertronics/testing_ws/install/effort_controllers:/home/tigertronics/testing_ws/install/forward_command_controller:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster:/home/tigertronics/testing_ws/install/diff_drive_controller:/home/tigertronics/testing_ws/install/controller_manager:/home/tigertronics/testing_ws/install/chained_filter_controller:/home/tigertronics/testing_ws/install/admittance_controller:/home/tigertronics/testing_ws/install/controller_interface:/home/tigertronics/testing_ws/install/cm_topic_hardware_component:/home/tigertronics/testing_ws/install/hardware_interface:/home/tigertronics/testing_ws/install/joint_limits:/home/tigertronics/testing_ws/install/control_toolbox:/home/tigertronics/testing_ws/install/realtime_tools:/home/tigertronics/testing_ws/install/moblie_robot:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio:/home/tigertronics/testing_ws/install/kinematics_interface_kdl:/home/tigertronics/testing_ws/install/kinematics_interface:/home/tigertronics/testing_ws/install/gz_ros2_control_tests:/home/tigertronics/testing_ws/install/controller_manager_msgs:/home/tigertronics/testing_ws/install/control_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/tigertronics/testing_ws/build/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/rqt_controller_manager:/home/tigertronics/testing_ws/install/rqt_controller_manager/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/ros2controlcli:/home/tigertronics/testing_ws/install/ros2controlcli/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/ros2_controllers_test_nodes:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/controller_manager/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/controller_manager_msgs/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/control_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/tigertronics/testing_ws/install/ros2_controllers:/home/tigertronics/testing_ws/install/ros2_control_demos:/home/tigertronics/testing_ws/install/ros2_control_demo_example_3:/home/tigertronics/testing_ws/install/gz_ros2_control_demos:/home/tigertronics/testing_ws/install/velocity_controllers:/home/tigertronics/testing_ws/install/tricycle_steering_controller:/home/tigertronics/testing_ws/install/tricycle_controller:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8:/home/tigertronics/testing_ws/install/ros2_control:/home/tigertronics/testing_ws/install/transmission_interface:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11:/home/tigertronics/testing_ws/install/bicycle_steering_controller:/home/tigertronics/testing_ws/install/ackermann_steering_controller:/home/tigertronics/testing_ws/install/steering_controllers_library:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17:/home/tigertronics/testing_ws/install/ros2_control_demo_example_15:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6:/home/tigertronics/testing_ws/install/ros2_control_demo_example_13:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10:/home/tigertronics/testing_ws/install/hardware_interface_testing:/home/tigertronics/testing_ws/install/ros2_control_test_assets:/home/tigertronics/testing_ws/install/ros2_control_demo_description:/home/tigertronics/testing_ws/install/gz_ros2_control:/home/tigertronics/testing_ws/install/ros2_control_cmake:/home/tigertronics/testing_ws/install/range_sensor_broadcaster:/home/tigertronics/testing_ws/install/position_controllers:/home/tigertronics/testing_ws/install/pose_broadcaster:/home/tigertronics/testing_ws/install/pid_controller:/home/tigertronics/testing_ws/install/parallel_gripper_controller:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller:/home/tigertronics/testing_ws/install/mecanum_drive_controller:/home/tigertronics/testing_ws/install/joint_trajectory_controller:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface:/home/tigertronics/testing_ws/install/joint_state_broadcaster:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster:/home/tigertronics/testing_ws/install/gripper_controllers:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster:/home/tigertronics/testing_ws/install/gpio_controllers:/home/tigertronics/testing_ws/install/effort_controllers:/home/tigertronics/testing_ws/install/forward_command_controller:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster:/home/tigertronics/testing_ws/install/diff_drive_controller:/home/tigertronics/testing_ws/install/controller_manager:/home/tigertronics/testing_ws/install/chained_filter_controller:/home/tigertronics/testing_ws/install/admittance_controller:/home/tigertronics/testing_ws/install/controller_interface:/home/tigertronics/testing_ws/install/cm_topic_hardware_component:/home/tigertronics/testing_ws/install/hardware_interface:/home/tigertronics/testing_ws/install/joint_limits:/home/tigertronics/testing_ws/install/control_toolbox:/home/tigertronics/testing_ws/install/realtime_tools:/home/tigertronics/testing_ws/install/moblie_robot:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio:/home/tigertronics/testing_ws/install/kinematics_interface_kdl:/home/tigertronics/testing_ws/install/kinematics_interface:/home/tigertronics/testing_ws/install/gz_ros2_control_tests:/home/tigertronics/testing_ws/install/controller_manager_msgs:/home/tigertronics/testing_ws/install/control_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/mujoco_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy'}), 'shell': False}
+[0.098422] (position_verifier) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099568] (-) TimerEvent: {}
+[0.199839] (-) TimerEvent: {}
+[0.300169] (-) TimerEvent: {}
+[0.400496] (-) TimerEvent: {}
+[0.491045] (position_verifier) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.500603] (-) TimerEvent: {}
+[0.525912] (position_verifier) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.595433] (position_verifier) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.600698] (-) TimerEvent: {}
+[0.615889] (position_verifier) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.655431] (position_verifier) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.691748] (position_verifier) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700794] (-) TimerEvent: {}
+[0.801094] (-) TimerEvent: {}
+[0.822334] (position_verifier) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.832395] (position_verifier) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.901217] (-) TimerEvent: {}
+[0.975907] (position_verifier) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.001326] (-) TimerEvent: {}
+[1.101660] (-) TimerEvent: {}
+[1.105377] (position_verifier) StdoutLine: {'line': b'-- Found rclcpp_action: 28.1.16 (/opt/ros/jazzy/share/rclcpp_action/cmake)\n'}
+[1.192474] (position_verifier) StdoutLine: {'line': b'-- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)\n'}
+[1.201763] (-) TimerEvent: {}
+[1.302074] (-) TimerEvent: {}
+[1.402390] (-) TimerEvent: {}
+[1.447569] (position_verifier) StdoutLine: {'line': b'-- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[1.460157] (position_verifier) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[1.480698] (position_verifier) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.484988] (position_verifier) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.502496] (-) TimerEvent: {}
+[1.602802] (-) TimerEvent: {}
+[1.703112] (-) TimerEvent: {}
+[1.803441] (-) TimerEvent: {}
+[1.822682] (position_verifier) StdoutLine: {'line': b'-- Configuring done (1.7s)\n'}
+[1.888810] (position_verifier) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.903551] (-) TimerEvent: {}
+[1.914361] (position_verifier) StdoutLine: {'line': b'-- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/position_verifier\n'}
+[1.933105] (position_verifier) CommandEnded: {'returncode': 0}
+[1.933862] (position_verifier) JobProgress: {'identifier': 'position_verifier', 'progress': 'build'}
+[1.935414] (position_verifier) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tigertronics/mecanum_ws_v2/build/position_verifier', '--', '-j4', '-l4'], 'cwd': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'en', 'USER': 'tigertronics', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/tigertronics/testing_ws/install/ros2_control_demo_example_3/lib:/home/tigertronics/testing_ws/install/velocity_controllers/lib:/home/tigertronics/testing_ws/install/tricycle_steering_controller/lib:/home/tigertronics/testing_ws/install/tricycle_controller/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8/lib:/home/tigertronics/testing_ws/install/transmission_interface/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11/lib:/home/tigertronics/testing_ws/install/bicycle_steering_controller/lib:/home/tigertronics/testing_ws/install/ackermann_steering_controller/lib:/home/tigertronics/testing_ws/install/steering_controllers_library/lib:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12/lib:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10/lib:/home/tigertronics/testing_ws/install/hardware_interface_testing/lib:/home/tigertronics/testing_ws/install/ros2_control_test_assets/lib:/home/tigertronics/testing_ws/install/gz_ros2_control/lib:/home/tigertronics/testing_ws/install/range_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/position_controllers/lib:/home/tigertronics/testing_ws/install/pose_broadcaster/lib:/home/tigertronics/testing_ws/install/pid_controller/lib:/home/tigertronics/testing_ws/install/parallel_gripper_controller/lib:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller/lib:/home/tigertronics/testing_ws/install/mecanum_drive_controller/lib:/home/tigertronics/testing_ws/install/joint_trajectory_controller/lib:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface/lib:/home/tigertronics/testing_ws/install/joint_state_broadcaster/lib:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/gripper_controllers/lib:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/gpio_controllers/lib:/home/tigertronics/testing_ws/install/effort_controllers/lib:/home/tigertronics/testing_ws/install/forward_command_controller/lib:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster/lib:/home/tigertronics/testing_ws/install/diff_drive_controller/lib:/home/tigertronics/testing_ws/install/controller_manager/lib:/home/tigertronics/testing_ws/install/chained_filter_controller/lib:/home/tigertronics/testing_ws/install/admittance_controller/lib:/home/tigertronics/testing_ws/install/controller_interface/lib:/home/tigertronics/testing_ws/install/cm_topic_hardware_component/lib:/home/tigertronics/testing_ws/install/hardware_interface/lib:/home/tigertronics/testing_ws/install/joint_limits/lib:/home/tigertronics/testing_ws/install/control_toolbox/lib:/home/tigertronics/testing_ws/install/realtime_tools/lib:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio/lib:/home/tigertronics/testing_ws/install/kinematics_interface_kdl/lib:/home/tigertronics/testing_ws/install/kinematics_interface/lib:/home/tigertronics/testing_ws/install/controller_manager_msgs/lib:/home/tigertronics/testing_ws/install/control_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/mujoco_vendor/lib:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/tigertronics', 'OLDPWD': '/home/tigertronics', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'SYSTEMD_EXEC_PID': '2079', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '-/testing_ws', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/tigertronics/testing_ws/install:/home/tigertronics/tigert_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'tigertronics', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/mujoco_vendor/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/tigertronics-desktop:@/tmp/.ICE-unix/2047,unix/tigertronics-desktop:/tmp/.ICE-unix/2047', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/e68336c4_cde9_4bfa_aa27_4c91a0092e9a', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/home/tigertronics/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.105', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/tigertronics', 'AMENT_PREFIX_PATH': '/home/tigertronics/testing_ws/install/ros2_controllers:/home/tigertronics/testing_ws/install/ros2_control_demos:/home/tigertronics/testing_ws/install/ros2_control_demo_example_3:/home/tigertronics/testing_ws/install/gz_ros2_control_demos:/home/tigertronics/testing_ws/install/velocity_controllers:/home/tigertronics/testing_ws/install/tricycle_steering_controller:/home/tigertronics/testing_ws/install/tricycle_controller:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8:/home/tigertronics/testing_ws/install/ros2_control:/home/tigertronics/testing_ws/install/transmission_interface:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11:/home/tigertronics/testing_ws/install/bicycle_steering_controller:/home/tigertronics/testing_ws/install/ackermann_steering_controller:/home/tigertronics/testing_ws/install/steering_controllers_library:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17:/home/tigertronics/testing_ws/install/ros2_control_demo_example_15:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6:/home/tigertronics/testing_ws/install/ros2_control_demo_example_13:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/home/tigertronics/testing_ws/install/hardware_interface_testing:/home/tigertronics/testing_ws/install/ros2_control_test_assets:/home/tigertronics/testing_ws/install/ros2_control_demo_description:/home/tigertronics/testing_ws/install/gz_ros2_control:/home/tigertronics/testing_ws/install/ros2_control_cmake:/home/tigertronics/testing_ws/install/range_sensor_broadcaster:/home/tigertronics/testing_ws/install/position_controllers:/home/tigertronics/testing_ws/install/pose_broadcaster:/home/tigertronics/testing_ws/install/pid_controller:/home/tigertronics/testing_ws/install/parallel_gripper_controller:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller:/home/tigertronics/testing_ws/install/mecanum_drive_controller:/home/tigertronics/testing_ws/install/joint_trajectory_controller:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface:/home/tigertronics/testing_ws/install/joint_state_broadcaster:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster:/home/tigertronics/testing_ws/install/gripper_controllers:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster:/home/tigertronics/testing_ws/install/gpio_controllers:/home/tigertronics/testing_ws/install/effort_controllers:/home/tigertronics/testing_ws/install/forward_command_controller:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster:/home/tigertronics/testing_ws/install/diff_drive_controller:/home/tigertronics/testing_ws/install/controller_manager:/home/tigertronics/testing_ws/install/chained_filter_controller:/home/tigertronics/testing_ws/install/admittance_controller:/home/tigertronics/testing_ws/install/controller_interface:/home/tigertronics/testing_ws/install/cm_topic_hardware_component:/home/tigertronics/testing_ws/install/hardware_interface:/home/tigertronics/testing_ws/install/joint_limits:/home/tigertronics/testing_ws/install/control_toolbox:/home/tigertronics/testing_ws/install/realtime_tools:/home/tigertronics/testing_ws/install/moblie_robot:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio:/home/tigertronics/testing_ws/install/kinematics_interface_kdl:/home/tigertronics/testing_ws/install/kinematics_interface:/home/tigertronics/testing_ws/install/gz_ros2_control_tests:/home/tigertronics/testing_ws/install/controller_manager_msgs:/home/tigertronics/testing_ws/install/control_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/tigertronics/mecanum_ws_v2/build/position_verifier', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/tigertronics/testing_ws/build/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/rqt_controller_manager:/home/tigertronics/testing_ws/install/rqt_controller_manager/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/ros2controlcli:/home/tigertronics/testing_ws/install/ros2controlcli/lib/python3.12/site-packages:/home/tigertronics/testing_ws/build/ros2_controllers_test_nodes:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/controller_manager/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/controller_manager_msgs/lib/python3.12/site-packages:/home/tigertronics/testing_ws/install/control_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/tigertronics/testing_ws/install/ros2_controllers:/home/tigertronics/testing_ws/install/ros2_control_demos:/home/tigertronics/testing_ws/install/ros2_control_demo_example_3:/home/tigertronics/testing_ws/install/gz_ros2_control_demos:/home/tigertronics/testing_ws/install/velocity_controllers:/home/tigertronics/testing_ws/install/tricycle_steering_controller:/home/tigertronics/testing_ws/install/tricycle_controller:/home/tigertronics/testing_ws/install/ros2_control_demo_example_8:/home/tigertronics/testing_ws/install/ros2_control:/home/tigertronics/testing_ws/install/transmission_interface:/home/tigertronics/testing_ws/install/ros2_control_demo_example_11:/home/tigertronics/testing_ws/install/bicycle_steering_controller:/home/tigertronics/testing_ws/install/ackermann_steering_controller:/home/tigertronics/testing_ws/install/steering_controllers_library:/home/tigertronics/testing_ws/install/state_interfaces_broadcaster:/home/tigertronics/testing_ws/install/ros2_control_demo_example_17:/home/tigertronics/testing_ws/install/ros2_control_demo_example_15:/home/tigertronics/testing_ws/install/ros2_control_demo_example_1:/home/tigertronics/testing_ws/install/ros2_control_demo_example_9:/home/tigertronics/testing_ws/install/ros2_control_demo_example_7:/home/tigertronics/testing_ws/install/ros2_control_demo_example_6:/home/tigertronics/testing_ws/install/ros2_control_demo_example_13:/home/tigertronics/testing_ws/install/ros2_control_demo_example_5:/home/tigertronics/testing_ws/install/ros2_control_demo_example_4:/home/tigertronics/testing_ws/install/ros2_control_demo_example_2:/home/tigertronics/testing_ws/install/ros2_control_demo_example_16:/home/tigertronics/testing_ws/install/ros2_control_demo_example_14:/home/tigertronics/testing_ws/install/ros2_control_demo_example_12:/home/tigertronics/testing_ws/install/ros2_control_demo_example_10:/home/tigertronics/testing_ws/install/hardware_interface_testing:/home/tigertronics/testing_ws/install/ros2_control_test_assets:/home/tigertronics/testing_ws/install/ros2_control_demo_description:/home/tigertronics/testing_ws/install/gz_ros2_control:/home/tigertronics/testing_ws/install/ros2_control_cmake:/home/tigertronics/testing_ws/install/range_sensor_broadcaster:/home/tigertronics/testing_ws/install/position_controllers:/home/tigertronics/testing_ws/install/pose_broadcaster:/home/tigertronics/testing_ws/install/pid_controller:/home/tigertronics/testing_ws/install/parallel_gripper_controller:/home/tigertronics/testing_ws/install/omni_wheel_drive_controller:/home/tigertronics/testing_ws/install/mecanum_drive_controller:/home/tigertronics/testing_ws/install/joint_trajectory_controller:/home/tigertronics/testing_ws/install/joint_state_topic_hardware_interface:/home/tigertronics/testing_ws/install/joint_state_broadcaster:/home/tigertronics/testing_ws/install/imu_sensor_broadcaster:/home/tigertronics/testing_ws/install/gripper_controllers:/home/tigertronics/testing_ws/install/gps_sensor_broadcaster:/home/tigertronics/testing_ws/install/gpio_controllers:/home/tigertronics/testing_ws/install/effort_controllers:/home/tigertronics/testing_ws/install/forward_command_controller:/home/tigertronics/testing_ws/install/force_torque_sensor_broadcaster:/home/tigertronics/testing_ws/install/diff_drive_controller:/home/tigertronics/testing_ws/install/controller_manager:/home/tigertronics/testing_ws/install/chained_filter_controller:/home/tigertronics/testing_ws/install/admittance_controller:/home/tigertronics/testing_ws/install/controller_interface:/home/tigertronics/testing_ws/install/cm_topic_hardware_component:/home/tigertronics/testing_ws/install/hardware_interface:/home/tigertronics/testing_ws/install/joint_limits:/home/tigertronics/testing_ws/install/control_toolbox:/home/tigertronics/testing_ws/install/realtime_tools:/home/tigertronics/testing_ws/install/moblie_robot:/home/tigertronics/testing_ws/install/kinematics_interface_pinocchio:/home/tigertronics/testing_ws/install/kinematics_interface_kdl:/home/tigertronics/testing_ws/install/kinematics_interface:/home/tigertronics/testing_ws/install/gz_ros2_control_tests:/home/tigertronics/testing_ws/install/controller_manager_msgs:/home/tigertronics/testing_ws/install/control_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/mujoco_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/tigertronics/testing_ws/install/rqt_joint_trajectory_controller:/home/tigertronics/testing_ws/install/rqt_controller_manager:/home/tigertronics/testing_ws/install/ros2controlcli:/home/tigertronics/testing_ws/install/ros2_controllers_test_nodes:/opt/ros/jazzy'}), 'shell': False}
+[2.003666] (-) TimerEvent: {}
+[2.104011] (-) TimerEvent: {}
+[2.152925] (position_verifier) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/position_verifier_node.dir/src/position_verifier_node.cpp.o\x1b[0m\n'}
+[2.204131] (-) TimerEvent: {}
+[2.304481] (-) TimerEvent: {}
+[2.404813] (-) TimerEvent: {}
+[2.505151] (-) TimerEvent: {}
+[2.605491] (-) TimerEvent: {}
+[2.705901] (-) TimerEvent: {}
+[2.806269] (-) TimerEvent: {}
+[2.906627] (-) TimerEvent: {}
+[3.007022] (-) TimerEvent: {}
+[3.107392] (-) TimerEvent: {}
+[3.207787] (-) TimerEvent: {}
+[3.308144] (-) TimerEvent: {}
+[3.408522] (-) TimerEvent: {}
+[3.508888] (-) TimerEvent: {}
+[3.609257] (-) TimerEvent: {}
+[3.709631] (-) TimerEvent: {}
+[3.809975] (-) TimerEvent: {}
+[3.910321] (-) TimerEvent: {}
+[4.010687] (-) TimerEvent: {}
+[4.111034] (-) TimerEvent: {}
+[4.211392] (-) TimerEvent: {}
+[4.311758] (-) TimerEvent: {}
+[4.412110] (-) TimerEvent: {}
+[4.512534] (-) TimerEvent: {}
+[4.614540] (-) TimerEvent: {}
+[4.714936] (-) TimerEvent: {}
+[4.815419] (-) TimerEvent: {}
+[4.915800] (-) TimerEvent: {}
+[5.016208] (-) TimerEvent: {}
+[5.116751] (-) TimerEvent: {}
+[5.217091] (-) TimerEvent: {}
+[5.317426] (-) TimerEvent: {}
+[5.417780] (-) TimerEvent: {}
+[5.518145] (-) TimerEvent: {}
+[5.618510] (-) TimerEvent: {}
+[5.718891] (-) TimerEvent: {}
+[5.819243] (-) TimerEvent: {}
+[5.919713] (-) TimerEvent: {}
+[6.020210] (-) TimerEvent: {}
+[6.120555] (-) TimerEvent: {}
+[6.220904] (-) TimerEvent: {}
+[6.321248] (-) TimerEvent: {}
+[6.421605] (-) TimerEvent: {}
+[6.521951] (-) TimerEvent: {}
+[6.622292] (-) TimerEvent: {}
+[6.722655] (-) TimerEvent: {}
+[6.823002] (-) TimerEvent: {}
+[6.923351] (-) TimerEvent: {}
+[7.023718] (-) TimerEvent: {}
+[7.124060] (-) TimerEvent: {}
+[7.224423] (-) TimerEvent: {}
+[7.324790] (-) TimerEvent: {}
+[7.425140] (-) TimerEvent: {}
+[7.525493] (-) TimerEvent: {}
+[7.625841] (-) TimerEvent: {}
+[7.726178] (-) TimerEvent: {}
+[7.826534] (-) TimerEvent: {}
+[7.926867] (-) TimerEvent: {}
+[8.027207] (-) TimerEvent: {}
+[8.127570] (-) TimerEvent: {}
+[8.228037] (-) TimerEvent: {}
+[8.328447] (-) TimerEvent: {}
+[8.428972] (-) TimerEvent: {}
+[8.529317] (-) TimerEvent: {}
+[8.629689] (-) TimerEvent: {}
+[8.730028] (-) TimerEvent: {}
+[8.830380] (-) TimerEvent: {}
+[8.930735] (-) TimerEvent: {}
+[9.031111] (-) TimerEvent: {}
+[9.131480] (-) TimerEvent: {}
+[9.232451] (-) TimerEvent: {}
+[9.332809] (-) TimerEvent: {}
+[9.433140] (-) TimerEvent: {}
+[9.533492] (-) TimerEvent: {}
+[9.633861] (-) TimerEvent: {}
+[9.734224] (-) TimerEvent: {}
+[9.834578] (-) TimerEvent: {}
+[9.934937] (-) TimerEvent: {}
+[10.035285] (-) TimerEvent: {}
+[10.135674] (-) TimerEvent: {}
+[10.236070] (-) TimerEvent: {}
+[10.336415] (-) TimerEvent: {}
+[10.436791] (-) TimerEvent: {}
+[10.537152] (-) TimerEvent: {}
+[10.637510] (-) TimerEvent: {}
+[10.737869] (-) TimerEvent: {}
+[10.838212] (-) TimerEvent: {}
+[10.938576] (-) TimerEvent: {}
+[11.038930] (-) TimerEvent: {}
+[11.139277] (-) TimerEvent: {}
+[11.242682] (-) TimerEvent: {}
+[11.343033] (-) TimerEvent: {}
+[11.443413] (-) TimerEvent: {}
+[11.543841] (-) TimerEvent: {}
+[11.644219] (-) TimerEvent: {}
+[11.744569] (-) TimerEvent: {}
+[11.844920] (-) TimerEvent: {}
+[11.945268] (-) TimerEvent: {}
+[12.045628] (-) TimerEvent: {}
+[12.146020] (-) TimerEvent: {}
+[12.246344] (-) TimerEvent: {}
+[12.346687] (-) TimerEvent: {}
+[12.447055] (-) TimerEvent: {}
+[12.547421] (-) TimerEvent: {}
+[12.647952] (-) TimerEvent: {}
+[12.748529] (-) TimerEvent: {}
+[12.848967] (-) TimerEvent: {}
+[12.949341] (-) TimerEvent: {}
+[13.049695] (-) TimerEvent: {}
+[13.150039] (-) TimerEvent: {}
+[13.250374] (-) TimerEvent: {}
+[13.350724] (-) TimerEvent: {}
+[13.451060] (-) TimerEvent: {}
+[13.551403] (-) TimerEvent: {}
+[13.651775] (-) TimerEvent: {}
+[13.752127] (-) TimerEvent: {}
+[13.852485] (-) TimerEvent: {}
+[13.952836] (-) TimerEvent: {}
+[14.053202] (-) TimerEvent: {}
+[14.153565] (-) TimerEvent: {}
+[14.253932] (-) TimerEvent: {}
+[14.354397] (-) TimerEvent: {}
+[14.454828] (-) TimerEvent: {}
+[14.555208] (-) TimerEvent: {}
+[14.655567] (-) TimerEvent: {}
+[14.755956] (-) TimerEvent: {}
+[14.856323] (-) TimerEvent: {}
+[14.956700] (-) TimerEvent: {}
+[15.057038] (-) TimerEvent: {}
+[15.157381] (-) TimerEvent: {}
+[15.257734] (-) TimerEvent: {}
+[15.358067] (-) TimerEvent: {}
+[15.458429] (-) TimerEvent: {}
+[15.559542] (-) TimerEvent: {}
+[15.659985] (-) TimerEvent: {}
+[15.760507] (-) TimerEvent: {}
+[15.860855] (-) TimerEvent: {}
+[15.961201] (-) TimerEvent: {}
+[16.061544] (-) TimerEvent: {}
+[16.161889] (-) TimerEvent: {}
+[16.262223] (-) TimerEvent: {}
+[16.362571] (-) TimerEvent: {}
+[16.462936] (-) TimerEvent: {}
+[16.563273] (-) TimerEvent: {}
+[16.663637] (-) TimerEvent: {}
+[16.763981] (-) TimerEvent: {}
+[16.864324] (-) TimerEvent: {}
+[16.964699] (-) TimerEvent: {}
+[17.065080] (-) TimerEvent: {}
+[17.165484] (-) TimerEvent: {}
+[17.265828] (-) TimerEvent: {}
+[17.366174] (-) TimerEvent: {}
+[17.466530] (-) TimerEvent: {}
+[17.566942] (-) TimerEvent: {}
+[17.667432] (-) TimerEvent: {}
+[17.767825] (-) TimerEvent: {}
+[17.868284] (-) TimerEvent: {}
+[17.968647] (-) TimerEvent: {}
+[18.069026] (-) TimerEvent: {}
+[18.169403] (-) TimerEvent: {}
+[18.269834] (-) TimerEvent: {}
+[18.370194] (-) TimerEvent: {}
+[18.470552] (-) TimerEvent: {}
+[18.570960] (-) TimerEvent: {}
+[18.671334] (-) TimerEvent: {}
+[18.771704] (-) TimerEvent: {}
+[18.872052] (-) TimerEvent: {}
+[18.972404] (-) TimerEvent: {}
+[19.413923] (-) TimerEvent: {}
+[19.813561] (-) TimerEvent: {}
+[19.914018] (-) TimerEvent: {}
+[20.014412] (-) TimerEvent: {}
+[20.114820] (-) TimerEvent: {}
+[20.215199] (-) TimerEvent: {}
+[20.315573] (-) TimerEvent: {}
+[20.415959] (-) TimerEvent: {}
+[20.516367] (-) TimerEvent: {}
+[20.616745] (-) TimerEvent: {}
+[20.717060] (-) TimerEvent: {}
+[20.817438] (-) TimerEvent: {}
+[20.917828] (-) TimerEvent: {}
+[21.018214] (-) TimerEvent: {}
+[21.118598] (-) TimerEvent: {}
+[21.218960] (-) TimerEvent: {}
+[21.319339] (-) TimerEvent: {}
+[21.419720] (-) TimerEvent: {}
+[21.520042] (-) TimerEvent: {}
+[21.620358] (-) TimerEvent: {}
+[21.720726] (-) TimerEvent: {}
+[21.821076] (-) TimerEvent: {}
+[21.921418] (-) TimerEvent: {}
+[22.021755] (-) TimerEvent: {}
+[22.122083] (-) TimerEvent: {}
+[22.222401] (-) TimerEvent: {}
+[22.322735] (-) TimerEvent: {}
+[22.423106] (-) TimerEvent: {}
+[22.523486] (-) TimerEvent: {}
+[22.623869] (-) TimerEvent: {}
+[22.724241] (-) TimerEvent: {}
+[22.824623] (-) TimerEvent: {}
+[22.924968] (-) TimerEvent: {}
+[23.025287] (-) TimerEvent: {}
+[23.125646] (-) TimerEvent: {}
+[23.226055] (-) TimerEvent: {}
+[23.326447] (-) TimerEvent: {}
+[23.426828] (-) TimerEvent: {}
+[23.527183] (-) TimerEvent: {}
+[23.627547] (-) TimerEvent: {}
+[23.727916] (-) TimerEvent: {}
+[23.828346] (-) TimerEvent: {}
+[23.928707] (-) TimerEvent: {}
+[24.029063] (-) TimerEvent: {}
+[24.129473] (-) TimerEvent: {}
+[24.229867] (-) TimerEvent: {}
+[24.330264] (-) TimerEvent: {}
+[24.430679] (-) TimerEvent: {}
+[24.531109] (-) TimerEvent: {}
+[24.631502] (-) TimerEvent: {}
+[24.731885] (-) TimerEvent: {}
+[24.832277] (-) TimerEvent: {}
+[25.160643] (-) TimerEvent: {}
+[25.260994] (-) TimerEvent: {}
+[25.361340] (-) TimerEvent: {}
+[25.461687] (-) TimerEvent: {}
+[25.562042] (-) TimerEvent: {}
+[25.662366] (-) TimerEvent: {}
+[25.762793] (-) TimerEvent: {}
+[25.863140] (-) TimerEvent: {}
+[25.963547] (-) TimerEvent: {}
+[26.063935] (-) TimerEvent: {}
+[26.164324] (-) TimerEvent: {}
+[26.264781] (-) TimerEvent: {}
+[26.365174] (-) TimerEvent: {}
+[26.465581] (-) TimerEvent: {}
+[26.565967] (-) TimerEvent: {}
+[26.666377] (-) TimerEvent: {}
+[26.766789] (-) TimerEvent: {}
+[26.867190] (-) TimerEvent: {}
+[26.967591] (-) TimerEvent: {}
+[27.067989] (-) TimerEvent: {}
+[27.168354] (-) TimerEvent: {}
+[27.268753] (-) TimerEvent: {}
+[27.369141] (-) TimerEvent: {}
+[27.469541] (-) TimerEvent: {}
+[27.569927] (-) TimerEvent: {}
+[27.670336] (-) TimerEvent: {}
+[27.770765] (-) TimerEvent: {}
+[27.871182] (-) TimerEvent: {}
+[27.971580] (-) TimerEvent: {}
+[28.071951] (-) TimerEvent: {}
+[28.172352] (-) TimerEvent: {}
+[28.272770] (-) TimerEvent: {}
+[28.373148] (-) TimerEvent: {}
+[28.473662] (-) TimerEvent: {}
+[28.574058] (-) TimerEvent: {}
+[28.674443] (-) TimerEvent: {}
+[28.774824] (-) TimerEvent: {}
+[28.875209] (-) TimerEvent: {}
+[28.975642] (-) TimerEvent: {}
+[29.076022] (-) TimerEvent: {}
+[29.176370] (-) TimerEvent: {}
+[29.276710] (-) TimerEvent: {}
+[29.377100] (-) TimerEvent: {}
+[29.477476] (-) TimerEvent: {}
+[29.577836] (-) TimerEvent: {}
+[29.678201] (-) TimerEvent: {}
+[29.778555] (-) TimerEvent: {}
+[29.878966] (-) TimerEvent: {}
+[29.979406] (-) TimerEvent: {}
+[30.552809] (-) TimerEvent: {}
+[30.897801] (-) TimerEvent: {}
+[31.228779] (-) TimerEvent: {}
+[31.329156] (-) TimerEvent: {}
+[31.429531] (-) TimerEvent: {}
+[31.529888] (-) TimerEvent: {}
+[31.630261] (-) TimerEvent: {}
+[31.730666] (-) TimerEvent: {}
+[31.831041] (-) TimerEvent: {}
+[31.931403] (-) TimerEvent: {}
+[32.031812] (-) TimerEvent: {}
+[32.132185] (-) TimerEvent: {}
+[32.232574] (-) TimerEvent: {}
+[32.332965] (-) TimerEvent: {}
+[32.433352] (-) TimerEvent: {}
+[32.533761] (-) TimerEvent: {}
+[32.634145] (-) TimerEvent: {}
+[32.734545] (-) TimerEvent: {}
+[32.834927] (-) TimerEvent: {}
+[32.935313] (-) TimerEvent: {}
+[33.035715] (-) TimerEvent: {}
+[33.136078] (-) TimerEvent: {}
+[33.236429] (-) TimerEvent: {}
+[33.336783] (-) TimerEvent: {}
+[33.437115] (-) TimerEvent: {}
+[34.353046] (-) TimerEvent: {}
+[37.436608] (-) TimerEvent: {}
+[37.539095] (-) TimerEvent: {}
+[37.639513] (-) TimerEvent: {}
+[38.159062] (-) TimerEvent: {}
+[38.321762] (-) TimerEvent: {}
+[38.422162] (-) TimerEvent: {}
+[38.522571] (-) TimerEvent: {}
+[38.622949] (-) TimerEvent: {}
+[40.104466] (-) TimerEvent: {}
+[40.268351] (-) TimerEvent: {}
+[40.368748] (-) TimerEvent: {}
+[40.469132] (-) TimerEvent: {}
+[42.211132] (-) TimerEvent: {}
+[42.381535] (-) TimerEvent: {}
+[42.481921] (-) TimerEvent: {}
+[42.582277] (-) TimerEvent: {}
+[42.682659] (-) TimerEvent: {}
+[42.783032] (-) TimerEvent: {}
+[42.883420] (-) TimerEvent: {}
+[42.983804] (-) TimerEvent: {}
+[43.084173] (-) TimerEvent: {}
+[43.184531] (-) TimerEvent: {}
+[43.284893] (-) TimerEvent: {}
+[43.385270] (-) TimerEvent: {}
+[66.936488] (-) TimerEvent: {}
+[67.252124] (position_verifier) StderrLine: {'line': b'\x1b[01m\x1b[Kc++:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[KKilled signal terminated program cc1plus\n'}
+[67.299435] (-) TimerEvent: {}
+[67.299634] (position_verifier) StderrLine: {'line': b'compilation terminated.\n'}
+[67.299820] (position_verifier) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/position_verifier_node.dir/build.make:76: CMakeFiles/position_verifier_node.dir/src/position_verifier_node.cpp.o] Error 1\n'}
+[67.299955] (position_verifier) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/position_verifier_node.dir/all] Error 2\n'}
+[67.300079] (position_verifier) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[67.399562] (-) TimerEvent: {}
+[67.499925] (-) TimerEvent: {}
+[67.600302] (-) TimerEvent: {}
+[67.700700] (-) TimerEvent: {}
+[67.801090] (-) TimerEvent: {}
+[67.882793] (position_verifier) CommandEnded: {'returncode': 2}
+[67.901165] (-) TimerEvent: {}
+[68.001477] (-) TimerEvent: {}
+[68.101798] (-) TimerEvent: {}

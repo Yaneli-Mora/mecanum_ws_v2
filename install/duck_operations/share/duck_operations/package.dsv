@@ -1,0 +1,8 @@
+source;share/duck_operations/hook/cmake_prefix_path.ps1
+source;share/duck_operations/hook/cmake_prefix_path.dsv
+source;share/duck_operations/hook/cmake_prefix_path.sh
+source;share/duck_operations/local_setup.bash
+source;share/duck_operations/local_setup.dsv
+source;share/duck_operations/local_setup.ps1
+source;share/duck_operations/local_setup.sh
+source;share/duck_operations/local_setup.zsh

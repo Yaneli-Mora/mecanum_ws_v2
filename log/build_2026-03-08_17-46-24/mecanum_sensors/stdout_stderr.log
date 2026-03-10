@@ -1,0 +1,68 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+-- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)
+-- Configuring done (1.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/tigertronics/mecanum_ws_v2/build/mecanum_sensors
+[ 37%] [32mBuilding CXX object CMakeFiles/tof_node.dir/src/tof_node.cpp.o[0m
+[ 37%] Built target imu_node
+[ 62%] Built target teensy_bridge_node
+[ 87%] Built target fixture_detector_node
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint16_t[01;32m[K readReg16[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:59:14:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   59 |   (void)[01;35m[Kwrite(fd, buf, 2)[m[K;
+      |         [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:61:13:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   61 |   (void)[01;35m[Kread(fd, val, 2)[m[K;
+      |         [01;35m[K~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint8_t[01;32m[K readReg[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:52:14:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   52 |   (void)[01;35m[Kwrite(fd, buf, 2)[m[K;
+      |         [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:54:13:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   54 |   (void)[01;35m[Kread(fd, &val, 1)[m[K;
+      |         [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg[m[K(int, uint16_t, uint8_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:43:14:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   43 |   (void)[01;35m[Kwrite(fd, buf, 3)[m[K;
+      |         [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg16[m[K(int, uint16_t, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:48:14:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   48 |   (void)[01;35m[Kwrite(fd, buf, 4)[m[K;
+      |         [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable tof_node[0m
+[100%] Built target tof_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/teensy_bridge_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/fixture_detector_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/imu_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/lib/mecanum_sensors/tof_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/fixture_detector_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/include/mecanum_sensors/teensy_bridge_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/package_run_dependencies/mecanum_sensors
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/parent_prefix_path/mecanum_sensors
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/environment/path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.bash
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.zsh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/ament_index/resource_index/packages/mecanum_sensors
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/cmake/mecanum_sensorsConfig-version.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/mecanum_sensors/share/mecanum_sensors/package.xml

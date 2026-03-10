@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/tigertronics/mecanum_ws_v2/build/mecanum_sensors/fixture_detector_node" "TARGETS" "fixture_detector_node" "DESTINATION" "lib/mecanum_sensors")

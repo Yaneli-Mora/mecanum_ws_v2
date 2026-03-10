@@ -1,0 +1,20 @@
+[100%] Built target position_verifier_node
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/lib/position_verifier/position_verifier_node
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/include/position_verifier/position_verifier_node.hpp
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/package_run_dependencies/position_verifier
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/parent_prefix_path/position_verifier
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/environment/path.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.bash
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.sh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.zsh
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/local_setup.dsv
+-- Symlinking: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.dsv
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/ament_index/resource_index/packages/position_verifier
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/cmake/position_verifierConfig-version.cmake
+-- Up-to-date symlink: /home/tigertronics/mecanum_ws_v2/install/position_verifier/share/position_verifier/package.xml

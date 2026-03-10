@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--
+    Sensor layout (all positions relative to base_link centre):
+
+    FRONT of robot (+x direction):
+      Camera         — front face, top centre
+      Ultrasonic FL  — front-left corner
+      Ultrasonic FR  — front-right corner
+
+    REAR of robot (-x direction):
+      ToF 0 (left)   — rear-left  (keypad squareness L)
+      ToF 1 (right)  — rear-right (keypad squareness R)
+      Ultrasonic RL  — rear-left corner
+      Ultrasonic RR  — rear-right corner
+
+    RIGHT SIDE of robot (-y direction):
+      ToF 2 (side)   — right side centre (antenna_2 strafe + crank)
+
+    BOTTOM (facing down):
+      Optical flow   — centre underside
+      TCRT5000       — front-centre underside (line tracker, on Arduino)
+
+    TOP/CENTRE:
+      IMU            — body centre top
+  -->
+
+  <!-- ── IMU ─────────────────────────────────────────────────────────── -->
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="imu_link"/>
+    <origin xyz="0 0 0.038" rpy="0 0 0"/>  <!-- top of body -->
+  </joint>
+
+  <!-- ── Forward camera ───────────────────────────────────────────────── -->
+  <link name="camera_forward_link"/>
+  <joint name="camera_forward_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="camera_forward_link"/>
+    <origin xyz="0.127 0 0.038" rpy="0 0 0"/>  <!-- front face centre -->
+  </joint>
+
+  <!-- ── ToF sensor 0 — rear LEFT (keypad left) ───────────────────────── -->
+  <link name="tof_0_link"/>
+  <joint name="tof_0_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="tof_0_link"/>
+    <origin xyz="-0.127 0.040 0" rpy="0 0 3.1416"/>  <!-- facing rear -->
+  </joint>
+
+  <!-- ── ToF sensor 1 — rear RIGHT (keypad right) ─────────────────────── -->
+  <link name="tof_1_link"/>
+  <joint name="tof_1_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="tof_1_link"/>
+    <origin xyz="-0.127 -0.040 0" rpy="0 0 3.1416"/>  <!-- facing rear -->
+  </joint>
+
+  <!-- ── ToF sensor 2 — RIGHT SIDE (antenna_2 strafe + crank) ─────────── -->
+  <link name="tof_2_link"/>
+  <joint name="tof_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="tof_2_link"/>
+    <origin xyz="0 -0.089 0" rpy="0 0 -1.5708"/>  <!-- facing right -->
+  </joint>
+
+  <!-- ── Ultrasonic FL — front-left ───────────────────────────────────── -->
+  <link name="ultrasonic_fl_link"/>
+  <joint name="ultrasonic_fl_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="ultrasonic_fl_link"/>
+    <origin xyz="0.127 0.070 0.010" rpy="0 0 0"/>  <!-- facing front -->
+  </joint>
+
+  <!-- ── Ultrasonic FR — front-right ──────────────────────────────────── -->
+  <link name="ultrasonic_fr_link"/>
+  <joint name="ultrasonic_fr_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="ultrasonic_fr_link"/>
+    <origin xyz="0.127 -0.070 0.010" rpy="0 0 0"/>  <!-- facing front -->
+  </joint>
+
+  <!-- ── Ultrasonic RL — rear-left ─────────────────────────────────────── -->
+  <link name="ultrasonic_rl_link"/>
+  <joint name="ultrasonic_rl_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="ultrasonic_rl_link"/>
+    <origin xyz="-0.127 0.070 0.010" rpy="0 0 3.1416"/>  <!-- facing rear -->
+  </joint>
+
+  <!-- ── Ultrasonic RR — rear-right ────────────────────────────────────── -->
+  <link name="ultrasonic_rr_link"/>
+  <joint name="ultrasonic_rr_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="ultrasonic_rr_link"/>
+    <origin xyz="-0.127 -0.070 0.010" rpy="0 0 3.1416"/>  <!-- facing rear -->
+  </joint>
+
+  <!-- ── Optical flow — bottom centre ─────────────────────────────────── -->
+  <link name="optical_flow_link"/>
+  <joint name="optical_flow_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="optical_flow_link"/>
+    <origin xyz="0 0 -0.038" rpy="0 3.1416 0"/>  <!-- facing down -->
+  </joint>
+
+  <!-- ── TCRT5000 line tracker — front-centre bottom (on Arduino) ──────── -->
+  <link name="line_tracker_link"/>
+  <joint name="line_tracker_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="line_tracker_link"/>
+    <origin xyz="0.080 0 -0.038" rpy="0 3.1416 0"/>  <!-- facing down, front biased -->
+  </joint>
+
+</robot>

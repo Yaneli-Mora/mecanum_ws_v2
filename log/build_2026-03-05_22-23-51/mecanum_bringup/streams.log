@@ -1,0 +1,45 @@
+[0.065s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[0.651s] -- The C compiler identification is GNU 13.3.0
+[1.297s] -- The CXX compiler identification is GNU 13.3.0
+[1.361s] -- Detecting C compiler ABI info
+[1.960s] -- Detecting C compiler ABI info - done
+[1.987s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.987s] -- Detecting C compile features
+[1.990s] -- Detecting C compile features - done
+[2.020s] -- Detecting CXX compiler ABI info
+[2.723s] -- Detecting CXX compiler ABI info - done
+[2.753s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.754s] -- Detecting CXX compile features
+[2.754s] -- Detecting CXX compile features - done
+[2.803s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.576s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.702s] Error parsing '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml':
+[55.443s] Traceback (most recent call last):
+[55.491s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[55.491s]     main()
+[55.492s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[55.492s]     raise e
+[55.494s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[55.495s]     package = parse_package_string(
+[55.495s]               ^^^^^^^^^^^^^^^^^^^^^
+[55.498s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 630, in parse_package_string
+[55.503s]     pkg.name = _get_node_value(_get_node(root, 'name', filename))
+[55.504s]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[55.505s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 800, in _get_node
+[55.505s]     raise InvalidPackage('The manifest must contain exactly one "%s" tag' % tagname, filename)
+[55.512s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml':
+[55.517s] The manifest must contain exactly one "name" tag
+[56.269s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[56.283s]   execute_process(/usr/bin/python3
+[56.298s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[56.307s]   /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml
+[56.311s]   /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup/ament_cmake_core/package.cmake)
+[56.325s]   returned error code 1
+[56.326s] Call Stack (most recent call first):
+[56.332s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[56.338s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[56.339s]   CMakeLists.txt:5 (ament_package)
+[56.342s] 
+[56.344s] [0m
+[56.350s] -- Configuring incomplete, errors occurred!
+[56.446s] Invoked command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup

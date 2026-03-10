@@ -1,0 +1,31 @@
+# sensor_calibration.yaml — fill in after physical testing
+
+tof:
+  left_offset_mm:   0.0    # positive = sensor reads short
+  right_offset_mm:  0.0
+  max_range_mm:     600
+  square_tolerance_mm: 8.0
+
+color_sensors:
+  black_clear_threshold:  50
+  white_clear_threshold:  800
+  green_ratio_min:        0.45
+  blue_ratio_min:         0.40
+  debounce_ms:            50
+
+encoders:
+  ticks_per_rev:  4096
+  wheel_radius_m: 0.050
+  wheel_base_x_m: 0.150
+  wheel_base_y_m: 0.170
+
+camera_forward:
+  fx: 554.0
+  fy: 554.0
+  cx: 320.0
+  cy: 240.0
+  height_above_floor_m: 0.30
+
+photodiode:
+  threshold:       700
+  sustained_count: 50

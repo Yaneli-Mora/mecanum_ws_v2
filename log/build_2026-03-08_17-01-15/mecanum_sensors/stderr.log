@@ -1,0 +1,55 @@
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/teensy_bridge_node.cpp:[m[K In constructor ‘[01m[Kmecanum_sensors::TeensyBridgeNode::[01;32m[KTeensyBridgeNode[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/teensy_bridge_node.cpp:27:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktof_pub_[m[K’ was not declared in this scope
+   27 |   [01;31m[Ktof_pub_[m[K         = create_publisher<std_msgs::msg::Float32MultiArray>("/tof_distances", 10);
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In constructor ‘[01m[KToFNode::[01;32m[KToFNode[m[K()[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:112:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KToFNode::create_timer(ToFNode*, rclcpp::Clock::SharedPtr, rclcpp::Duration, std::_Bind_helper<false, void (ToFNode::*)(), ToFNode*>::type)[m[K’
+  112 |     timer_ = [01;31m[Kcreate_timer(this, get_clock(),[m[K
+      |              [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+  113 | [01;31m[K      rclcpp::Duration::from_seconds(period),[m[K
+      |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  114 | [01;31m[K      std::bind(&ToFNode::publish, this))[m[K;
+      |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+                 from [01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:13[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:255:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::GenericTimer<CallbackT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_timer[m[K(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+  255 |   [01;36m[Kcreate_timer[m[K(
+      |   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:255:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:112:26:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[KToFNode*[m[K’
+  112 |     timer_ = [01;36m[Kcreate_timer(this, get_clock(),[m[K
+      |              [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+  113 | [01;36m[K      rclcpp::Duration::from_seconds(period),[m[K
+      |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  114 | [01;36m[K      std::bind(&ToFNode::publish, this))[m[K;
+      |       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg[m[K(int, uint16_t, uint8_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:56:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   56 |   [01;35m[Kwrite(fd, buf, 3)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint16_t[01;32m[K readReg16[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:72:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   72 |   [01;35m[Kwrite(fd, buf, 2)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:74:7:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   74 |   [01;35m[Kread(fd, val, 2)[m[K;
+      |   [01;35m[K~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kuint8_t[01;32m[K readReg[m[K(int, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:65:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   65 |   [01;35m[Kwrite(fd, buf, 2)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:67:7:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K read[m[K(int, void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   67 |   [01;35m[Kread(fd, &val, 1)[m[K;
+      |   [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K writeReg16[m[K(int, uint16_t, uint16_t)[m[K’:
+[01m[K/home/tigertronics/mecanum_ws_v2/src/mecanum_sensors/src/tof_node.cpp:61:8:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kssize_t[01;32m[K write[m[K(int, const void*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   61 |   [01;35m[Kwrite(fd, buf, 4)[m[K;
+      |   [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/tof_node.dir/build.make:76: CMakeFiles/tof_node.dir/src/tof_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/tof_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/teensy_bridge_node.dir/build.make:76: CMakeFiles/teensy_bridge_node.dir/src/teensy_bridge_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/teensy_bridge_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

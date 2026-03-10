@@ -1,0 +1,10 @@
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/task_manager_uninstall.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/task_manager_node.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/test.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/edit_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/rebuild_cache.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/list_install_components.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/install.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/install/local.dir
+/home/tigertronics/mecanum_ws_v2/build/task_manager/CMakeFiles/install/strip.dir

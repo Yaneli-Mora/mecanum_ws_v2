@@ -1,0 +1,17 @@
+/home/tigertronics/mecanum_ws_v2/install/task_manager/lib/task_manager/task_manager_node
+/home/tigertronics/mecanum_ws_v2/install/task_manager/include/task_manager/task_manager_node.hpp
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/package_run_dependencies/task_manager
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/parent_prefix_path/task_manager
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.sh
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/ament_prefix_path.dsv
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.sh
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/environment/path.dsv
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.bash
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.sh
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.zsh
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/local_setup.dsv
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.dsv
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/ament_index/resource_index/packages/task_manager
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig.cmake
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/cmake/task_managerConfig-version.cmake
+/home/tigertronics/mecanum_ws_v2/install/task_manager/share/task_manager/package.xml

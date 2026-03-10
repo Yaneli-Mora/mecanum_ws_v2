@@ -1,0 +1,31 @@
+[0.058s] Invoking command in '/home/tigertronics/mecanum_ws_v2/build/mecanum_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup -DCMAKE_INSTALL_PREFIX=/home/tigertronics/mecanum_ws_v2/install/mecanum_bringup
+[0.125s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.632s] Error parsing '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml':
+[53.533s] Traceback (most recent call last):
+[53.535s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[53.542s]     main()
+[53.549s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[53.551s]     raise e
+[53.551s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[53.552s]     package = parse_package_string(
+[53.562s]               ^^^^^^^^^^^^^^^^^^^^^
+[53.570s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 630, in parse_package_string
+[53.572s]     pkg.name = _get_node_value(_get_node(root, 'name', filename))
+[53.573s]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[53.574s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 800, in _get_node
+[53.574s]     raise InvalidPackage('The manifest must contain exactly one "%s" tag' % tagname, filename)
+[53.574s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml':
+[53.575s] The manifest must contain exactly one "name" tag
+[54.359s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[54.364s]   execute_process(/usr/bin/python3
+[54.366s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[54.366s]   /home/tigertronics/mecanum_ws_v2/src/mecanum_bringup/package.xml
+[54.366s]   /home/tigertronics/mecanum_ws_v2/build/mecanum_bringup/ament_cmake_core/package.cmake)
+[54.370s]   returned error code 1
+[54.373s] Call Stack (most recent call first):
+[54.380s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[54.385s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package.cmake:63 (ament_package_xml)
+[54.392s]   CMakeLists.txt:5 (ament_package)
+[54.397s] 
+[54.399s] [0m
+[54.409s] -- Configuring incomplete, errors occurred!

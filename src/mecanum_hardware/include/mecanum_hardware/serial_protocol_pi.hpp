@@ -2,15 +2,16 @@
 #include <cstdint>
 #include <cstddef>
 
+// ── Teensy 1 → Pi binary packet ──────────────────────────────────────────────
+// Ultrasonics moved to Teensy 2 — no longer in this packet
 struct __attribute__((packed)) TeensyToPiPacket {
   uint8_t  start_byte;
-  int16_t  enc_ticks[4];
-  uint16_t ultrasonic_mm[4];
-  uint16_t tof_mm[2];
+  int16_t  enc_ticks[4];    // FL, FR, RL, RR encoder deltas
+  uint16_t tof_mm[3];       // ToF sensors 0=rear-L, 1=rear-R, 2=right-side
   int16_t  flow_vx;
   int16_t  flow_vy;
-  uint8_t  color_left;
-  uint8_t  color_right;
+  uint8_t  color_left;      // reserved
+  uint8_t  color_right;     // reserved
   uint8_t  start_detected;
   uint8_t  checksum;
 };

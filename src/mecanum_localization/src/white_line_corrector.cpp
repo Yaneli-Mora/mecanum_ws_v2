@@ -31,7 +31,7 @@ public:
       [this](const nav_msgs::msg::Odometry::SharedPtr m) { latest_ = *m; });
 
     color_sub_ = create_subscription<std_msgs::msg::String>(
-      "/color_sensor/zone", 10,
+      "/line_state", 10,
       [this](const std_msgs::msg::String::SharedPtr m) { onColor(m->data); });
 
     RCLCPP_INFO(get_logger(), "White line corrector started (%zu lines)", lines_.size());
@@ -39,7 +39,7 @@ public:
 
 private:
   void onColor(const std::string & color) {
-    if (color != "white") { was_white_ = false; return; }
+    if (color != "WHITE") { was_white_ = false; return; }
     if (was_white_) return;  // leading edge only
     was_white_ = true;
 

@@ -1,3 +1,4 @@
+
 import os
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -77,7 +78,7 @@ def generate_launch_description():
 
         # ── Teensy 2 bridge (replaces Arduino) ────────────────────────────
         # Handles: ultrasonics, line sensor, RGB sensor, IR transmitter, crank DC motor
-        Node(package='teensy2_interface', executable='teensy2_bridge_node',
+        Node(package='mecanum_sensors', executable='teensy2_bridge_node',
              parameters=[{'serial_port': '/dev/teensy2'}]),
 
         # ── EKF localisation ───────────────────────────────────────────────

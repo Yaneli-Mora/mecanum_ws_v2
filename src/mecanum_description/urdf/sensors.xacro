@@ -105,12 +105,46 @@
     <origin xyz="0 0 -0.038" rpy="0 3.1416 0"/>  <!-- facing down -->
   </joint>
 
-  <!-- ── TCRT5000 line tracker — front-centre bottom (on Arduino) ──────── -->
+  <!-- ── TCRT5000 line tracker — front-centre bottom (on Teensy 2) ──────── -->
   <link name="line_tracker_link"/>
   <joint name="line_tracker_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="line_tracker_link"/>
     <origin xyz="0.080 0 -0.038" rpy="0 3.1416 0"/>  <!-- facing down, front biased -->
+  </joint>
+
+  <!-- ── Plank A — extends left for crater loop object knock ───────────── -->
+  <!-- Physical: horizontal arm at 90°, sweeps at body height              -->
+  <link name="plank_a_link"/>
+  <joint name="plank_a_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="plank_a_link"/>
+    <origin xyz="0 0.089 0.020" rpy="0 0 1.5708"/>  <!-- ⚠️ update when measured -->
+  </joint>
+
+  <!-- ── Plank B — lifts RGB sensor + IR transmitter to read antenna LEDs  -->
+  <!-- Two positions: 90° (low antennas) and 150° (high antennas)          -->
+  <link name="plank_b_link"/>
+  <joint name="plank_b_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="plank_b_link"/>
+    <origin xyz="0.060 0 0.038" rpy="0 0 0"/>  <!-- ⚠️ update when measured -->
+  </joint>
+
+  <!-- ── RGB sensor (TCS34725) — mounted on tip of Plank B ─────────────── -->
+  <link name="rgb_sensor_link"/>
+  <joint name="rgb_sensor_joint" type="fixed">
+    <parent link="plank_b_link"/>
+    <child  link="rgb_sensor_link"/>
+    <origin xyz="0.100 0 0" rpy="0 0 0"/>  <!-- tip of plank B, facing forward -->
+  </joint>
+
+  <!-- ── IR transmitter — mounted on tip of Plank B beside RGB sensor ───── -->
+  <link name="ir_transmitter_link"/>
+  <joint name="ir_transmitter_joint" type="fixed">
+    <parent link="plank_b_link"/>
+    <child  link="ir_transmitter_link"/>
+    <origin xyz="0.100 0.020 0" rpy="0 0 0"/>  <!-- beside RGB sensor -->
   </joint>
 
 </robot>

@@ -21,9 +21,9 @@ WALL_THICKNESS = 2    # pixels
 # ══════════════════════════════════════════════════════════════════════════
 # CRATER — measure center from bottom-left corner, and radius
 # ══════════════════════════════════════════════════════════════════════════
-CRATER_X      = 0.65  # ⚠️ MEASURE ON FIELD
-CRATER_Y      = 0.40  # ⚠️ MEASURE ON FIELD
-CRATER_RADIUS = 0.15  # ⚠️ MEASURE ON FIELD
+CRATER_X      = 1.50  # ⚠️ MEASURE ON FIELD
+CRATER_Y      = 0.59  # ⚠️ MEASURE ON FIELD
+CRATER_RADIUS = 0.30  # ⚠️ MEASURE ON FIELD
 
 # ══════════════════════════════════════════════════════════════════════════
 # ANTENNA BOXES — measure center of each box from bottom-left corner
@@ -32,10 +32,10 @@ CRATER_RADIUS = 0.15  # ⚠️ MEASURE ON FIELD
 # ══════════════════════════════════════════════════════════════════════════
 ANTENNA_BOXES = [
     # (center_x, center_y, width, height)  all in meters
-    (0.15, 0.75, 0.10, 0.10),   # antenna_1 ⚠️ MEASURE
-    (1.30, 0.75, 0.10, 0.10),   # antenna_2 ⚠️ MEASURE
-    (0.65, 0.40, 0.10, 0.10),   # antenna_3 ⚠️ MEASURE
-    (0.65, 0.10, 0.10, 0.10),   # antenna_4 ⚠️ MEASURE
+    (0.1397, 1.0795, 0.10, 0.10),   # antenna_1 ⚠️ MEASURE
+    (2.2987, 1.0795, 0.10, 0.10),   # antenna_2 ⚠️ MEASURE
+    (1.2003, 2.2479, 0.10, 0.10),   # antenna_3 ⚠️ MEASURE
+    (2., 0.1397, 0.10, 0.10),   # antenna_4 ⚠️ MEASURE
 ]
 
 # Output

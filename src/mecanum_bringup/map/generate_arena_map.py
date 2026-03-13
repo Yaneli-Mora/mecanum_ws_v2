@@ -32,9 +32,9 @@ CRATER_RADIUS = 0.15  # ⚠️ MEASURE ON FIELD
 # ══════════════════════════════════════════════════════════════════════════
 ANTENNA_BOXES = [
     # (center_x, center_y, width, height)  all in meters
-    (0.15, 0.75, 0.10, 0.10),   # antenna_1 ⚠️ MEASURE
-    (1.30, 0.75, 0.10, 0.10),   # antenna_2 ⚠️ MEASURE
-    (0.65, 0.10, 0.10, 0.10),   # antenna_4 ⚠️ MEASURE
+    (0.139, 1.079, 0.10, 0.10),   # antenna_1 ⚠️ MEASURE
+    (2.29, 1.079, 0.10, 0.10),   # antenna_2 ⚠️ MEASURE
+    (0.9779, 0.139, 0.10, 0.10),   # antenna_4 ⚠️ MEASURE
 ]
 
 # Output

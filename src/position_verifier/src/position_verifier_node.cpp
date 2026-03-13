@@ -53,12 +53,13 @@ void PositionVerifierNode::loadStationProfiles() {
   };
 
   // name           x      y      yaw     tof_m  color  tof_sensor
-  add("antenna_1",    0.15,  0.75,  1.5708, 0.0,   "",    -1);  // EKF only
-  add("antenna_2",    1.30,  0.75,  1.5708, 0.0,   "",    -1);  // EKF only
-  add("antenna_3",    0.65,  0.40,  0.0,    0.0,   "",    -1);  // EKF only
-  add("antenna_4",    0.65,  0.10,  1.5708, 0.0,   "",    -1);  // EKF only
-  add("keypad_panel", 0.65,  0.80,  3.1416, 0.12,  "",     0);  // sensors 0+1 (L+R)
-  add("crank",        0.10,  0.40,  0.0,    0.15,  "",     2);  // sensor 2 (front)
+  // tof_sensor: -1 = EKF only
+  //              0 = sensors 0+1 rear L+R (keypad squareness)
+  //              2 = sensor 2 left-side (antenna_2 crank distance)
+  add("antenna_1",  0.15,  0.90,  3.1416, 0.0,   "",    -1);  // reverse approach, EKF only
+  add("antenna_2",  1.20,  0.90,  0.0,    0.10,  "",     2);  // left-side ToF for crank
+  add("antenna_4",  0.60,  0.15,  3.1416, 0.12,  "",     0);  // reverse, sensors 0+1
+  add("keypad_panel",0.60, 0.15,  3.1416, 0.12,  "",     0);  // same as antenna_4
 }
 
 bool PositionVerifierNode::checkEKF(const StationProfile & p) {
@@ -95,12 +96,12 @@ bool PositionVerifierNode::checkToF(const StationProfile & p) {
   }
 
   if (p.tof_sensor == 2) {
-    // Crank: use sensor 2 (front) — check distance only
-    float front = latest_tof_.data[2];
-    bool dist_ok = std::abs(front - p.tof_expected_m) < p.tof_tol_m;
+    // Crank: use sensor 2 (left-side) — check distance to crank face
+    float left = latest_tof_.data[2];
+    bool dist_ok = std::abs(left - p.tof_expected_m) < p.tof_tol_m;
     if (!dist_ok)
-      RCLCPP_WARN(get_logger(), "ToF front FAIL: %.3fm expected=%.3fm",
-                  front, p.tof_expected_m);
+      RCLCPP_WARN(get_logger(), "ToF left FAIL: %.3fm expected=%.3fm",
+                  left, p.tof_expected_m);
     return dist_ok;
   }
 

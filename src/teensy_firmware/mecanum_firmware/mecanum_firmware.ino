@@ -34,7 +34,7 @@ const int PLANK_A_EXTENDED  = 90;
 
 // ── Plank B — LED reading (two positions: 90° or 150°) ─────────────────────
 Servo plankB;
-const int PLANK_B_PIN       = 32;   // ⚠️ update when wired
+const int PLANK_B_PIN       = 15;   // ⚠️ update when wired
 const int PLANK_B_RETRACTED = 0;
 const int PLANK_B_POS_90    = 90;
 const int PLANK_B_POS_150   = 150;

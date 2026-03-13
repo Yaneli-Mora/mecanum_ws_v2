@@ -63,7 +63,7 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
   //  Layout:
   //    antenna_1  = top-left    (button press)
   //    antenna_4  = bottom-mid  (keypad, reverse approach)
-  //    antenna_2  = top-right   (crank, strafe right side)
+  //    antenna_2  = top-right   (crank, left side of robot)
   //    antenna_3  = crater loop (extend plank, clockwise, knock object)
   //
   //  Order:
@@ -73,7 +73,7 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
   //    4. antenna_4 (keypad — reverse approach)
   //    5. duck_3    (top of crater)
   //    6. duck_4    (right of crater)
-  //    7. antenna_2 (crank — strafe right side)
+  //    7. antenna_2 (crank — strafe left side, ToF2 on left)
   //    8. duck_5    (lower side of crater)
   //    9. antenna_3 (crater loop — plank extends before loop)
   //   10. return home
@@ -86,9 +86,10 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
 
   mission_queue_ = {
 
-    // 1. Antenna_1 — top-left, button press, read LED after
-    { S, {"antenna_1", 0.15, 0.90, 1.5708, true,
-          ApproachMode::NORMAL, 0.0, -1, "PRESS_BUTTON", 1} },
+    // 1. Antenna_1 — top-left, reverse approach (robot backs into button 3x),
+    //    plank B lifts during button press, read LED, then pivot to duck_1
+    { S, {"antenna_1", 0.15, 0.90, 3.1416, true,
+          ApproachMode::REVERSE, 0.08, 0, "PRESS_BUTTON", 1} },
 
     // 2. Duck_1
     { D, {}, {"duck_1", 0.30, 0.80, BLUE_X, BLUE_Y, DuckPushMode::NORMAL} },
@@ -109,7 +110,12 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
     { D, {}, {"duck_4", CRATER_CX + CRATER_RADIUS + 0.15, CRATER_CY, BLUE_X, BLUE_Y,
               DuckPushMode::UTURN_TO_STATION, 1.20, 0.90, 0.0} },
 
-    // 7. Antenna_2/Crank — strafe approach, read LED after
+    // 7. Antenna_2/Crank — top-right corner, crank face points south
+    //    Crank module on LEFT side of robot, ToF2 also on left side
+    //    Robot yaw=0.0 (facing east/right wall), left side faces south → engages crank ✓
+    //    Strafe in +y (toward top wall) until ToF2 reads 0.10m from crank face
+    //    After crank: drive forward (east = +x) to clear → pivot right 90° (yaw=-1.5708)
+    //    → rear faces north/top wall → reverse into top wall → READ_LED 2
     { S, {"antenna_2", 1.20, 0.90, 0.0, false,
           ApproachMode::STRAFE, 0.10, 2, "TURN_CRANK", 2} },
 
@@ -293,7 +299,7 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
         position_verified_ = false; step_ = 3;
       } else {
         geometry_msgs::msg::Twist t;
-        t.linear.y = -0.05f;
+        t.linear.y = +0.05f;   // strafe toward top wall (left side toward crank)
         cmd_vel_pub_->publish(t);
       }
     }
@@ -304,11 +310,20 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
 
     if (s.task_command.empty()) {
       // Keypad station — module triggers automatically on robot position
-      // No command to send, wait a fixed dwell time then advance
       RCLCPP_INFO(get_logger(), "[%s] Auto-trigger station — dwelling 2s", s.name.c_str());
       rclcpp::sleep_for(std::chrono::seconds(2));
       task_done_ = true;
     } else {
+      // For antenna_1: start lifting plank B DURING button press for time efficiency
+      // For antenna_2: start lifting plank B DURING crank turn (~3s) for time efficiency
+      if (s.name == "antenna_1" || s.name == "antenna_2") {
+        const char* plank_cmd =
+          (s.read_led_antenna == 2) ? "EXTEND_PLANK_B_150" : "EXTEND_PLANK_B_90";
+        auto ext = std_msgs::msg::String();
+        ext.data = plank_cmd;
+        teensy_cmd_pub_->publish(ext);
+        RCLCPP_INFO(get_logger(), "[%s] Lifting plank B during task", s.name.c_str());
+      }
       auto cmd = std_msgs::msg::String();
       cmd.data = s.task_command;
       if (s.use_plow) plow_cmd_pub_->publish(cmd);
@@ -319,24 +334,37 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
   } else if (step_ == 4) {
     if (s.use_plow ? plow_done_ : task_done_) {
       RCLCPP_INFO(get_logger(), "[%s] Task done", s.name.c_str());
-      // If this station has an antenna LED to read, do it now
       if (s.read_led_antenna > 0) {
-        // Extend plank B to lift RGB sensor to antenna LED height
-        // ⚠️ Use EXTEND_PLANK_B_90 or EXTEND_PLANK_B_150 depending on antenna height
-        // antenna_1=low(90°), antenna_2=high(150°), antenna_3=low(90°), antenna_4=low(90°)
-        const char* plank_cmd =
-          (s.read_led_antenna == 2) ? "EXTEND_PLANK_B_150" : "EXTEND_PLANK_B_90";
-
-        auto ext = std_msgs::msg::String();
-        ext.data = plank_cmd;
-        teensy_cmd_pub_->publish(ext);
-        rclcpp::sleep_for(std::chrono::milliseconds(600));  // wait for servo to settle
-
-        task_done_ = false;
-        auto cmd = std_msgs::msg::String();
-        cmd.data  = "READ_LED " + std::to_string(s.read_led_antenna);
-        task_cmd_pub_->publish(cmd);
-        step_ = 5;
+        if (s.name == "antenna_1") {
+          // Plank B already up — just read the LED immediately
+          RCLCPP_INFO(get_logger(), "[antenna_1] Plank B already raised — reading LED");
+          task_done_ = false;
+          auto cmd = std_msgs::msg::String();
+          cmd.data  = "READ_LED 1";
+          task_cmd_pub_->publish(cmd);
+          step_ = 5;
+        } else if (s.name == "antenna_2") {
+          // Crank done, plank B already raised during crank
+          // Robot currently yaw=0.0 (facing east/right wall)
+          // Drive forward (east = +x) ~0.15m to clear crank before pivoting
+          RCLCPP_INFO(get_logger(), "[antenna_2] Crank done — driving east to clear crank");
+          nav_complete_ = false;
+          sendNavGoal(s.x + 0.15, s.y, 0.0);
+          step_ = 7;
+        } else {
+          // All other antennas — extend plank B now
+          const char* plank_cmd =
+            (s.read_led_antenna == 2) ? "EXTEND_PLANK_B_150" : "EXTEND_PLANK_B_90";
+          auto ext = std_msgs::msg::String();
+          ext.data = plank_cmd;
+          teensy_cmd_pub_->publish(ext);
+          rclcpp::sleep_for(std::chrono::milliseconds(600));
+          task_done_ = false;
+          auto cmd = std_msgs::msg::String();
+          cmd.data  = "READ_LED " + std::to_string(s.read_led_antenna);
+          task_cmd_pub_->publish(cmd);
+          step_ = 5;
+        }
       } else {
         RCLCPP_INFO(get_logger(), "[%s] Complete", s.name.c_str());
         current_item_++; step_ = 0;
@@ -344,12 +372,89 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
     }
 
   } else if (step_ == 5 && task_done_) {
-    // Retract plank B now RGB read is done
+    // LED read complete — retract plank B
     auto ret = std_msgs::msg::String();
     ret.data = "RETRACT_PLANK_B";
     teensy_cmd_pub_->publish(ret);
     rclcpp::sleep_for(std::chrono::milliseconds(600));
+
+    // For antenna_1 — pivot to face duck_1 before advancing
+    if (s.name == "antenna_1") {
+      RCLCPP_INFO(get_logger(), "[antenna_1] Pivoting to face duck_1");
+      nav_complete_ = false;
+      sendNavGoal(s.x, s.y, 1.5708);  // face up toward field
+      step_ = 6;
+      return;
+    }
     RCLCPP_INFO(get_logger(), "[%s] LED read complete", s.name.c_str());
+    current_item_++; step_ = 0;
+
+  } else if (step_ == 6 && nav_complete_) {
+    // antenna_1 only — pivot complete, advance to duck_1
+    RCLCPP_INFO(get_logger(), "[antenna_1] Pivot complete — advancing to duck_1");
+    current_item_++; step_ = 0;
+
+  // ── antenna_2 reposition steps ────────────────────────────────────────────
+  // step 7: forward clear (east) done → pivot RIGHT 90°
+  //         yaw=0.0 → turn right 90° → yaw=-1.5708 (facing south)
+  //         rear of robot now faces north/top wall ✓
+  } else if (step_ == 7 && nav_complete_) {
+    if (!nav_succeeded_)
+      RCLCPP_WARN(get_logger(), "[antenna_2] Clear nav failed — attempting pivot anyway");
+    RCLCPP_INFO(get_logger(), "[antenna_2] Cleared crank — pivoting right 90° to yaw=-1.5708");
+    nav_complete_ = false;
+    sendNavGoal(s.x + 0.15, s.y, -1.5708);  // same position, rear now faces top wall
+    step_ = 8;
+
+  // step 8: pivot done → enter ToF reverse loop toward top wall
+  } else if (step_ == 8 && nav_complete_) {
+    if (!nav_succeeded_)
+      RCLCPP_WARN(get_logger(), "[antenna_2] Pivot nav failed — attempting reverse anyway");
+    RCLCPP_INFO(get_logger(), "[antenna_2] Pivoted — reversing into top wall for LED");
+    step_ = 9;
+
+  } else if (step_ == 9) {
+    // ToF-guided reverse toward top wall
+    // Robot facing south (yaw=-1.5708), reverse = +y = toward top wall ✓
+    if ((int)latest_tof_.data.size() < 2) return;
+    float l = latest_tof_.data[0], r = latest_tof_.data[1];
+    float avg = (l + r) / 2.0f;
+    static constexpr float ANT2_LED_TARGET = 0.05f;  // ⚠️ tune on field
+    if (avg <= ANT2_LED_TARGET + 0.010f && std::abs(l - r) < 0.015f) {
+      geometry_msgs::msg::Twist stop; cmd_vel_pub_->publish(stop);
+      RCLCPP_INFO(get_logger(), "[antenna_2] At LED position L=%.3f R=%.3f — reading", l, r);
+      task_done_ = false;
+      auto cmd = std_msgs::msg::String();
+      cmd.data  = "READ_LED 2";
+      task_cmd_pub_->publish(cmd);
+      step_ = 10;
+    } else {
+      geometry_msgs::msg::Twist t;
+      t.linear.x  = -0.05f;          // reverse = toward top wall when facing south
+      t.angular.z = (r - l) * 1.0f;  // square up
+      cmd_vel_pub_->publish(t);
+    }
+    } else {
+      geometry_msgs::msg::Twist t;
+      t.linear.x  = -0.05f;              // reverse (toward top wall, robot facing down)
+      t.angular.z = (r - l) * 1.0f;     // square up
+      cmd_vel_pub_->publish(t);
+    }
+
+  } else if (step_ == 10 && task_done_) {
+    RCLCPP_INFO(get_logger(), "[antenna_2] LED read complete — retracting and clearing");
+    auto ret = std_msgs::msg::String();
+    ret.data = "RETRACT_PLANK_B";
+    teensy_cmd_pub_->publish(ret);
+    rclcpp::sleep_for(std::chrono::milliseconds(600));
+    nav_complete_ = false;
+    // Drive south (away from top wall) to clear, ready for duck_5 approach
+    // ⚠️ tune x/y on field
+    sendNavGoal(s.x + 0.15, s.y - 0.20, 0.0);
+    step_ = 11;
+
+  } else if (step_ == 11 && nav_complete_) {
+    RCLCPP_INFO(get_logger(), "[antenna_2] Complete — advancing to duck_5");
     current_item_++; step_ = 0;
   }
 }

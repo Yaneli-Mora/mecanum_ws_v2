@@ -1,3 +1,4 @@
+
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!--
@@ -14,8 +15,8 @@
       Ultrasonic RL  — rear-left corner
       Ultrasonic RR  — rear-right corner
 
-    RIGHT SIDE of robot (-y direction):
-      ToF 2 (side)   — right side centre (antenna_2 strafe + crank)
+    LEFT SIDE of robot (+y direction):
+      ToF 2 (side)   — left side centre (antenna_2 crank approach)
 
     BOTTOM (facing down):
       Optical flow   — centre underside
@@ -57,12 +58,12 @@
     <origin xyz="-0.127 -0.040 0" rpy="0 0 3.1416"/>  <!-- facing rear -->
   </joint>
 
-  <!-- ── ToF sensor 2 — RIGHT SIDE (antenna_2 strafe + crank) ─────────── -->
+  <!-- ── ToF sensor 2 — LEFT SIDE (antenna_2 crank approach) ──────────── -->
   <link name="tof_2_link"/>
   <joint name="tof_2_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="tof_2_link"/>
-    <origin xyz="0 -0.089 0" rpy="0 0 -1.5708"/>  <!-- facing right -->
+    <origin xyz="0 0.089 0" rpy="0 0 1.5708"/>  <!-- facing left -->
   </joint>
 
   <!-- ── Ultrasonic FL — front-left ───────────────────────────────────── -->
@@ -113,7 +114,7 @@
     <origin xyz="0.080 0 -0.038" rpy="0 3.1416 0"/>  <!-- facing down, front biased -->
   </joint>
 
-  <!-- ── Plank A — extends left for crater loop object knock ───────────── -->
+  <!-- ── Plank A — physical arm on robot (not used in current mission) ──────── -->
   <!-- Physical: horizontal arm at 90°, sweeps at body height              -->
   <link name="plank_a_link"/>
   <joint name="plank_a_joint" type="fixed">

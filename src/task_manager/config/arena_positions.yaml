@@ -29,15 +29,6 @@ arena_stations:
     plank_b_angle: 150      # antenna_2 is higher
     led_read_yaw: -1.5708   # pivot right 90°, rear faces north/top wall
 
-  antenna_3:
-    x: 0.0                  # CRATER_CX - DRIVE_RADIUS = 0.75 - 0.760 = -0.01 ⚠️ measure
-    y: 0.50                 # CRATER_CY
-    yaw: 3.1416             # facing left/west wall
-    task: "CRATER_LOOP"
-    approach: NORMAL
-    led_read: 3
-    plank_b_angle: 150      # antenna_3 is shorter
-
   antenna_4:
     x: 0.60
     y: 0.15
@@ -77,12 +68,10 @@ blue_square:
 crater:
   center_x: 0.75
   center_y: 0.50
-  radius: 0.610
-  drive_radius: 0.760       # radius + robot clearance
-  waypoints: 12             # 30° steps clockwise
+  radius: 0.610             # ⚠️ measure on field
 
 ir_transmit:
-  x: 0.0                    # same as antenna_3 LED read position ⚠️ measure
+  x: 0.0                    # ⚠️ measure on field — position facing IR receiver
   y: 0.50
   yaw: 1.8326               # north (1.5708) + 15° toward left wall (0.2618)
   plank_b_angle: 120

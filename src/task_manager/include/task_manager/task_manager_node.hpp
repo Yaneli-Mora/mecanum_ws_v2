@@ -1,3 +1,4 @@
+
 #pragma once
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
@@ -29,7 +30,6 @@ enum class MissionPhase {
 enum class MissionItemType {
   STATION,      // navigate to station, do task
   DUCK,         // find duck, push to blue square
-  CRATER_LOOP,  // extend plank, drive clockwise around crater, retract plank
   TRANSMIT_IR   // send all recorded antenna colors via IR transmitter
 };
 
@@ -73,19 +73,11 @@ struct DuckTarget {
                                            // instead of retreating to approx pos
 };
 
-// ── Crater loop definition ──────────────────────────────────────────────────
-struct CraterLoop {
-  double center_x, center_y;   // crater centre in map frame (metres)
-  double radius;                // drive radius around crater (metres)
-  int    num_waypoints;         // how many waypoints around perimeter
-};
-
 // ── Unified mission item ────────────────────────────────────────────────────
 struct MissionItem {
   MissionItemType type;
   ArenaStation    station;    // used when type == STATION
   DuckTarget      duck;       // used when type == DUCK
-  CraterLoop      crater;     // used when type == CRATER_LOOP
 };
 
 class TaskManagerNode : public rclcpp::Node {
@@ -103,7 +95,6 @@ private:
   // ── Item executors ─────────────────────────────────────────────────────
   void executeStation(const ArenaStation & s);
   void executeDuck(const DuckTarget & d);
-  void executeCraterLoop(const CraterLoop & c);
 
   // ── Helpers ────────────────────────────────────────────────────────────
   void sendNavGoal(double x, double y, double yaw,
@@ -148,13 +139,11 @@ private:
   double CRATER_CX      = 0.75;
   double CRATER_CY      = 0.50;
   double CRATER_RADIUS  = 0.610;
-  double DRIVE_RADIUS   = 0.760;
   double BLUE_X         = 0.035;
   double BLUE_Y         = 1.21;
   double IR_X           = -0.01;
   double IR_Y           = 0.50;
   double IR_YAW         = 1.8326;
-  int    CRATER_WPS     = 12;
 
   struct DuckPatch       { std::string name; double x; double y; };
   struct StationOverride { double x; double y; double yaw; };
@@ -165,10 +154,6 @@ private:
   std::vector<MissionItem> mission_queue_;
   size_t current_item_ = 0;
   int    step_         = 0;
-
-  // ── Crater loop state ──────────────────────────────────────────────────
-  int    crater_wp_      = 0;   // current waypoint index
-  bool   plank_extended_ = false;
 
   // ── Nav state ──────────────────────────────────────────────────────────
   bool nav_complete_  = false;

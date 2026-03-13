@@ -314,15 +314,12 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
       rclcpp::sleep_for(std::chrono::seconds(2));
       task_done_ = true;
     } else {
-      // For antenna_1: start lifting plank B DURING button press for time efficiency
       // For antenna_2: start lifting plank B DURING crank turn (~3s) for time efficiency
-      if (s.name == "antenna_1" || s.name == "antenna_2") {
-        const char* plank_cmd =
-          (s.read_led_antenna == 2) ? "EXTEND_PLANK_B_150" : "EXTEND_PLANK_B_90";
+      if (s.name == "antenna_2") {
         auto ext = std_msgs::msg::String();
-        ext.data = plank_cmd;
+        ext.data = "EXTEND_PLANK_B_150";
         teensy_cmd_pub_->publish(ext);
-        RCLCPP_INFO(get_logger(), "[%s] Lifting plank B during task", s.name.c_str());
+        RCLCPP_INFO(get_logger(), "[antenna_2] Lifting plank B during crank");
       }
       auto cmd = std_msgs::msg::String();
       cmd.data = s.task_command;
@@ -336,8 +333,12 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
       RCLCPP_INFO(get_logger(), "[%s] Task done", s.name.c_str());
       if (s.read_led_antenna > 0) {
         if (s.name == "antenna_1") {
-          // Plank B already up — just read the LED immediately
-          RCLCPP_INFO(get_logger(), "[antenna_1] Plank B already raised — reading LED");
+          // Button press done — NOW extend plank B and read LED
+          auto ext = std_msgs::msg::String();
+          ext.data = "EXTEND_PLANK_B_90";
+          teensy_cmd_pub_->publish(ext);
+          rclcpp::sleep_for(std::chrono::milliseconds(600));
+          RCLCPP_INFO(get_logger(), "[antenna_1] Plank B raised — reading LED");
           task_done_ = false;
           auto cmd = std_msgs::msg::String();
           cmd.data  = "READ_LED 1";

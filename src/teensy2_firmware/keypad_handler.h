@@ -20,10 +20,10 @@ public:
   bool press();   // blocking — fires full sequence, returns true when done
 
 private:
-  static const int SOL_A = 25;   // key 7
-  static const int SOL_B = 26;   // key 3
-  static const int SOL_C = 27;   // key 8
-  static const int SOL_D = 28;   // key #
+  static const int SOL_A = 16;   // key 7
+  static const int SOL_B = 15;   // key 3
+  static const int SOL_C = 17;   // key 8
+  static const int SOL_D = 20;   // key #
 
   static const int FIRE_MS = 80;   // ⚠️ tune on field — solenoid strike duration
   static const int GAP_MS  = 200;  // ⚠️ tune on field — release gap between keys

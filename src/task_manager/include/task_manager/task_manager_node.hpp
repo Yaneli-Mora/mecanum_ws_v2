@@ -9,9 +9,11 @@
 #include "geometry_msgs/msg/twist.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
 #include "nav_msgs/msg/odometry.hpp"
+#include <yaml-cpp/yaml.h>
 #include <vector>
 #include <string>
 #include <functional>
+#include <map>
 
 namespace task_manager {
 
@@ -109,6 +111,7 @@ private:
   void sendTeensyCmd(const std::string & cmd);
   void startSearch(double cx, double cy);
   void tickSearch();
+  void loadArenaPositions(const std::string & yaml_path);
 
   // ── Callbacks ──────────────────────────────────────────────────────────
   void onStartSignal      (const std_msgs::msg::Bool::SharedPtr msg);
@@ -140,6 +143,23 @@ private:
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr            line_sub_;
 
   rclcpp::TimerBase::SharedPtr tick_timer_;
+
+  // ── Arena config (loaded from arena_positions.yaml) ────────────────────
+  double CRATER_CX      = 0.75;
+  double CRATER_CY      = 0.50;
+  double CRATER_RADIUS  = 0.610;
+  double DRIVE_RADIUS   = 0.760;
+  double BLUE_X         = 0.035;
+  double BLUE_Y         = 1.21;
+  double IR_X           = -0.01;
+  double IR_Y           = 0.50;
+  double IR_YAW         = 1.8326;
+  int    CRATER_WPS     = 12;
+
+  struct DuckPatch       { std::string name; double x; double y; };
+  struct StationOverride { double x; double y; double yaw; };
+  std::vector<DuckPatch>                          duck_patches_;
+  std::map<std::string, StationOverride>          station_overrides_;
 
   // ── Mission queue ──────────────────────────────────────────────────────
   std::vector<MissionItem> mission_queue_;

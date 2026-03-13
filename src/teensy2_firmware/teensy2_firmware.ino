@@ -15,6 +15,7 @@
 //
 //   Pi → Teensy2 (commands):
 //     TURN_CRANK                    — spin crank 3 full turns via encoder
+//     PRESS_KEYPAD                  — fire solenoids: 7→3→7→3→8→#
 //     READ_LED <1-4>                — read RGB, record + report color
 //     TRANSMIT_IR                   — send all 4 recorded colors via IR
 //
@@ -28,6 +29,7 @@
 #include "rgb_sensor_handler.h"
 #include "ir_transmitter_handler.h"
 #include "crank_handler.h"
+#include "keypad_handler.h"
 
 // ── Pin assignments ───────────────────────────────────────────────────────
 const int LINE_PIN    = A0;
@@ -36,14 +38,17 @@ const int CRANK_IN1   = 20;
 const int CRANK_IN2   = 21;
 const int CRANK_PWM   = 22;
 const int CRANK_ENC_A = 23;
-const int CRANK_ENC_B = 24;  // direction sense only (not interrupt)
+const int CRANK_ENC_B = 24;
+// Solenoids (keypad) — pins 25-28
+// SOL_A=25 (key 7), SOL_B=26 (key 3), SOL_C=27 (key 8), SOL_D=28 (key #)
 
 // ── Handlers ─────────────────────────────────────────────────────────────
-UltrasonicHandler  ultrasonics;
-LineTrackerHandler lineTracker;
-RGBSensorHandler   rgbSensor;
+UltrasonicHandler    ultrasonics;
+LineTrackerHandler   lineTracker;
+RGBSensorHandler     rgbSensor;
 IRTransmitterHandler irTx;
-CrankHandler       crank;
+CrankHandler         crank;
+KeypadHandler        keypad;
 
 // ── Timing ───────────────────────────────────────────────────────────────
 const int US_INTERVAL_MS = 20;   // 50Hz ultrasonic publish
@@ -61,6 +66,7 @@ void setup() {
   rgbSensor.init();
   irTx.init(IR_PIN);
   crank.init(CRANK_IN1, CRANK_IN2, CRANK_PWM, CRANK_ENC_A, CRANK_ENC_B);
+  keypad.init();
 
   Serial.println("READY");
 }
@@ -105,6 +111,11 @@ void handleCommand(const String & cmd) {
   // TURN_CRANK — spin 3 full turns via encoder feedback
   if (cmd == "TURN_CRANK") {
     bool ok = crank.turn(3);
+    Serial.println(ok ? "DONE" : "ERROR");
+
+  // PRESS_KEYPAD — fire solenoids in sequence: 7 → 3 → 7 → 3 → 8 → #
+  } else if (cmd == "PRESS_KEYPAD") {
+    bool ok = keypad.press();
     Serial.println(ok ? "DONE" : "ERROR");
 
   // READ_LED <antenna 1-4>

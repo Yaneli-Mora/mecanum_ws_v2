@@ -96,7 +96,15 @@ def generate_launch_description():
              ]),
 
         # ── Task manager ───────────────────────────────────────────────────
-        Node(package='task_manager', executable='task_manager_node'),
+        Node(
+          package='task_manager',
+          executable='task_manager_node',
+          parameters=[{
+            'arena_positions_yaml': os.path.join(
+              FindPackageShare('task_manager').find('task_manager'),
+              'config', 'arena_positions.yaml')
+          }]
+        ),
 
         # ── Position verifier ──────────────────────────────────────────────
         Node(package='position_verifier', executable='position_verifier_node'),

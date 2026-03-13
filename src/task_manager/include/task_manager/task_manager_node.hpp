@@ -34,7 +34,7 @@ enum class MissionItemType {
 enum class ApproachMode {
   NORMAL,   // Nav2 direct
   REVERSE,  // back up using ToF 0+1 (rear L+R)
-  STRAFE    // strafe left using ToF 2 (right side)
+  STRAFE    // strafe toward top wall using ToF 2 (left side)
 };
 
 // ── Station definition ──────────────────────────────────────────────────────

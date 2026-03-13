@@ -32,12 +32,12 @@
 #include "keypad_handler.h"
 
 // ── Pin assignments ───────────────────────────────────────────────────────
-const int LINE_PIN    = A0;
-const int IR_PIN      = 10;
-const int CRANK_IN1   = 20;
-const int CRANK_IN2   = 21;
-const int CRANK_PWM   = 22;
-const int CRANK_ENC_A = 23;
+const int LINE_PIN    = 10;
+const int IR_PIN      = 11;
+const int CRANK_IN1   = 22;
+const int CRANK_IN2   = 23;
+const int CRANK_PWM   = 21;
+const int CRANK_ENC_A = 25;
 const int CRANK_ENC_B = 24;
 // Solenoids (keypad) — pins 25-28
 // SOL_A=25 (key 7), SOL_B=26 (key 3), SOL_C=27 (key 8), SOL_D=28 (key #)

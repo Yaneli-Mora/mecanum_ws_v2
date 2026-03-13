@@ -1,23 +1,21 @@
+
 #include "task_manager/task_manager_node.hpp"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <yaml-cpp/yaml.h>
 #include <cmath>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 namespace task_manager {
 
-// ── Arena constants (⚠️ measure on physical field) ─────────────────────────
-// Crater centre and radius (2ft = 0.610m radius, robot drives at +0.15m clearance)
-static constexpr double CRATER_CX       = 0.75;   // metres from left wall
-static constexpr double CRATER_CY       = 0.50;   // metres from bottom wall
-static constexpr double CRATER_RADIUS   = 0.610;  // actual crater radius
-static constexpr double DRIVE_RADIUS    = 0.760;  // crater radius + robot clearance
-static constexpr int    CRATER_WPS      = 12;     // 12 waypoints = 30° steps
-
-// Blue scoring square (top-left of crater)
-static constexpr double BLUE_X          = CRATER_CX - CRATER_RADIUS - 0.10;
-static constexpr double BLUE_Y          = CRATER_CY + CRATER_RADIUS + 0.10;
-
 TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
+
+  // ── Load arena positions from yaml ─────────────────────────────────────
+  declare_parameter("arena_positions_yaml",
+    ament_index_cpp::get_package_share_directory("task_manager")
+    + "/config/arena_positions.yaml");
+  std::string yaml_path = get_parameter("arena_positions_yaml").as_string();
+  loadArenaPositions(yaml_path);
 
   // ── Publishers ─────────────────────────────────────────────────────────
   phase_pub_      = create_publisher<std_msgs::msg::String>("/mission_phase",  10);
@@ -97,10 +95,10 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
     // 3. Duck_2
     { D, {}, {"duck_2", 0.30, 0.55, BLUE_X, BLUE_Y, DuckPushMode::NORMAL} },
 
-    // 4. Antenna_4/Keypad — reverse approach, keypad module auto-triggers on position
+    // 4. Antenna_4/Keypad — reverse approach, fire solenoids 7→3→7→3→8→#
     //    read LED after
     { S, {"antenna_4", 0.60, 0.15, 3.1416, false,
-          ApproachMode::REVERSE, 0.12, 0, "", 4} },
+          ApproachMode::REVERSE, 0.12, 0, "PRESS_KEYPAD", 4} },
 
     // 5. Duck_3 — top of crater, U-turn push
     { D, {}, {"duck_3", CRATER_CX, CRATER_CY + CRATER_RADIUS + 0.15, BLUE_X, BLUE_Y,
@@ -130,6 +128,38 @@ TaskManagerNode::TaskManagerNode() : Node("task_manager_node") {
     // 10. TRANSMIT_IR — send all 4 recorded antenna colors on way home
     { IR },
   };
+
+  // ── Apply yaml overrides to mission queue ──────────────────────────────
+  for (auto & item : mission_queue_) {
+    if (item.type == MissionItemType::STATION) {
+      auto it = station_overrides_.find(item.station.name);
+      if (it != station_overrides_.end()) {
+        item.station.x   = it->second.x;
+        item.station.y   = it->second.y;
+        item.station.yaw = it->second.yaw;
+        RCLCPP_INFO(get_logger(), "Overrode station %s → (%.3f, %.3f, yaw=%.4f)",
+          item.station.name.c_str(), item.station.x, item.station.y, item.station.yaw);
+      }
+    } else if (item.type == MissionItemType::DUCK) {
+      for (const auto & p : duck_patches_) {
+        if (p.name == item.duck.name) {
+          item.duck.approx_x = p.x;
+          item.duck.approx_y = p.y;
+          RCLCPP_INFO(get_logger(), "Overrode duck %s → (%.3f, %.3f)",
+            item.duck.name.c_str(), p.x, p.y);
+          break;
+        }
+      }
+      // Always update blue square from loaded values
+      item.duck.blue_square_x = BLUE_X;
+      item.duck.blue_square_y = BLUE_Y;
+    } else if (item.type == MissionItemType::CRATER_LOOP) {
+      item.crater.center_x      = CRATER_CX;
+      item.crater.center_y      = CRATER_CY;
+      item.crater.radius        = DRIVE_RADIUS;
+      item.crater.num_waypoints = CRATER_WPS;
+    }
+  }
 
   // ── Tick timer 10Hz ────────────────────────────────────────────────────
   tick_timer_ = create_wall_timer(
@@ -236,15 +266,40 @@ void TaskManagerNode::missionTick() {
       case MissionItemType::DUCK:       executeDuck(item.duck);         break;
       case MissionItemType::CRATER_LOOP:executeCraterLoop(item.crater); break;
       case MissionItemType::TRANSMIT_IR:
+        // IR transmit position: same x/y as antenna_3 LED read (left edge of crater)
+        // Yaw: facing north (1.5708) + 15° toward left wall = 1.5708 + 0.2618 = 1.8326
+        // Plank B: 120°
         if (step_ == 0) {
-          RCLCPP_INFO(get_logger(), "Transmitting antenna colors via IR");
+          RCLCPP_INFO(get_logger(), "[IR] Navigating to transmit position");
+          nav_complete_ = false;
+          double ir_x   = IR_X;
+          double ir_y   = IR_Y;
+          double ir_yaw = IR_YAW;
+          sendNavGoal(ir_x, ir_y, ir_yaw);
+          step_ = 1;
+
+        } else if (step_ == 1 && nav_complete_) {
+          if (!nav_succeeded_)
+            RCLCPP_WARN(get_logger(), "[IR] Nav failed — attempting transmit anyway");
+          // Extend plank B to 120° for IR transmitter angle
+          RCLCPP_INFO(get_logger(), "[IR] Extending plank B to 120° for transmit");
+          auto ext = std_msgs::msg::String();
+          ext.data = "EXTEND_PLANK_B_120";
+          teensy_cmd_pub_->publish(ext);
+          rclcpp::sleep_for(std::chrono::milliseconds(600));
+          RCLCPP_INFO(get_logger(), "[IR] Transmitting antenna colors");
           task_done_ = false;
           auto cmd = std_msgs::msg::String();
           cmd.data  = "TRANSMIT_IR";
           task_cmd_pub_->publish(cmd);
-          step_ = 1;
-        } else if (step_ == 1 && task_done_) {
-          RCLCPP_INFO(get_logger(), "IR transmit complete");
+          step_ = 2;
+
+        } else if (step_ == 2 && task_done_) {
+          auto ret = std_msgs::msg::String();
+          ret.data = "RETRACT_PLANK_B";
+          teensy_cmd_pub_->publish(ret);
+          rclcpp::sleep_for(std::chrono::milliseconds(600));
+          RCLCPP_INFO(get_logger(), "[IR] Transmit complete");
           current_item_++; step_ = 0;
         }
         break;
@@ -309,10 +364,7 @@ void TaskManagerNode::executeStation(const ArenaStation & s) {
     task_done_ = false; plow_done_ = false;
 
     if (s.task_command.empty()) {
-      // Keypad station — module triggers automatically on robot position
-      RCLCPP_INFO(get_logger(), "[%s] Auto-trigger station — dwelling 2s", s.name.c_str());
-      rclcpp::sleep_for(std::chrono::seconds(2));
-      task_done_ = true;
+      task_done_ = true;  // nothing to do, advance
     } else {
       // For antenna_2: start lifting plank B DURING crank turn (~3s) for time efficiency
       if (s.name == "antenna_2") {
@@ -665,21 +717,31 @@ void TaskManagerNode::executeCraterLoop(const CraterLoop & c) {
     crater_wp_++;
 
   } else if (step_ == 2) {
-    // Extend plank B to read antenna_3 LED (low antenna — 90°)
+    // Loop complete — nav to antenna_3 LED read position:
+    // Left edge of crater, facing left/west wall
+    RCLCPP_INFO(get_logger(), "[CRATER] Navigating to antenna_3 LED read position");
+    nav_complete_ = false;
+    double read_x = c.center_x - c.radius;   // left edge of crater
+    double read_y = c.center_y;               // same y as crater centre
+    sendNavGoal(read_x, read_y, M_PI);        // yaw=π = facing left/west wall
+    step_ = 3;
+
+  } else if (step_ == 3 && nav_complete_) {
+    if (!nav_succeeded_)
+      RCLCPP_WARN(get_logger(), "[CRATER] LED read nav failed — attempting read anyway");
+    // Antenna_3 is shorter — use 150° for plank B
     auto ext = std_msgs::msg::String();
-    ext.data = "EXTEND_PLANK_B_90";
+    ext.data = "EXTEND_PLANK_B_150";
     teensy_cmd_pub_->publish(ext);
     rclcpp::sleep_for(std::chrono::milliseconds(600));
-
     RCLCPP_INFO(get_logger(), "[CRATER] Reading antenna_3 LED");
     task_done_ = false;
     auto cmd = std_msgs::msg::String();
     cmd.data  = "READ_LED 3";
     task_cmd_pub_->publish(cmd);
-    step_ = 3;
+    step_ = 4;
 
-  } else if (step_ == 3 && task_done_) {
-    // Retract plank B
+  } else if (step_ == 4 && task_done_) {
     auto ret = std_msgs::msg::String();
     ret.data = "RETRACT_PLANK_B";
     teensy_cmd_pub_->publish(ret);
@@ -743,6 +805,80 @@ void TaskManagerNode::sendTeensyCmd(const std::string & cmd) {
   auto msg = std_msgs::msg::String();
   msg.data = cmd;
   teensy_cmd_pub_->publish(msg);
+}
+
+// ── Load arena positions from yaml ─────────────────────────────────────────
+void TaskManagerNode::loadArenaPositions(const std::string & yaml_path) {
+  RCLCPP_INFO(get_logger(), "Loading arena positions from: %s", yaml_path.c_str());
+
+  YAML::Node cfg;
+  try {
+    cfg = YAML::LoadFile(yaml_path);
+  } catch (const YAML::Exception & e) {
+    RCLCPP_ERROR(get_logger(),
+      "Failed to load arena_positions.yaml: %s — using defaults", e.what());
+    return;
+  }
+
+  // ── Crater ───────────────────────────────────────────────────────────────
+  auto crater = cfg["crater"];
+  if (crater) {
+    CRATER_CX     = crater["center_x"].as<double>(CRATER_CX);
+    CRATER_CY     = crater["center_y"].as<double>(CRATER_CY);
+    CRATER_RADIUS = crater["radius"].as<double>(CRATER_RADIUS);
+    DRIVE_RADIUS  = crater["drive_radius"].as<double>(DRIVE_RADIUS);
+    CRATER_WPS    = crater["waypoints"].as<int>(CRATER_WPS);
+  }
+
+  // ── Blue square ──────────────────────────────────────────────────────────
+  auto blue = cfg["blue_square"];
+  if (blue) {
+    BLUE_X = blue["x"].as<double>(BLUE_X);
+    BLUE_Y = blue["y"].as<double>(BLUE_Y);
+  }
+
+  // ── IR transmit position ─────────────────────────────────────────────────
+  auto ir = cfg["ir_transmit"];
+  if (ir) {
+    IR_X   = ir["x"].as<double>(IR_X);
+    IR_Y   = ir["y"].as<double>(IR_Y);
+    IR_YAW = ir["yaw"].as<double>(IR_YAW);
+  }
+
+  // ── Duck positions ───────────────────────────────────────────────────────
+  // Loaded directly into mission queue after buildMissionQueue() runs,
+  // so we re-patch duck approx positions here using named lookup
+  auto ducks = cfg["duck_positions"];
+  if (ducks) {
+    struct DuckPatch { std::string name; double x; double y; };
+    std::vector<DuckPatch> patches;
+    for (auto it = ducks.begin(); it != ducks.end(); ++it) {
+      patches.push_back({
+        it->first.as<std::string>(),
+        it->second["approx_x"].as<double>(),
+        it->second["approx_y"].as<double>()
+      });
+    }
+    // Store for patching after mission queue is built
+    duck_patches_ = patches;
+  }
+
+  // ── Station positions ─────────────────────────────────────────────────────
+  auto stations = cfg["arena_stations"];
+  if (stations) {
+    for (auto it = stations.begin(); it != stations.end(); ++it) {
+      std::string n = it->first.as<std::string>();
+      station_overrides_[n] = {
+        it->second["x"].as<double>(),
+        it->second["y"].as<double>(),
+        it->second["yaw"].as<double>()
+      };
+    }
+  }
+
+  RCLCPP_INFO(get_logger(),
+    "Arena loaded — crater=(%.3f,%.3f) r=%.3f blue=(%.3f,%.3f)",
+    CRATER_CX, CRATER_CY, CRATER_RADIUS, BLUE_X, BLUE_Y);
 }
 
 } // namespace task_manager

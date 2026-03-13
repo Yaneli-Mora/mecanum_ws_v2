@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>task_manager</name><version>0.1.0</version>
+  <n>task_manager</n><version>0.1.0</version>
   <description>Top-level mission sequencer</description>
   <maintainer email="todo@todo.com">TODO</maintainer>
   <license>Apache-2.0</license>
@@ -8,5 +8,7 @@
   <depend>nav2_msgs</depend><depend>std_msgs</depend>
   <depend>geometry_msgs</depend><depend>nav_msgs</depend>
   <depend>tf2</depend><depend>tf2_geometry_msgs</depend>
+  <depend>yaml-cpp</depend>
+  <depend>ament_index_cpp</depend>
   <export><build_type>ament_cmake</build_type></export>
 </package>

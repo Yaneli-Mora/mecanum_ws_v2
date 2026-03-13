@@ -33,7 +33,7 @@ private:
   // Wheel:               FL   FR   RL   RR
   const int IN1_PINS[NUM_WHEELS] = { 30,  35, 24, 28};
   const int IN2_PINS[NUM_WHEELS] = { 32,  34, 26, 29};
-  const int PWM_PINS[NUM_WHEELS] = { 31,  33, 25, 27};
+  const int PWM_PINS[NUM_WHEELS] = { 31,  33, 23, 27};
 
   // STBY pin for each TB6612 chip (tie together if using one chip for all 4)
   // If you have 2 chips, wire each STBY separately

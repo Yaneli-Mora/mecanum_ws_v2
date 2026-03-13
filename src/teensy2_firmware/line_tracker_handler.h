@@ -17,7 +17,7 @@ public:
   static const int THRESH_BLACK = 800;  // above = black
 
 private:
-  int       pin_    = A0;
+  int       pin_    = 10;
   LineState state_  = LINE_WHITE;
   bool      changed_= false;
 };

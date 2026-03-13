@@ -1,53 +1,90 @@
 # arena_positions.yaml
-# All coordinates measured from bottom-left corner of arena (starting area)
+# Reference document — coordinates match task_manager_node.cpp constants
 # x = distance from left wall, y = distance from bottom wall
-# yaw: 0=face right, 1.5708=face up, 3.1416=face left
-# MEASURE ALL VALUES ON YOUR PHYSICAL FIELD BEFORE COMPETITION
+# yaw: 0=face right(east), 1.5708=face up(north), 3.1416=face left(west), -1.5708=face down(south)
+# ⚠️ MEASURE ALL VALUES ON YOUR PHYSICAL FIELD BEFORE COMPETITION
 
 arena_stations:
+
   antenna_1:
     x: 0.15
-    y: 0.75
-    yaw: 1.5708
+    y: 0.90
+    yaw: 3.1416             # facing left/west (reverse approach, rear hits button)
     task: "PRESS_BUTTON"
-    tof_expected_m: 0.15
-    use_plow: true
-    
-  keypad_panel:
-    x: 0.65
-    y: 0.80
-    yaw: 3.1416
-    task: "PRESS_KEY 1 1"
-    tof_expected_m: 0.12
-    use_plow: false
+    approach: REVERSE
+    tof_sensor: rear_L_R
+    tof_expected_m: 0.08
+    led_read: 1
+    plank_b_angle: 90
 
-  crank:
-    x: 0.10
-    y: 0.40
-    yaw: 0.0
-    task: "TURN_CRANK 90"
-    tof_expected_m: 0.15
-    use_plow: false
+  antenna_2:
+    x: 1.20
+    y: 0.90
+    yaw: 0.0                # facing right/east, left side engages crank face (points south)
+    task: "TURN_CRANK"
+    approach: STRAFE        # strafe +y until ToF2 (left side) = 0.10m
+    tof_sensor: left_side
+    tof_expected_m: 0.10
+    led_read: 2
+    plank_b_angle: 150      # antenna_2 is higher
+    led_read_yaw: -1.5708   # pivot right 90°, rear faces north/top wall
+
+  antenna_4:
+    x: 0.60
+    y: 0.15
+    yaw: 3.1416             # facing left/west (reverse approach)
+    task: "PRESS_KEYPAD"    # solenoid sequence: 7→3→7→3→8→#
+    approach: REVERSE
+    tof_sensor: rear_L_R
+    tof_expected_m: 0.12
+    led_read: 4
+    plank_b_angle: 90
 
 duck_positions:
   duck_1:
-    approx_x: 0.25
-    approx_y: 0.60
+    approx_x: 0.30
+    approx_y: 0.80
   duck_2:
-    approx_x: 0.85
-    approx_y: 0.60
+    approx_x: 0.30
+    approx_y: 0.55
   duck_3:
-    approx_x: 0.25
-    approx_y: 0.25
+    approx_x: 0.75          # CRATER_CX
+    approx_y: 1.22          # CRATER_CY + CRATER_RADIUS + 0.15 ⚠️ measure
+    push_mode: UTURN
   duck_4:
-    approx_x: 1.10
-    approx_y: 0.30
+    approx_x: 1.36          # CRATER_CX + CRATER_RADIUS + 0.15 ⚠️ measure
+    approx_y: 0.50          # CRATER_CY
+    push_mode: UTURN_TO_STATION
+    after_x: 1.20           # reverse to antenna_2 after push
+    after_y: 0.90
+  duck_5:
+    approx_x: 0.75          # CRATER_CX
+    approx_y: -0.11         # CRATER_CY - CRATER_RADIUS - 0.15 ⚠️ measure/clamp to field
 
 blue_square:
-  center_x: 0.65
-  center_y: 0.30
+  x: 0.035                  # CRATER_CX - CRATER_RADIUS - 0.10 ⚠️ measure
+  y: 1.21                   # CRATER_CY + CRATER_RADIUS + 0.10 ⚠️ measure
+
+crater:
+  center_x: 0.75
+  center_y: 0.50
+  radius: 0.610             # ⚠️ measure on field
+
+ir_transmit:
+  x: 0.0                    # ⚠️ measure on field — position facing IR receiver
+  y: 0.50
+  yaw: 1.8326               # north (1.5708) + 15° toward left wall (0.2618)
+  plank_b_angle: 120
+
+solenoid_pins:              # Teensy 2 pin assignments
+  key_7: 25                 # Solenoid A (fires at positions 1 and 3)
+  key_3: 26                 # Solenoid B (fires at positions 2 and 4)
+  key_8: 27                 # Solenoid C (fires at position 5)
+  key_hash: 28              # Solenoid D (fires at position 6)
+  fire_ms: 80               # ⚠️ tune on field
+  gap_ms: 200               # ⚠️ tune on field
 
 starting_pose:
   x: 0.15
   y: 0.15
-  yaw: 1.5708
+  yaw: 1.5708               # facing up/north toward field

@@ -1,13 +1,15 @@
 // mecanum_firmware.ino — Teensy 4.1 (board 1)
-// Handles: encoders, motors, ToF x3, optical flow, start signal
-//          Plank A servo (crater loop, 90°)
-//          Plank B servo (LED reading, 90° or 150°)
+// Handles: encoders, motors (TB6612FNG), ToF x3 (VL53L1X),
+//          optical flow (PMW3901), start signal, Plank A servo, Plank B servo
+//
+// Color sensors (TCS34725) and ultrasonics (HC-SR04) are on Teensy 2.
 //
 // Text commands received from Pi via /teensy_command:
-//   EXTEND_PLANK_A      — Plank A to 90°  (crater loop)
-//   RETRACT_PLANK_A     — Plank A to 0°
-//   EXTEND_PLANK_B_90   — Plank B to 90°  (LED read position 1)
-//   EXTEND_PLANK_B_150  — Plank B to 150° (LED read position 2)
+//   EXTEND_PLANK_A      — Plank A to 90°  (pin 31)
+//   RETRACT_PLANK_A     — Plank A to 0°   (pin 31)
+//   EXTEND_PLANK_B_90   — Plank B to 90°  (antennas 1, 4)
+//   EXTEND_PLANK_B_120  — Plank B to 120° (IR transmit)
+//   EXTEND_PLANK_B_150  — Plank B to 150° (antenna 2, antenna 3 — shorter antennas)
 //   RETRACT_PLANK_B     — Plank B to 0°
 
 #include <Servo.h>
@@ -16,43 +18,41 @@
 #include "motor_handler.h"
 #include "tof_handler.h"
 #include "flow_handler.h"
-#include "color_sensor_handler.h"
 #include "start_signal_handler.h"
 
 EncoderHandler     enc;
 MotorHandler       mot;
 ToFHandler         tof;
 FlowHandler        flow;
-ColorSensorHandler col;
-StartSignalHandler sig(A0, 700);
+StartSignalHandler sig(10000);  // ⚠️ tune threshold on field — ADC value when light hits photodiode
 
-// ── Plank A — crater loop (single position: 90°) ────────────────────────────
+// ── Plank A — servo on pin 31 ────────────────────────────────────────────
 Servo plankA;
-const int PLANK_A_PIN       = 31;   // ⚠️ update when wired
+const int PLANK_A_PIN       = 31;
 const int PLANK_A_RETRACTED = 0;
 const int PLANK_A_EXTENDED  = 90;
 
-// ── Plank B — LED reading (two positions: 90° or 150°) ─────────────────────
+// ── Plank B — LED reading ────────────────────────────────────────────────
 Servo plankB;
-const int PLANK_B_PIN       = 15;   // ⚠️ update when wired
+const int PLANK_B_PIN       = 32;
 const int PLANK_B_RETRACTED = 0;
 const int PLANK_B_POS_90    = 90;
+const int PLANK_B_POS_120   = 120;
 const int PLANK_B_POS_150   = 150;
 
-// ── String command buffer ────────────────────────────────────────────────────
+// ── Command buffer ───────────────────────────────────────────────────────
 String cmd_buffer = "";
 
-bool mission_active       = false;
-unsigned long last_rx_ms  = 0;
-const unsigned long WD_MS = 500;
-const int LOOP_MS         = 10;    // 100 Hz
+bool          mission_active = false;
+unsigned long last_rx_ms     = 0;
+const unsigned long WD_MS    = 500;   // watchdog: stop motors if no cmd for 500ms
+const int     LOOP_MS        = 10;    // 100Hz loop
 
 void setup() {
   Serial.begin(115200);
   enc.init();
   mot.init();
   tof.init();
-  col.init();
   sig.init();
 
   plankA.attach(PLANK_A_PIN);
@@ -62,18 +62,20 @@ void setup() {
   plankB.write(PLANK_B_RETRACTED);
 
   if (!flow.init()) {
-    // Flow sensor not found — check SPI wiring: MOSI=11,MISO=12,SCK=13,CS=10
+    // Flow sensor not found — check SPI wiring: MOSI=11, MISO=12, SCK=13, CS=10
   }
 }
 
 void loop() {
   unsigned long t0 = millis();
 
+  // Activate on start signal
   if (!mission_active && sig.checkForStart()) {
     mission_active = true;
     mot.unlock();
   }
 
+  // Watchdog — stop motors if Pi goes quiet
   if (mission_active && (millis() - last_rx_ms > WD_MS)) {
     mot.brakeAll();
   }
@@ -81,7 +83,6 @@ void loop() {
   enc.update();
   tof.update();
   flow.update();
-  col.update();
 
   sendPacket();
   receiveCommands();
@@ -92,16 +93,13 @@ void loop() {
 
 void sendPacket() {
   TeensyToPiPacket p;
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 4; i++)
     p.enc_ticks[i] = (int16_t)enc.getDeltaTicks(i);
-  }
-  p.tof_mm[0]      = tof.getDistanceMM(0);
-  p.tof_mm[1]      = tof.getDistanceMM(1);
-  p.tof_mm[2]      = tof.getDistanceMM(2);
+  p.tof_mm[0]      = tof.getDistanceMM(0);   // rear-left  (keypad squareness L)
+  p.tof_mm[1]      = tof.getDistanceMM(1);   // rear-right (keypad squareness R)
+  p.tof_mm[2]      = tof.getDistanceMM(2);   // left-side  (antenna_2 crank approach)
   p.flow_vx        = flow.getDeltaX();
   p.flow_vy        = flow.getDeltaY();
-  p.color_left     = (uint8_t)col.getZone(0);
-  p.color_right    = (uint8_t)col.getZone(1);
   p.start_detected = sig.hasStarted() ? 1 : 0;
   p.checksum       = computeChecksum((uint8_t*)&p, TEENSY_PKT_SIZE - 1);
   Serial.write((uint8_t*)&p, TEENSY_PKT_SIZE);
@@ -120,12 +118,12 @@ void receiveCommands() {
     return;
   }
 
-  // Text commands
+  // Text commands from Pi via /teensy_command
   while (Serial.available()) {
     char c = Serial.read();
     if (c == '\n') {
       cmd_buffer.trim();
-      handleTextCommand(cmd_buffer);
+      if (cmd_buffer.length() > 0) handleTextCommand(cmd_buffer);
       cmd_buffer = "";
     } else if (c != '\r') {
       cmd_buffer += c;
@@ -134,19 +132,10 @@ void receiveCommands() {
 }
 
 void handleTextCommand(const String & cmd) {
-  if (cmd == "EXTEND_PLANK_A") {
-    plankA.write(PLANK_A_EXTENDED);
-
-  } else if (cmd == "RETRACT_PLANK_A") {
-    plankA.write(PLANK_A_RETRACTED);
-
-  } else if (cmd == "EXTEND_PLANK_B_90") {
-    plankB.write(PLANK_B_POS_90);
-
-  } else if (cmd == "EXTEND_PLANK_B_150") {
-    plankB.write(PLANK_B_POS_150);
-
-  } else if (cmd == "RETRACT_PLANK_B") {
-    plankB.write(PLANK_B_RETRACTED);
-  }
+  if      (cmd == "EXTEND_PLANK_A")    plankA.write(PLANK_A_EXTENDED);
+  else if (cmd == "RETRACT_PLANK_A")   plankA.write(PLANK_A_RETRACTED);
+  else if (cmd == "EXTEND_PLANK_B_90")  plankB.write(PLANK_B_POS_90);
+  else if (cmd == "EXTEND_PLANK_B_120") plankB.write(PLANK_B_POS_120);
+  else if (cmd == "EXTEND_PLANK_B_150") plankB.write(PLANK_B_POS_150);
+  else if (cmd == "RETRACT_PLANK_B")    plankB.write(PLANK_B_RETRACTED);
 }

@@ -1,6 +1,8 @@
 #pragma once
 #include <Arduino.h>
-#include <IRremote.h>
+#define IR_SEND_PIN 10          // must be defined before include in IRremote v4
+#define NO_LED_FEEDBACK_CODE    // disable feedback LED to save flash
+#include <IRremote.hpp>
 
 // ── Antenna address codes ─────────────────────────────────────────────────
 #define ANTENNA_1_ADDR  0x00

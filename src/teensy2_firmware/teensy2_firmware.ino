@@ -1,3 +1,4 @@
+
 // teensy2_firmware.ino — Teensy 4.1 (board 2)
 // Handles:
 //   4x HC-SR04 ultrasonic sensors  — UltrasonicHandler
@@ -33,7 +34,6 @@
 #include "ir_transmitter_handler.h"
 #include "crank_handler.h"
 #include "keypad_handler.h"
-#include "plank_a_handler.h"
 
 // ── Pin assignments ───────────────────────────────────────────────────────
 const int LINE_PIN    = A0;
@@ -73,7 +73,6 @@ void setup() {
   irTx.init(IR_PIN);
   crank.init(CRANK_IN1, CRANK_IN2, CRANK_PWM, CRANK_ENC_A, CRANK_ENC_B);
   keypad.init();
-  plankA.init();
 
   Serial.println("READY");
 }

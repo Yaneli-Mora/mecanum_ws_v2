@@ -1,6 +1,9 @@
+
 #include "rgb_sensor_handler.h"
 
 bool RGBSensorHandler::init() {
+  Wire.begin();
+  tcs_ = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
   ready_ = tcs_.begin();
   return ready_;
 }

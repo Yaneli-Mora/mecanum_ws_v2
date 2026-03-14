@@ -1,4 +1,3 @@
-
 // teensy2_firmware.ino — Teensy 4.1 (board 2)
 // Handles:
 //   4x HC-SR04 ultrasonic sensors  — UltrasonicHandler
@@ -17,8 +16,6 @@
 //   Pi → Teensy2 (commands):
 //     TURN_CRANK                    — spin crank 3 full turns via encoder
 //     PRESS_KEYPAD                  — fire solenoids: 7→3→7→3→8→#
-//     EXTEND_PLANK_A                — Plank A servo to 90°
-//     RETRACT_PLANK_A               — Plank A servo to 0°
 //     READ_LED <1-4>                — read RGB, record + report color
 //     TRANSMIT_IR                   — send all 4 recorded colors via IR
 //
@@ -54,7 +51,6 @@ RGBSensorHandler     rgbSensor;
 IRTransmitterHandler irTx;
 CrankHandler         crank;
 KeypadHandler        keypad;
-PlankAHandler        plankA;
 
 // ── Timing ───────────────────────────────────────────────────────────────
 const int US_INTERVAL_MS = 20;   // 50Hz ultrasonic publish
@@ -123,16 +119,6 @@ void handleCommand(const String & cmd) {
   } else if (cmd == "PRESS_KEYPAD") {
     bool ok = keypad.press();
     Serial.println(ok ? "DONE" : "ERROR");
-
-  // EXTEND_PLANK_A — Plank A servo to 90°
-  } else if (cmd == "EXTEND_PLANK_A") {
-    plankA.extend();
-    Serial.println("DONE");
-
-  // RETRACT_PLANK_A — Plank A servo to 0°
-  } else if (cmd == "RETRACT_PLANK_A") {
-    plankA.retract();
-    Serial.println("DONE");
 
   // READ_LED <antenna 1-4>
   } else if (cmd.startsWith("READ_LED")) {

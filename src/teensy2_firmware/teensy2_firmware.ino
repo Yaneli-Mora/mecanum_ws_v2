@@ -16,6 +16,8 @@
 //   Pi → Teensy2 (commands):
 //     TURN_CRANK                    — spin crank 3 full turns via encoder
 //     PRESS_KEYPAD                  — fire solenoids: 7→3→7→3→8→#
+//     EXTEND_PLANK_A                — Plank A servo to 90°
+//     RETRACT_PLANK_A               — Plank A servo to 0°
 //     READ_LED <1-4>                — read RGB, record + report color
 //     TRANSMIT_IR                   — send all 4 recorded colors via IR
 //
@@ -24,23 +26,26 @@
 //     ERROR                         — command failed
 //     COLOR:<antenna>:<color>       — after READ_LED
 
+#include <Wire.h>
 #include "ultrasonic_handler.h"
 #include "line_tracker_handler.h"
 #include "rgb_sensor_handler.h"
 #include "ir_transmitter_handler.h"
 #include "crank_handler.h"
 #include "keypad_handler.h"
+#include "plank_a_handler.h"
 
 // ── Pin assignments ───────────────────────────────────────────────────────
-const int LINE_PIN    = 10;
-const int IR_PIN      = 11;
-const int CRANK_IN1   = 22;
-const int CRANK_IN2   = 23;
-const int CRANK_PWM   = 21;
-const int CRANK_ENC_A = 25;
+const int LINE_PIN    = A0;
+const int IR_PIN      = 10;
+const int CRANK_IN1   = 20;
+const int CRANK_IN2   = 21;
+const int CRANK_PWM   = 22;
+const int CRANK_ENC_A = 23;
 const int CRANK_ENC_B = 24;
 // Solenoids (keypad) — pins 25-28
 // SOL_A=25 (key 7), SOL_B=26 (key 3), SOL_C=27 (key 8), SOL_D=28 (key #)
+// Plank A servo      — pin 29
 
 // ── Handlers ─────────────────────────────────────────────────────────────
 UltrasonicHandler    ultrasonics;
@@ -49,6 +54,7 @@ RGBSensorHandler     rgbSensor;
 IRTransmitterHandler irTx;
 CrankHandler         crank;
 KeypadHandler        keypad;
+PlankAHandler        plankA;
 
 // ── Timing ───────────────────────────────────────────────────────────────
 const int US_INTERVAL_MS = 20;   // 50Hz ultrasonic publish
@@ -67,6 +73,7 @@ void setup() {
   irTx.init(IR_PIN);
   crank.init(CRANK_IN1, CRANK_IN2, CRANK_PWM, CRANK_ENC_A, CRANK_ENC_B);
   keypad.init();
+  plankA.init();
 
   Serial.println("READY");
 }
@@ -117,6 +124,16 @@ void handleCommand(const String & cmd) {
   } else if (cmd == "PRESS_KEYPAD") {
     bool ok = keypad.press();
     Serial.println(ok ? "DONE" : "ERROR");
+
+  // EXTEND_PLANK_A — Plank A servo to 90°
+  } else if (cmd == "EXTEND_PLANK_A") {
+    plankA.extend();
+    Serial.println("DONE");
+
+  // RETRACT_PLANK_A — Plank A servo to 0°
+  } else if (cmd == "RETRACT_PLANK_A") {
+    plankA.retract();
+    Serial.println("DONE");
 
   // READ_LED <antenna 1-4>
   } else if (cmd.startsWith("READ_LED")) {

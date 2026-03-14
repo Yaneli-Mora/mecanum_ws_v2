@@ -1,4 +1,5 @@
 #pragma once
+#include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_TCS34725.h>
 #include "ir_transmitter_handler.h"  // for color code defines
@@ -10,8 +11,7 @@ public:
   const char* colorStr(uint8_t code) const;
 
 private:
-  Adafruit_TCS34725 tcs_ = Adafruit_TCS34725(
-    TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+  Adafruit_TCS34725 tcs_;   // initialized in init() after Wire.begin()
   bool ready_ = false;
 
   uint8_t classify(uint16_t r, uint16_t g, uint16_t b);

@@ -1,21 +1,19 @@
 #pragma once
 #include <Arduino.h>
 
+// CrankHandler — simple DC motor via L298N (no encoder)
+// Runs for a fixed duration to complete the crank task
+// L298N wiring:
+//   IN1 → pin 20
+//   IN2 → pin 21
+//   ENA → pin 22  (PWM speed control)
+
 class CrankHandler {
 public:
-  void init(int in1, int in2, int pwm, int enc_a, int enc_b);
-  bool turn(int turns = 3);  // spin N full turns, returns true on success
+  void init(int in1, int in2, int pwm);
+  bool turn();   // runs motor for CRANK_DURATION_MS, returns true when done
   void stop();
 
-  // Called from ISR — must be public
-  void encoderISR();
-
-  // ⚠️ Set to your motor's actual counts per revolution
-  static const int CPR   = 1200;
-  static const int SPEED = 180;   // PWM 0-255
-  static const unsigned long WATCHDOG_MS = 10000;  // 10s timeout
-
-private:
-  int in1_, in2_, pwm_;
-  volatile long ticks_ = 0;
+  static const int     SPEED           = 200;    // PWM 0-255 ⚠️ tune on field
+  static const unsigned long CRANK_DURATION_MS = 4000;  // ⚠️ tune — ms to complete task
 };

@@ -4,7 +4,7 @@
 //   TCRT5000 line tracker          — LineTrackerHandler
 //   TCS34725 RGB sensor            — RGBSensorHandler (on Plank B)
 //   IR transmitter                 — IRTransmitterHandler (on Plank B)
-//   Crank DC motor + encoder       — CrankHandler
+//   Crank DC motor (L298N, no encoder) — CrankHandler
 //
 // Serial protocol to Pi (115200 baud, newline terminated):
 //
@@ -14,7 +14,7 @@
 //     US:<fl>,<fr>,<rl>,<rr>        — distances in mm at 50Hz
 //
 //   Pi → Teensy2 (commands):
-//     TURN_CRANK                    — spin crank 3 full turns via encoder
+//     TURN_CRANK                    — run crank motor for fixed duration
 //     PRESS_KEYPAD                  — fire solenoids: 7→3→7→3→8→#
 //     READ_LED <1-4>                — read RGB, record + report color
 //     TRANSMIT_IR                   — send all 4 recorded colors via IR
@@ -38,8 +38,9 @@ const int IR_PIN      = 10;
 const int CRANK_IN1   = 20;
 const int CRANK_IN2   = 21;
 const int CRANK_PWM   = 22;
-const int CRANK_ENC_A = 23;
-const int CRANK_ENC_B = 24;
+// Encoder removed — L298N time-based control
+
+// No encoder pins needed for L298N
 // Solenoids (keypad) — pins 25-28
 // SOL_A=25 (key 7), SOL_B=26 (key 3), SOL_C=27 (key 8), SOL_D=28 (key #)
 // Plank A servo      — pin 29
@@ -67,7 +68,7 @@ void setup() {
   lineTracker.init(LINE_PIN);
   rgbSensor.init();
   irTx.init(IR_PIN);
-  crank.init(CRANK_IN1, CRANK_IN2, CRANK_PWM, CRANK_ENC_A, CRANK_ENC_B);
+  crank.init(CRANK_IN1, CRANK_IN2, CRANK_PWM);
   keypad.init();
 
   Serial.println("READY");
@@ -110,9 +111,9 @@ void loop() {
 // ── Command handler ───────────────────────────────────────────────────────
 void handleCommand(const String & cmd) {
 
-  // TURN_CRANK — spin 3 full turns via encoder feedback
+  // TURN_CRANK — run crank motor for CRANK_DURATION_MS then stop
   if (cmd == "TURN_CRANK") {
-    bool ok = crank.turn(3);
+    bool ok = crank.turn();
     Serial.println(ok ? "DONE" : "ERROR");
 
   // PRESS_KEYPAD — fire solenoids in sequence: 7 → 3 → 7 → 3 → 8 → #

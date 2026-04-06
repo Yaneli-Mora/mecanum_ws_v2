@@ -1,44 +1,27 @@
 #include "crank_handler.h"
 
-static CrankHandler* _instance = nullptr;
-static void crankISR() { if (_instance) _instance->encoderISR(); }
+static int _in1, _in2, _pwm;
 
-void CrankHandler::init(int in1, int in2, int pwm, int enc_a, int enc_b) {
-  in1_ = in1; in2_ = in2; pwm_ = pwm;
-  pinMode(in1_, OUTPUT); pinMode(in2_, OUTPUT); pinMode(pwm_, OUTPUT);
+void CrankHandler::init(int in1, int in2, int pwm) {
+  _in1 = in1; _in2 = in2; _pwm = pwm;
+  pinMode(_in1, OUTPUT);
+  pinMode(_in2, OUTPUT);
+  pinMode(_pwm, OUTPUT);
   stop();
-  pinMode(enc_a, INPUT_PULLUP);
-  pinMode(enc_b, INPUT_PULLUP);
-  _instance = this;
-  attachInterrupt(digitalPinToInterrupt(enc_a), crankISR, RISING);
 }
 
-void CrankHandler::encoderISR() {
-  ticks_++;
-}
-
-bool CrankHandler::turn(int turns) {
-  long target = (long)CPR * turns;
-  ticks_ = 0;
-
-  digitalWrite(in1_, HIGH);
-  digitalWrite(in2_, LOW);
-  analogWrite(pwm_, SPEED);
-
-  unsigned long start = millis();
-  while (ticks_ < target) {
-    if (millis() - start > WATCHDOG_MS) {
-      stop();
-      return false;  // timeout — motor stalled or encoder fault
-    }
-    delayMicroseconds(100);
-  }
+bool CrankHandler::turn() {
+  // Spin motor forward for CRANK_DURATION_MS then stop
+  digitalWrite(_in1, HIGH);
+  digitalWrite(_in2, LOW);
+  analogWrite(_pwm, SPEED);
+  delay(CRANK_DURATION_MS);
   stop();
   return true;
 }
 
 void CrankHandler::stop() {
-  digitalWrite(in1_, LOW);
-  digitalWrite(in2_, LOW);
-  analogWrite(pwm_, 0);
+  digitalWrite(_in1, LOW);
+  digitalWrite(_in2, LOW);
+  analogWrite(_pwm, 0);
 }
